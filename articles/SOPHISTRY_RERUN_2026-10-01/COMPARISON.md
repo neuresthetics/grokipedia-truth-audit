@@ -4,6 +4,8 @@
 **Method (both runs):** substance_lens v0.5.9 `fallacyScanPass` (67 kept F-IDs), both sides, the article's own voice only, no outside fact-checking.
 **Every number below comes from `compare.py`** (output in `comparison.json`; tables in `tables.md`). The flags themselves are judgment calls by a model in both runs, not measurements.
 
+**Run 3:** a blind full-read rescan of the 24 title-match articles, compared with this run (run 2) on those same articles, is in [SOPHISTRY_RUN3_TITLE24_2026-10-02/README.md](../SOPHISTRY_RUN3_TITLE24_2026-10-02/README.md). How the three runs fit together: [METHOD_THREE_PHASE_TEST.md](../../METHOD_THREE_PHASE_TEST.md).
+
 ## How run 2 was done
 
 - **Blinding.** Run 2 was scanned without opening run 1's per-article scans, the run 1 summary, `tools/sophistry_triage.py` or `(unpublished run-1 scratch)`. `flags.csv` was finalized at 2026-10-01 23:14 PT (sha256 `fc6978a1…95d3`), and only then were those files opened for this comparison.

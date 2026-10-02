@@ -2,7 +2,7 @@
 
 Public, version-controlled audit of bias, omissions, and alignment drift in Grokipedia (xAI’s AI-generated encyclopedia) with a current focus on the "Circumcision" article.
 
-## Latest findings (2026-10-01)
+## Latest findings (2026-10-01, replication added 2026-10-02)
 
 A full-read sophistry scan of 58 Grokipedia circumcision articles found a pro-circumcision lean in the male-circumcision articles: 85% of side-taking flags (123 pro, 22 anti). Every flag is a judgment call, so treat each as a lead to check.
 
@@ -55,6 +55,24 @@ Counted by script from the scan's flag file. In FGM articles, "pro" means the fl
 - Reproducibility check against an earlier partial read: [COMPARISON.md](articles/SOPHISTRY_RERUN_2026-10-01/COMPARISON.md)
 - All 58 articles with snapshot and Grokipedia links and why each was included: [ARTICLE_LIST.md](articles/ARTICLE_LIST.md)
 - Full index with counts and dates: [INDEX_circumcision_related.md](articles/INDEX_circumcision_related.md)
+
+### Replication: three-phase test (2026-10-02)
+
+The scan has now been run three times with the same [substance_lens](https://github.com/neuresthetics/substance_lens) v0.5.9 fallacy catalogue. Run 1 was a partial read of about 30% of sentences. Run 2 is the blind full read above. Run 3 was a second blind full read of the 24 core articles, the ones with "circumcision" in the title, and was compared with run 2 on those same 24.
+
+| On the 24 title-match articles | Run 2 | Run 3 |
+|---|---|---|
+| Flags (pro / anti / neither) | 126 (100 / 19 / 7) | 111 (86 / 18 / 7) |
+| Pro share of sided flags | 84.0% | 82.7% |
+| Ethics of circumcision | 24 (all pro) | 21 (all pro) |
+| Circumcision controversies | 21 | 13 |
+| Circumcision | 15 | 6 |
+| Forced circumcision | 7 (all anti) | 7 (all anti) |
+
+The pro lean and the ranking of the most-flagged articles held up: per-article counts correlate at 0.837 (Spearman), and 17 of the 24 articles got the same lean, with every mismatch on an article with 4 or fewer flags. Only 60% of run 2's flagged sentences were flagged again, though when both runs flagged a sentence they agreed on its side 97% of the time. So individual flags remain leads to check by hand. Because every run used the same model family and method, this shows the scan is consistent, not that it is correct.
+
+- How the three runs were done, and what the test does and doesn't show: [METHOD_THREE_PHASE_TEST.md](METHOD_THREE_PHASE_TEST.md)
+- Run 3 flags, scripts and full comparison: [articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/](articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/README.md)
 
 ## Why this repo exists
 - Grokipedia launched 27 Oct 2025 with the claim of being “Wikipedia without the propaganda”.

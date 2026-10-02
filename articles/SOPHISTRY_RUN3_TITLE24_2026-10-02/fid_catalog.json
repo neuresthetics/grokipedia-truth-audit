@@ -1,0 +1,408 @@
+{
+ "spec": "substance_lens v0.5.9 fallacyScanPass.kept",
+ "count": 67,
+ "entries": [
+  {
+   "id": "F001",
+   "name": "Ad Hominem",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F002",
+   "name": "Straw Man",
+   "category": "relevance",
+   "check_type": "partial"
+  },
+  {
+   "id": "F003",
+   "name": "Red Herring",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F004",
+   "name": "Appeal to Authority",
+   "category": "relevance",
+   "check_type": "partial"
+  },
+  {
+   "id": "F005",
+   "name": "Appeal to Popularity",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F007",
+   "name": "Appeal to Emotion",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F010",
+   "name": "Appeal to Ignorance",
+   "category": "insufficiency",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F011",
+   "name": "Hasty Generalization",
+   "category": "insufficiency",
+   "check_type": "partial"
+  },
+  {
+   "id": "F012",
+   "name": "Slippery Slope",
+   "category": "insufficiency",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F013",
+   "name": "False Dilemma",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F016",
+   "name": "Complex Question",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F019",
+   "name": "Composition",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F020",
+   "name": "Division",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F021",
+   "name": "Accent",
+   "category": "ambiguity",
+   "check_type": "partial"
+  },
+  {
+   "id": "F022",
+   "name": "Accident",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F024",
+   "name": "Tu Quoque",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F025",
+   "name": "Guilt by Association",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F026",
+   "name": "Poisoning the Well",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F027",
+   "name": "Genetic Fallacy",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F028",
+   "name": "Appeal to Tradition",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F029",
+   "name": "Appeal to Novelty",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F031",
+   "name": "Post Hoc",
+   "category": "causal",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F032",
+   "name": "Cum Hoc",
+   "category": "causal",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F033",
+   "name": "Causal Oversimplification",
+   "category": "causal",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F034",
+   "name": "False Cause",
+   "category": "causal",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F035",
+   "name": "Texas Sharpshooter",
+   "category": "causal",
+   "check_type": "partial"
+  },
+  {
+   "id": "F036",
+   "name": "Suppressed Evidence",
+   "category": "insufficiency",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F038",
+   "name": "Moving the Goalposts",
+   "category": "presumption",
+   "check_type": "partial"
+  },
+  {
+   "id": "F039",
+   "name": "No True Scotsman",
+   "category": "presumption",
+   "check_type": "partial"
+  },
+  {
+   "id": "F040",
+   "name": "Loaded Language",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F041",
+   "name": "False Equivalence",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F042",
+   "name": "False Analogy",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F043",
+   "name": "Misleading Vividness",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F045",
+   "name": "Sunk Cost Fallacy",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F046",
+   "name": "Gambler's Fallacy",
+   "category": "causal",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F047",
+   "name": "Hot Hand Fallacy",
+   "category": "causal",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F048",
+   "name": "Middle Ground",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F049",
+   "name": "Fallacy of the Beard",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F050",
+   "name": "Reification",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F052",
+   "name": "Argument from Incredulity",
+   "category": "insufficiency",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F053",
+   "name": "Argument from Repetition",
+   "category": "insufficiency",
+   "check_type": "partial"
+  },
+  {
+   "id": "F054",
+   "name": "Etymological Fallacy",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F055",
+   "name": "Ecological Fallacy",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F056",
+   "name": "Exception Fallacy",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F057",
+   "name": "Historian's Fallacy",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F058",
+   "name": "Presentism",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F059",
+   "name": "Moralistic Fallacy",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F060",
+   "name": "Naturalistic Fallacy",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F061",
+   "name": "Is-Ought Jump",
+   "category": "presumption",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F062",
+   "name": "Masked Man Fallacy",
+   "category": "ambiguity",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F063",
+   "name": "Quantifier Shift",
+   "category": "ambiguity",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F064",
+   "name": "Existential Fallacy",
+   "category": "ambiguity",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F065",
+   "name": "Illicit Major",
+   "category": "formal",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F066",
+   "name": "Illicit Minor",
+   "category": "formal",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F067",
+   "name": "Undistributed Middle",
+   "category": "formal",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F068",
+   "name": "Exclusive Premises",
+   "category": "formal",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F069",
+   "name": "Affirming the Consequent",
+   "category": "formal",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F070",
+   "name": "Denying the Antecedent",
+   "category": "formal",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F071",
+   "name": "Base Rate Neglect",
+   "category": "insufficiency",
+   "check_type": "partial"
+  },
+  {
+   "id": "F072",
+   "name": "Conjunction Fallacy",
+   "category": "insufficiency",
+   "check_type": "code-checkable"
+  },
+  {
+   "id": "F073",
+   "name": "McNamara Fallacy",
+   "category": "insufficiency",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F074",
+   "name": "Prosecutor's Fallacy",
+   "category": "insufficiency",
+   "check_type": "partial"
+  },
+  {
+   "id": "F075",
+   "name": "Appeal to Consequences",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F076",
+   "name": "Wishful Thinking",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F077",
+   "name": "Fallacy of Relative Privation",
+   "category": "relevance",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F079",
+   "name": "Shotgun Argumentation",
+   "category": "insufficiency",
+   "check_type": "judgment"
+  },
+  {
+   "id": "F080",
+   "name": "Nirvana Fallacy",
+   "category": "presumption",
+   "check_type": "judgment"
+  }
+ ]
+}
