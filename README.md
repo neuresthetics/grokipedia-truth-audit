@@ -1,5 +1,7 @@
 # grokipedia-truth-audit
 
+![Grok logo under a magnifying glass](docs/img/header.jpg)
+
 Audits of Grokipedia articles, done on saved snapshots so every finding can be traced to the text that was read. Articles are grouped by topic; so far: 58 circumcision-related articles (2026-10-01 snapshots) and the Baruch Spinoza article.
 
 ## Where to find things
@@ -45,3 +47,7 @@ From citation [90] onward the Baruch Spinoza article's numbers appear shifted by
 ## Plans
 
 Snapshot the same articles again later, re-scan them with the same method and compare flag counts by side (pro / anti / neutral) with these runs; audit more articles from [docs/CANDIDATE_ARTICLES.md](docs/CANDIDATE_ARTICLES.md); add more topics ([docs/ADDING_A_TOPIC.md](docs/ADDING_A_TOPIC.md)).
+
+## Credits
+
+The Grok logo in the header image is a trademark of xAI, used here only for identification; this repo is not affiliated with xAI. Logo source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Grok-feb-2025-logo.svg).
