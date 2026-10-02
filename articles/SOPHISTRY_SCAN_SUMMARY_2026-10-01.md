@@ -78,6 +78,45 @@ Lean is the side with the most flags in that article (ties shown as mixed). ‡ 
 - Side split, articles not marked ‡ (male circumcision and related): pro 108, anti 32, neu 30.
 - Side split, ‡ articles (female genital cutting): pro 18, anti 24, neu 27.
 
+## Violations by fallacy type and side
+
+Tallied by script from the flag tables in all 58 `sophistry_scan.md` files. Every flag is a judgment call, not a measurement. In ‡ (female genital cutting) articles, 'pro' means the flag favors cutting or a male/female distinction.
+
+| Fallacy (engine ID) | Total | Pro | Anti | Neither |
+|---|---|---|---|---|
+| F040 Loaded Language | 39 | 25 | 11 | 3 |
+| F011 Hasty Generalization | 20 | 8 | 8 | 4 |
+| F032 Cum Hoc | 19 | 11 | 5 | 3 |
+| F034 False Cause | 17 | 5 | 5 | 7 |
+| F003 Red Herring | 16 | 13 | 2 | 1 |
+| F026 Poisoning the Well | 16 | 13 | 2 | 1 |
+| F036 Suppressed Evidence | 16 | 12 | 2 | 2 |
+| F004 Appeal to Authority | 13 | 3 | 1 | 9 |
+| F033 Causal Oversimplification | 13 | 1 | 4 | 8 |
+| F061 Is-Ought Jump | 10 | 3 | 7 | 0 |
+| F002 Straw Man | 7 | 4 | 1 | 2 |
+| F010 Appeal to Ignorance | 7 | 3 | 0 | 4 |
+| F022 Accident | 6 | 5 | 1 | 0 |
+| F031 Post Hoc | 6 | 1 | 0 | 5 |
+| F042 False Analogy | 6 | 5 | 1 | 0 |
+| F041 False Equivalence | 4 | 0 | 3 | 1 |
+| F073 McNamara Fallacy | 4 | 4 | 0 | 0 |
+| F001 Ad Hominem | 3 | 2 | 0 | 1 |
+| F005 Appeal to Popularity | 2 | 0 | 0 | 2 |
+| F020 Division | 2 | 0 | 1 | 1 |
+| F025 Guilt by Association | 2 | 2 | 0 | 0 |
+| F056 Exception Fallacy | 2 | 2 | 0 | 0 |
+| F027 Genetic Fallacy | 1 | 0 | 0 | 1 |
+| F028 Appeal to Tradition | 1 | 1 | 0 | 0 |
+| F035 Texas Sharpshooter | 1 | 1 | 0 | 0 |
+| F053 Argument from Repetition | 1 | 0 | 0 | 1 |
+| F055 Ecological Fallacy | 1 | 0 | 1 | 0 |
+| F058 Presentism | 1 | 0 | 0 | 1 |
+| F071 Base Rate Neglect | 1 | 0 | 1 | 0 |
+| F075 Appeal to Consequences | 1 | 1 | 0 | 0 |
+| F080 Nirvana Fallacy | 1 | 1 | 0 | 0 |
+| **Total** | **239** | **126** | **56** | **57** |
+
 ## Cross-article patterns (judgment-based reading of the flags)
 
 These patterns come from reading the flags in the per-article files. They are not statistics. Each one points to articles where the quoted sentences can be checked.
