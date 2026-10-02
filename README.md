@@ -2,6 +2,14 @@
 
 Public, version-controlled audit of bias, omissions, and alignment drift in Grokipedia (xAI’s AI-generated encyclopedia) with a current focus on the "Circumcision" article.
 
+## Latest findings (2026-10-01)
+
+Two blind scans of 58 Grokipedia circumcision articles both found a pro-circumcision lean (77% and 85% of side-taking flags), with no article flipping. Individual flags were less stable (44% re-flagged), so treat each as a lead to check.
+
+- Per-article scans and a table of violations by fallacy type: [SOPHISTRY_SCAN_SUMMARY_2026-10-01.md](articles/SOPHISTRY_SCAN_SUMMARY_2026-10-01.md)
+- Run 1 vs run 2 comparison: [SOPHISTRY_RERUN_2026-10-01/COMPARISON.md](articles/SOPHISTRY_RERUN_2026-10-01/COMPARISON.md)
+- Index of the 58 articles: [INDEX_circumcision_related.md](articles/INDEX_circumcision_related.md)
+
 ## Why this repo exists
 - Grokipedia launched 27 Oct 2025 with the claim of being “Wikipedia without the propaganda”.
 - The current Circumcision entry (last Grok-verified 29 Nov 2025) is ~68 % pro non-therapeutic infant male circumcision, ~20 % neutral, ~12 % anti (see quantitative breakdown in [articles/circumcision/analyses/2025-11-30](articles/circumcision/analyses/2025-11-30/bias_quantification.md)).
