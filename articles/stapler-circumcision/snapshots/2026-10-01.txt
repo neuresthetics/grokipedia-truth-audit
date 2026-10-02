@@ -1,0 +1,242 @@
+Title: Stapler circumcision
+Grokipedia URL: https://grokipedia.com/page/Stapler_circumcision
+Fetched: 2026-10-01 22:02:10 PDT (curl, plain HTTP GET, HTTP 200)
+Page header label: Fact-checked by Grok · 6 months ago (relative to fetch time)
+Last edited label: none shown on page
+dateModified (page JSON-LD): 2026-03-18T02:56:45.000Z = 2026-03-17 19:56 PDT
+Category: title contains 'circumcision'
+Paragraphs (span[data-tts-block]): 83; tables/lists (div[data-tts-block]): 0; sources listed (li#ref-N): 38; page label: "38 sources"
+Highest in-text citation number: 32
+Citation notes: listed sources never cited in text: 6 (33, 34, 35, 36, 37, 38)
+Extraction: text from div.article-body span[data-tts-block] (paragraphs) and div[data-tts-block] (tables, rendered with ' | '); headings h2/h3/h4; [n] = in-text citation link to #ref-n. No content added or altered.
+==============================================================================
+
+# Stapler circumcision
+
+Stapler circumcision, also known as disposable circumcision stapler circumcision or circular stapler circumcision, is a surgical technique for male circumcision that employs a disposable anastomotic stapler device to simultaneously excise the foreskin and close the wound with staples in a single step. This method is widely used in China and has been demonstrated in clinical studies to offer advantages over traditional surgical circumcision, including significantly shorter operative time (typically 6–10 minutes), reduced blood loss, lower intraoperative and postoperative pain, fewer complications, and improved patient satisfaction with penile appearance. [1] [2] [3]
+
+The procedure involves placing an inner bell to protect the glans penis, positioning the outer bell to sandwich the foreskin, and activating the device to cut the tissue while deploying staples (often 18 in number) to anastomose the wound edges. Patients typically experience a rapid postoperative recovery with low overall complication rates (around 2–5%), including occasional delayed staple detachment or minor edema, hematoma, or infection. Most patients report high satisfaction with cosmetic outcomes, though many require removal of residual staples, and the technique carries higher treatment costs than conventional methods. [1] [2] [3]
+
+Clinical comparisons highlight stapler circumcision's efficiency and safety profile, positioning it as a preferred option in settings prioritizing rapid procedures and reduced patient discomfort, though ongoing refinements may address issues like staple retention and cost. [1] [2]
+
+## Overview
+
+### Definition
+
+Stapler circumcision, also known as circumcision using a disposable anastomotic stapler (or disposable circumcision suture device, DCSD), is a male circumcision technique that employs a specialized disposable mechanical device to simultaneously excise the foreskin and close the wound with a circular row of titanium staples. [4] [5]
+
+The device functions on the principle of anastomotic staplers, where a circular knife cuts the foreskin tissue while titanium staples are deployed at equal spacing to approximate the tissue edges, achieving hemostasis, tissue alignment, and closure in a single action. [4]
+
+This results in a uniform, circumferential anastomosis characterized by a clean, even suture line with the staples initially visible along the incision. [4] [5]
+
+The use of titanium staples minimizes foreign body reactions and supports consistent suturing density, distinguishing the technique from conventional methods that rely on manual excision and suturing. [4]
+
+### Prevalence and regional usage
+
+Stapler circumcision, also known as circumcision using a disposable anastomotic stapler, is widely used in mainland China, where male circumcision overall remains uncommon (prevalence estimates around 2–14%). Numerous clinical studies and meta-analyses on the method have been conducted primarily in China, reflecting its significant application in the country. For example, a systematic review and meta-analysis of nine randomized controlled trials involving 1,898 patients demonstrated significant application of the disposable circumcision suture device (a form of stapler circumcision) in Chinese medical settings. [4]
+
+Comparative studies of circumcision devices, including stapler techniques, have been conducted by institutions such as Chongqing University. [6]
+
+Adoption of stapler circumcision remains largely limited outside China, with the majority of published research, clinical trials, patents, and commercial manufacturing originating from within the country. [7] [4]
+
+### Comparison overview
+
+Stapler circumcision, utilizing a disposable circular anastomotic stapler that simultaneously excises the foreskin and secures the wound with titanium staples, differs from other methods in operative efficiency, closure mechanism, and outcomes. Compared to conventional scalpel-and-suture circumcision, stapler circumcision consistently demonstrates shorter operative time, reduced intraoperative blood loss, lower pain scores, superior cosmetic appearance, and fewer complications such as edema and infection. [4] [7]
+
+A meta-analysis of randomized trials reported significantly shorter operation times (standardized mean difference -21.44) and less blood loss (SMD -9.64) with the stapler device, alongside lower postoperative pain and better cosmetic results (odds ratio 8.77 for superior penile appearance). [4] One prospective trial found operative time averaged 6.8 minutes versus 24.2 minutes for conventional methods, with blood loss of 1.8 mL versus 9.4 mL. [7]
+
+Broader comparisons with other device-based techniques show stapler circumcision belongs to the crush-based category (alongside the Shang Ring), which generally offers greater reductions in operative time (approximately 18 minutes less than conventional) compared to ligature-based methods like PrePex. [8] The Shang Ring achieves similar hemostasis through tissue crushing and ring detachment without staples, while PrePex relies on an elastic ring for necrosis and may involve more pain during removal. [8]
+
+Patient satisfaction tends to be slightly higher with device-based methods overall, including stapler circumcision, though direct head-to-head comparisons between specific devices remain limited. [8] Stapler circumcision uniquely employs removable titanium staples for wound closure, distinguishing it from suture-based conventional methods and non-staple devices like Shang Ring or PrePex. [4]
+
+## Procedure
+
+### Indications and patient selection
+
+Stapler circumcision, also known as circumcision using a disposable anastomotic stapler, is indicated primarily for the treatment of redundant prepuce (preputial redundancy) and phimosis, which are among the most common penile conditions requiring circumcision. [4] [9]
+
+Patient selection requires careful assessment to confirm suitability and exclude cases at higher risk of complications. The procedure is generally appropriate for patients with normal penile anatomy who lack severe preputial adhesions, glans or foreskin deformity, occult penis, active infection or edema of the foreskin or glans, penile cancer, uncontrolled diabetes, bleeding tendencies, hypoproteinemia, severe cardiovascular disease, or recent use of anticoagulant medications. [10]
+
+Exclusion criteria commonly include abnormalities of the genitalia, urinary tract infection, blood coagulation dysfunction, and diabetes, as these factors increase procedural risks or compromise healing. [4] [9]
+
+The device is suitable for children and adults, with different models available to accommodate varying penile sizes. [10]
+
+### Surgical technique
+
+Stapler circumcision is typically performed under local anesthesia and takes approximately 10 to 20 minutes to complete. [11] [12]
+
+The procedure begins with measurement of the penis just below the glans to determine the appropriate size of the disposable circular stapler device. The surgical site is disinfected with povidone-iodine, followed by administration of local anesthesia through a dorsal penile nerve block and circumferential block using 1% lidocaine. [7]
+
+The inner bell of the stapler is positioned inside the foreskin to cover and protect the glans, with its edge aligned at the level of the coronal sulcus. In cases of severe phimosis, a dorsal slit may be made to enable proper placement of the inner bell. The outer bell is then placed over the inner bell after removal of safety features, while preserving the frenulum. The screw mechanism is rotated clockwise to tightly sandwich the foreskin between the inner and outer bells. [7]
+
+The handles are triggered to simultaneously excise the foreskin using a circular blade and close the resulting wound with a row of staples for immediate hemostasis. The device is unscrewed and removed, and the staple line is inspected. Any minor bleeding is controlled by applying gentle pressure with gauze for 1 to 2 minutes. The staples, often made of titanium, secure the wound edges in a single step. [7] [13]
+
+### Instruments and materials
+
+The primary instrument in stapler circumcision is the disposable anastomotic stapler (包皮吻合器), a single-use, sterile medical device that integrates a circular cutting blade, a staple cartridge, and a circumferential stapling mechanism to simultaneously excise the foreskin and close the wound. [14] [15]
+
+The device features a ring-type clamp and is available in multiple diameters, typically ranging from 12 mm to 32 mm, to match varying patient anatomy.
+
+The stapler cartridge contains titanium staples arranged in a single circumferential row, with the number of staples varying by model and size (commonly 6 to 20 in some designs), and a typical staple height of 3 mm. [16] [17] [18]
+
+Titanium is selected for the staples due to its excellent biocompatibility, corrosion resistance, and non-reactive properties in tissue. [19]
+
+Ancillary materials and instruments include sizing rings or measuring tapes to determine the appropriate stapler diameter by assessing the glans and foreskin dimensions prior to selection.
+
+The stapler body is commonly constructed from medical-grade plastic.
+
+## Recovery and aftercare
+
+### Immediate postoperative period
+
+In the immediate postoperative period following stapler circumcision, patients are typically observed for at least 30 minutes after the procedure to confirm hemostasis, absence of active bleeding, and normal urination before discharge. [20] A pressure or compression bandage is applied to the surgical site to control minor bleeding, reduce swelling, and promote hemostasis. [20] [7] [12]
+
+The bandage is generally kept in place for 24-48 hours or up to 3 days, during which time the incision must be kept dry and clean to prevent contamination or complications. [20] [12] Mild pain or discomfort is common as local anesthesia subsides, typically within 1-2 hours postoperatively, and is managed with oral analgesics or painkillers as needed. [20] [12]
+
+The first dressing change usually occurs after 24-72 hours, allowing for inspection of the staple line for signs of adequate hemostasis, excessive swelling, oozing, or other early issues. [20] During this period, patients are advised to avoid erections to minimize wound pain or disruption. [20]
+
+### Staple detachment timeline
+
+In stapler circumcision, the titanium staples used to approximate the skin edges and close the wound often detach spontaneously for many staples as the healing process progresses and the tissue remodels, though complete spontaneous detachment of all staples is not typical.
+
+Staples typically begin to fall off spontaneously around 10-14 days after surgery. In many patients, a significant portion of staples fall off within 1 month (e.g., 95% in one study), but residual staples commonly require manual removal by a healthcare provider (required in 88% of cases in one prospective trial). [7]
+
+As staples detach, the circumcision site often develops scabs at the former staple locations, and patients may observe minor spotting or small amounts of bleeding where individual staples have come out. This is considered a normal part of the process.
+
+### Activity restrictions and wound care
+
+Following stapler circumcision, patients are advised to avoid sexual activities and sexual stimulation for approximately one month to prevent complications such as wound pain, tearing, bleeding, or delayed healing caused by erections. Morning or involuntary erections may cause discomfort due to stretching of the wound tissue or pressure from swelling on the titanium staples; patients are instructed to avoid stimuli that may provoke them. Strenuous physical activities, heavy exercise, running, sports, and swimming should be avoided for at least half a month to one month, with rest recommended for the first three to four days and limited activity thereafter to prevent loosening of bandages, hematoma, or bleeding.
+
+Wound care involves keeping the incision clean and dry for the first three days, with pressure bandaging applied initially to control swelling and minor bleeding; the bandage can typically be removed after three days unless otherwise instructed. Gentle cleaning during showering after the initial period is permitted, but harsh rubbing or soap on the wound should be avoided to prevent irritation. Patients should wear loose-fitting underwear or clothing to minimize friction and pressure on the surgical site. A light, nutritious diet high in protein is recommended to support healing, while alcohol, spicy foods, and irritants should be avoided.
+
+These restrictions aid in proper healing and minimize complications during the staple detachment process, which often begins around 10-14 days post-surgery but frequently requires professional removal of residual staples for complete resolution. Patients should follow specific postoperative instructions from their healthcare provider and seek prompt medical attention for signs of complications such as excessive bleeding or severe swelling. [7]
+
+## Advantages
+
+### Cosmetic and functional outcomes
+
+Stapler circumcision typically yields favorable cosmetic outcomes characterized by a uniform, clean circumferential incision line and minimal visible scarring. The device's mechanism of simultaneous tissue excision and stapling with titanium staples ensures consistent staple placement and even wound approximation, contributing to a predictable and aesthetically pleasing result once the staples detach and the wound heals completely. [4]
+
+A systematic review and meta-analysis of randomized controlled trials, primarily from China where the technique is prevalent, found that patients undergoing circumcision with a disposable circumcision suture device (equivalent to stapler circumcision) reported significantly higher satisfaction with cosmetic penile appearance than those undergoing conventional circumcision (odds ratio 8.77, 95% CI [5.90, 13.02], P < 0.00001). This improved satisfaction is attributed to standardized suture spacing, reduced irregularity in wound closure, and decreased postoperative edema, all of which enhance the final appearance. [4]
+
+Individual studies reinforce these findings; for example, in one clinical investigation of a novel circumcision stapler device, all enrolled patients expressed satisfaction with postoperative penile cosmesis, with no excessive foreskin removal or prolonged edema observed. [2]
+
+Functional outcomes are generally positive, with the procedure preserving normal penile anatomy and function, including micturition and erectile capability, in the absence of significant complications affecting these aspects. The technique allows for selective preservation of the frenulum when clinically indicated or patient-preferred, supporting maintained anatomical integrity. Patient satisfaction encompasses both aesthetic and overall functional recovery, with high rates reported in regions where stapler circumcision predominates. [4] [2]
+
+### Operative time and blood loss
+
+Stapler circumcision is characterized by a notably short operative time and minimal intraoperative blood loss, primarily due to the device's ability to simultaneously excise the foreskin and apply a circular row of titanium staples for immediate hemostasis.
+
+Studies report mean operative times typically ranging from approximately 6 to 8 minutes. In a prospective randomized clinical trial involving adult patients, the mean operative time for stapler circumcision was 6.8 ± 3.1 minutes, compared to 24.2 ± 3.2 minutes for conventional circumcision (P < 0.01) [1]. Similar findings from other comparative studies include mean times of 7.1 ± 1.4 minutes for stapler circumcision versus 22.6 ± 4.6 minutes for conventional methods, as well as 6.52 ± 2.45 minutes for the stapler approach versus 28.36 ± 4.22 minutes for traditional circumcision (P < 0.05 in both cases) [21] [22].
+
+Intraoperative blood loss is correspondingly low, usually in the range of 1–3 mL. The same randomized trial recorded mean blood loss of 1.8 ± 1.8 mL with the stapler versus 9.4 ± 1.5 mL with conventional circumcision (P < 0.01) [1]. Other reports show comparable results, such as 2.3 ± 1.3 mL for stapler circumcision versus 15.6 ± 2.9 mL conventionally, and 1.93 ± 0.82 mL versus 9.52 ± 3.29 mL for traditional methods (P < 0.05) [21] [22].
+
+These intraoperative efficiencies distinguish stapler circumcision from conventional scalpel techniques (see Conventional scalpel circumcision).
+
+### Pain and healing profile
+
+Postoperative pain following stapler circumcision is typically mild to moderate. Pain levels are generally lower than with conventional methods in the immediate postoperative period, with reported visual analog scale scores of approximately 4.0 ± 0.9 one hour after surgery. [7]
+
+The healing process involves the natural detachment of the titanium staples used to close the wound. Staples usually begin to fall off spontaneously around 10 days postoperatively, with detachment (at least partial) occurring within one month in approximately 95% of patients. However, the majority of patients (approximately 88% in the cited study) require manual removal of residual staples by a clinician. Mild foreskin edema commonly resolves within two weeks, though severe edema can persist for one to three months. [7]
+
+This stapled closure supports relatively rapid healing and facilitates an earlier return to normal activities compared to methods requiring suture removal or prolonged tissue necrosis. Patients are advised to avoid sexual intercourse and masturbation for at least 4 weeks after circumcision to minimize potential wound disruption. [7]
+
+## Complications and risks
+
+### Early complications
+
+Early complications of stapler circumcision are generally infrequent and less common than those associated with conventional circumcision, with overall rates reported around 2.7% in large prospective studies. [7]
+
+Common early complications, occurring within the first 2 weeks postoperatively, include mild foreskin edema (present in most patients but typically resolving within 2 weeks), postoperative bleeding requiring intervention (approximately 1.1% of cases), and wound infection (managed with oral antibiotics and without high reported incidence). Severe edema, defined as involving more than 30% of the penile shaft perimeter, occurs in about 1.1% of patients. Wound dehiscence is rare, with zero cases reported in some cohorts of over 400 patients. Staple line ischemia is not commonly documented as an early issue with this technique, likely due to the simultaneous cutting and stapling that minimizes tissue necrosis compared to methods relying on delayed ischemia. [7] [7] [7]
+
+Other occasional findings include local ecchymosis, though rates vary across studies and are not consistently elevated. [21]
+
+Adherence to postoperative activity restrictions, such as avoiding erections during early recovery, helps minimize risks like bleeding or wound disruption. (See Activity restrictions and wound care.) [7]
+
+### Delayed complications
+
+Delayed complications of stapler circumcision are uncommon, with large studies reporting low rates of issues persisting beyond the initial recovery period. The primary concern involves residual titanium staples that fail to detach spontaneously, frequently requiring manual removal by a surgeon within the first month postoperatively. In a prospective randomized trial of 441 patients undergoing stapler circumcision, staples fell off spontaneously within 1 month in 95% of patients, with spontaneous shedding typically beginning around 10 days after surgery; however, 88% required removal of residual staples. [7]
+
+Severe edema persisting for 1 to 3 months was observed in approximately 1.1% of cases in the same study. [7]
+
+Long-term follow-up (up to 3 months for all patients and 1 year for a subset) has shown no instances of meatal stenosis, skin bridging, penile deformities, or other significant delayed complications such as persistent staples beyond the removal window or staple extrusion. [7] Comparative studies in pediatric populations similarly report no wound adhesions at 1-month follow-up in the stapler group (0%), in contrast to occasional cases in conventional circumcision. [23]
+
+Rare delayed infections or bleeding may occur but are infrequently documented as major issues in the stapler method, with overall complication rates remaining lower than in conventional techniques. [7]
+
+### Management of complications
+
+Management of complications in stapler circumcision primarily involves conservative approaches for minor issues and surgical intervention for more severe cases. Mild postoperative edema, a common occurrence, is typically managed conservatively with compression using gauze or self-adhesive elastic bandages, leading to resolution in most patients. [24] Severe edema is observed less frequently and often resolves spontaneously within 1 to 3 months without specific intervention beyond observation. [7]
+
+Postoperative bleeding is addressed initially with local compression bandages or gauze pressure; if persistent, it may require suture closure of bleeding points or, in cases of significant hematoma, secondary surgical evacuation. [7] [24] Infections, when they occur, are treated with oral antibiotics such as levofloxacin. [7] Residual titanium staples that do not detach spontaneously are removed surgically by a clinician, typically within 1 month postoperatively, as a procedure-specific intervention. [7]
+
+Analgesics may be used for pain control as needed, though pain is generally reported as mild. Adherence to activity restrictions and proper wound care, as outlined in postoperative guidelines, helps prevent escalation of complications such as bleeding or delayed healing. Patients should seek emergency medical attention for signs of severe bleeding, uncontrolled pain, increasing swelling unresponsive to conservative measures, or evidence of infection such as fever or purulent discharge. [7] [24]
+
+## Comparison with other circumcision methods
+
+### Conventional scalpel circumcision
+
+Conventional scalpel circumcision, also known as freehand circumcision, is the traditional surgical method for removing the foreskin using a scalpel and manual suturing, without reliance on specialized devices. [25]
+
+The procedure typically involves retracting the foreskin to expose the glans and separating any adhesions. The surgeon marks incision lines on the inner and outer preputial layers, often beginning with a dorsal slit at the 12 o'clock position to facilitate access. Circumferential incisions are made with a scalpel to excise the foreskin, leaving a cuff of inner mucosal tissue. Bleeding vessels are controlled through ligation, electrocautery, or clipping. The remaining skin edges are then approximated using multiple interrupted absorbable sutures, commonly 4-0 or similar, placed circumferentially to achieve hemostasis and alignment. [26] [27]
+
+Variations include the sleeve resection technique, where two parallel circumferential markings are placed proximal to the corona, connected by a longitudinal incision, and the resulting sleeve of foreskin is removed before suturing. [25]
+
+This method requires greater operative time—often 15–25 minutes or more—higher intraoperative blood loss, and placement of multiple sutures compared to stapler circumcision, which achieves cutting and closure in a single step. [27] [25]
+
+### Other device-based techniques
+
+Other device-based techniques
+
+Other device-based circumcision techniques include the Shang Ring, PrePex, and Alisklamp (also known as Ali’s clamp), which employ mechanical compression rather than stapling to achieve hemostasis and foreskin removal. These devices differ from stapler circumcision, which uses a circular stapler to simultaneously excise tissue and apply titanium staples for immediate wound closure. [28] [29] [30]
+
+The Shang Ring consists of two concentric plastic rings: an inner ring placed at the coronal sulcus with a silicone-lined groove and an outer hinged ring secured with a ratchet closure. After everting the foreskin over the inner ring and applying the outer ring, the foreskin is compressed to occlude blood flow, excess tissue is excised with scissors, and small slits are made to aid healing. No staples or sutures are used; hemostasis relies on mechanical pressure. The device remains in place for seven days to allow tissue necrosis, after which the outer ring is broken open, the inner ring cut and removed, and the wound bandaged. [28]
+
+The PrePex device is a nonsurgical elastic collar compression system with an outer elastic ring and inner hard surface that compresses the foreskin between them, occluding circulation and inducing necrosis over seven days without initial excision or injected anesthesia. The device is placed in minutes, left in situ, and removed on day seven by cutting away the necrotic foreskin with scissors, allowing healing by secondary intention. Unlike stapler circumcision, it involves no cutting during application and no staples. [29]
+
+The Alisklamp uses a plastic clamp with an inner tube placed over the glans and an outer ring locked over the retracted foreskin. The foreskin distal to the outer ring is excised with a blade, and the clamp is left in place for 48–96 hours to control bleeding through compression before removal, often aided by oil application. No staples are employed, and the technique avoids suturing. [30]
+
+These methods share the absence of staples and reliance on prolonged compression or necrosis, contrasting with the stapler approach's single-step cutting and stapling. [28] [29] [30]
+
+### Evidence from comparative studies
+
+Multiple comparative studies, primarily from China, have investigated stapler circumcision (using disposable anastomotic staplers with titanium staples) against conventional scalpel circumcision, Shang Ring, foreskin cerclage, disposable prepuce ligators, and other suture devices. These studies generally report advantages for stapler circumcision in operative efficiency and certain safety parameters, though results vary by comparator and patient population. [6] [3] [22]
+
+A prospective comparative study of three devices in adults with redundant prepuce or phimosis found the disposable titanium nail stapler superior to both a double-handle suture device and Shang Ring, with significantly lower intraoperative and postoperative pain (VAS scores), fewer complications, and equivalent patient satisfaction with penile appearance despite longer operative times than Shang Ring in some metrics. [6] Another retrospective analysis of 327 patients showed stapler circumcision had shorter operative times (approximately 9-10 minutes versus 36 minutes for traditional methods), reduced blood loss (around 2 ml versus 14 ml), lower pain scores, higher patient satisfaction with appearance, and lower rates of hematoma, infection, dehiscence, and edema compared to traditional surgery and prepuce ligation. [3]
+
+In a separate comparison involving circumcision stapler, foreskin cerclage, and traditional circumcision, the stapler method demonstrated shorter operative times (around 6-7 minutes versus 28 minutes for traditional), minimal blood loss (around 2 ml versus 9 ml), lower intraoperative pain, and fewer overall postoperative complications (5% versus 14% for cerclage), though postoperative pain was comparable to traditional methods. [22] In pediatric patients, stapler circumcision reduced operative time, bleeding, and rebleeding compared to traditional methods but showed longer wound healing and higher edge swelling in some cases, with no differences in pain, infection, or aesthetic satisfaction. [31]
+
+Prospective randomized trials have similarly indicated stapler circumcision as time-efficient and safe relative to conventional techniques, with benefits in operative speed and reduced blood loss, though some require further refinement for optimal outcomes. [7]
+
+The existing evidence base has limitations, including a predominance of retrospective or single-center Chinese studies, relatively small sample sizes in many trials, and limited long-term follow-up beyond early recovery. Few high-quality international multicenter randomized controlled trials exist, and direct meta-analyses specifically on anastomotic stapler devices remain scarce, underscoring the need for larger, more robust studies to confirm generalizability.
+
+## History and development
+
+### Origin and introduction in China
+
+Stapler circumcision was developed in China during the late 2000s, adapting principles from circular stapling devices used in gastrointestinal surgery to enable simultaneous foreskin excision and stapled wound closure in a single step.
+
+Introduction into clinical practice occurred in the early 2010s, supported by initial investigations and trials in China. A clinical study published in 2014 (based on procedures likely conducted earlier) at Peking University First Hospital evaluated the Circular Cutter with Stapled Anastomosis for Circumcision (CCSAC/Lang He®), a stapler device invented in 2009, in 62 adult patients. It demonstrated an average operative time of 7.7 minutes and a low complication rate of 4.8% (3 cases: 1 intraoperative bleeding, 2 delayed staple fallout), with the device using 18 stainless steel staples for anastomosis. [32]
+
+These early studies on stapler devices established the technique's feasibility and safety in Chinese medical practice, facilitating wider adoption.
+
+### Adoption and standardization
+
+Stapler circumcision has been rapidly adopted in Chinese hospitals since the commercial development of the disposable anastomotic stapler (also known as the circular stapler or disposable circumcision suture device, DCSD) in the late 2000s and early 2010s. The device, pioneered in China and marketed by companies such as Henry Medical Device Company, was applied in multiple urological departments, with prospective trials conducted across several hospitals between 2013 and 2014 demonstrating its feasibility in clinical settings. [7] [4]
+
+The simplicity of the stapler, which performs cutting and stapling in a single mechanical step, has facilitated its spread by requiring minimal training for providers and enabling use in high-volume environments. This design reduces the influence of individual surgeon experience, promoting greater consistency in outcomes compared to conventional methods. [7] [4]
+
+Clinical studies and meta-analyses of randomized controlled trials conducted exclusively in China have supported its advantages—such as shorter operative times, reduced blood loss, and fewer complications—contributing to its integration into routine urological practice across participating institutions. The mechanical standardization inherent to the device has been noted as a key factor in facilitating more uniform procedures. [7] [4]
+
+### Current status and variations
+
+Stapler circumcision is a commonly used technique for male circumcision in China, employed in hospitals for both adult and pediatric procedures. Its use stems from its standardized, efficient design, which enables a quick single-step operation.
+
+The procedure employs a disposable circular anastomotic stapler that simultaneously excises the foreskin and secures the wound edges with a ring of titanium staples, distinguishing it from other device-based methods such as the Shang Ring clamp.
+
+Variations exist in stapler models from domestic manufacturers. Preoperative sizing involves selecting an appropriate device diameter based on penile dimensions to ensure optimal fit and tissue alignment without altering the fundamental mechanism.
+
+## References
+
+## See also
+
+## External links
