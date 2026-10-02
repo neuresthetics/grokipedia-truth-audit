@@ -1,6 +1,6 @@
 # Sophistry scan reproducibility: run 1 vs run 2 (58 Grokipedia snapshots, 2026-10-01)
 
-**Compared:** run 1 (`articles/*/analyses/2026-10-01/sophistry_scan.md` in `/workspace/gta_repo`) and run 2 (`flags.csv`).
+**Compared:** run 1 (`articles/*/analyses/2026-10-01/sophistry_scan.md`) and run 2 (`flags.csv`).
 **Method (both runs):** substance_lens v0.5.9 `fallacyScanPass` (67 kept F-IDs), both sides, the article's own voice only, no outside fact-checking.
 **Every number below comes from `compare.py`** (output in `comparison.json`; tables in `tables.md`). The flags themselves are judgment calls by a model in both runs, not measurements.
 

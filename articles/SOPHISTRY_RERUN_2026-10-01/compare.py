@@ -14,7 +14,8 @@ Writes comparison.json and prints the tables. Read-only on the repo (no bytecode
 import csv, json, os, re, sys
 from collections import Counter, defaultdict
 sys.dont_write_bytecode = True
-REPO = '/workspace/gta_repo'
+import os
+REPO = os.environ.get('REPO', os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 ART = f'{REPO}/articles'
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATE = '2026-10-01'
