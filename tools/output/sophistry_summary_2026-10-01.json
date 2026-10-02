@@ -1,0 +1,914 @@
+[
+ {
+  "n": 1,
+  "title": "Circumcision",
+  "slug": "circumcision",
+  "flags": 14,
+  "side": {
+   "pro": 12,
+   "anti": 2
+  },
+  "fgm": false,
+  "top": "F036 Suppressed Evidence; F040 Loaded Language (3) (tie)",
+  "lean": "pro",
+  "uncited": 116,
+  "sentences": 384,
+  "dangling": 1
+ },
+ {
+  "n": 2,
+  "title": "Circumcision and HIV",
+  "slug": "circumcision-and-hiv",
+  "flags": 8,
+  "side": {
+   "pro": 7,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F036 Suppressed Evidence; F040 Loaded Language (2) (tie)",
+  "lean": "pro",
+  "uncited": 44,
+  "sentences": 216,
+  "dangling": 0
+ },
+ {
+  "n": 3,
+  "title": "Circumcision and law",
+  "slug": "circumcision-and-law",
+  "flags": 6,
+  "side": {
+   "pro": 5,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F040 Loaded Language (3)",
+  "lean": "pro",
+  "uncited": 82,
+  "sentences": 320,
+  "dangling": 1
+ },
+ {
+  "n": 4,
+  "title": "Circumcision controversies",
+  "slug": "circumcision-controversies",
+  "flags": 15,
+  "side": {
+   "pro": 13,
+   "anti": 2
+  },
+  "fgm": false,
+  "top": "F032 Cum Hoc; F061 Is-Ought Jump; F073 McNamara Fallacy (2) (tie)",
+  "lean": "pro",
+  "uncited": 42,
+  "sentences": 180,
+  "dangling": 0
+ },
+ {
+  "n": 5,
+  "title": "Circumcision controversy in early Christianity",
+  "slug": "circumcision-controversy-in-early-christianity",
+  "flags": 5,
+  "side": {
+   "neu": 5
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority (2)",
+  "lean": "neu",
+  "uncited": 32,
+  "sentences": 161,
+  "dangling": 0
+ },
+ {
+  "n": 6,
+  "title": "Circumcision in Africa",
+  "slug": "circumcision-in-africa",
+  "flags": 6,
+  "side": {
+   "pro": 6
+  },
+  "fgm": false,
+  "top": "F001 Ad Hominem; F003 Red Herring; F026 Poisoning the Well; F040 Loaded Language; F056 Exception Fallacy; F075 Appeal to Consequences (tie)",
+  "lean": "pro",
+  "uncited": 55,
+  "sentences": 223,
+  "dangling": 0
+ },
+ {
+  "n": 7,
+  "title": "Circumcision in Brunei",
+  "slug": "circumcision-in-brunei",
+  "flags": 1,
+  "side": {
+   "pro": 1
+  },
+  "fgm": false,
+  "top": "F022 Accident",
+  "lean": "pro",
+  "uncited": 19,
+  "sentences": 42,
+  "dangling": 0
+ },
+ {
+  "n": 8,
+  "title": "Circumcision in China",
+  "slug": "circumcision-in-china",
+  "flags": 2,
+  "side": {
+   "neu": 1,
+   "pro": 1
+  },
+  "fgm": false,
+  "top": "F022 Accident; F033 Causal Oversimplification (tie)",
+  "lean": "mixed (pro/neu tie)",
+  "uncited": 18,
+  "sentences": 55,
+  "dangling": 0
+ },
+ {
+  "n": 9,
+  "title": "Circumcision in the Bible",
+  "slug": "circumcision-in-the-bible",
+  "flags": 3,
+  "side": {
+   "neu": 3
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority; F011 Hasty Generalization; F036 Suppressed Evidence (tie)",
+  "lean": "neu",
+  "uncited": 34,
+  "sentences": 100,
+  "dangling": 0
+ },
+ {
+  "n": 10,
+  "title": "Circumcision of Jesus",
+  "slug": "circumcision-of-jesus",
+  "flags": 3,
+  "side": {
+   "neu": 3
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority; F005 Appeal to Popularity; F010 Appeal to Ignorance (tie)",
+  "lean": "neu",
+  "uncited": 22,
+  "sentences": 145,
+  "dangling": 0
+ },
+ {
+  "n": 11,
+  "title": "Circumcision surgical procedure",
+  "slug": "circumcision-surgical-procedure",
+  "flags": 4,
+  "side": {
+   "pro": 2,
+   "neu": 1,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority; F011 Hasty Generalization; F020 Division; F032 Cum Hoc (tie)",
+  "lean": "pro",
+  "uncited": 72,
+  "sentences": 260,
+  "dangling": 4
+ },
+ {
+  "n": 12,
+  "title": "Cost of circumcision surgery in Chaozhou",
+  "slug": "cost-of-circumcision-surgery-in-chaozhou",
+  "flags": 2,
+  "side": {
+   "pro": 1,
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F005 Appeal to Popularity; F040 Loaded Language (tie)",
+  "lean": "mixed (pro/neu tie)",
+  "uncited": 46,
+  "sentences": 115,
+  "dangling": 0
+ },
+ {
+  "n": 13,
+  "title": "Cultural views on circumcision aesthetics",
+  "slug": "cultural-views-on-circumcision-aesthetics",
+  "flags": 3,
+  "side": {
+   "pro": 1,
+   "anti": 1,
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F011 Hasty Generalization (2)",
+  "lean": "mixed (pro/anti/neu tie)",
+  "uncited": 28,
+  "sentences": 96,
+  "dangling": 0
+ },
+ {
+  "n": 14,
+  "title": "Ethics of circumcision",
+  "slug": "ethics-of-circumcision",
+  "flags": 11,
+  "side": {
+   "pro": 11
+  },
+  "fgm": false,
+  "top": "F026 Poisoning the Well; F042 False Analogy (2) (tie)",
+  "lean": "pro",
+  "uncited": 43,
+  "sentences": 242,
+  "dangling": 0
+ },
+ {
+  "n": 15,
+  "title": "Feast of the Circumcision of Christ",
+  "slug": "feast-of-the-circumcision-of-christ",
+  "flags": 1,
+  "side": {
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority",
+  "lean": "neu",
+  "uncited": 57,
+  "sentences": 138,
+  "dangling": 0
+ },
+ {
+  "n": 16,
+  "title": "Forced circumcision",
+  "slug": "forced-circumcision",
+  "flags": 6,
+  "side": {
+   "anti": 5,
+   "pro": 1
+  },
+  "fgm": false,
+  "top": "F003 Red Herring; F026 Poisoning the Well; F033 Causal Oversimplification; F034 False Cause; F040 Loaded Language; F041 False Equivalence (tie)",
+  "lean": "anti",
+  "uncited": 37,
+  "sentences": 220,
+  "dangling": 0
+ },
+ {
+  "n": 17,
+  "title": "Forced circumcision of minors in South Korea",
+  "slug": "forced-circumcision-of-minors-in-south-korea",
+  "flags": 3,
+  "side": {
+   "anti": 1,
+   "neu": 2
+  },
+  "fgm": false,
+  "top": "F041 False Equivalence (2)",
+  "lean": "neu",
+  "uncited": 12,
+  "sentences": 47,
+  "dangling": 0
+ },
+ {
+  "n": 18,
+  "title": "History of circumcision",
+  "slug": "history-of-circumcision",
+  "flags": 4,
+  "side": {
+   "pro": 2,
+   "anti": 1,
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority; F032 Cum Hoc; F033 Causal Oversimplification; F034 False Cause (tie)",
+  "lean": "pro",
+  "uncited": 34,
+  "sentences": 180,
+  "dangling": 0
+ },
+ {
+  "n": 19,
+  "title": "Khitan (circumcision)",
+  "slug": "khitan-circumcision",
+  "flags": 4,
+  "side": {
+   "pro": 3,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F026 Poisoning the Well (2)",
+  "lean": "pro",
+  "uncited": 32,
+  "sentences": 178,
+  "dangling": 0
+ },
+ {
+  "n": 20,
+  "title": "Prevalence of circumcision",
+  "slug": "prevalence-of-circumcision",
+  "flags": 3,
+  "side": {
+   "pro": 2,
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F031 Post Hoc; F034 False Cause; F036 Suppressed Evidence (tie)",
+  "lean": "pro",
+  "uncited": 58,
+  "sentences": 185,
+  "dangling": 0
+ },
+ {
+  "n": 21,
+  "title": "Prohibition of Female Circumcision Act 1985",
+  "slug": "prohibition-of-female-circumcision-act-1985",
+  "flags": 5,
+  "side": {
+   "pro": 1,
+   "anti": 1,
+   "neu": 3
+  },
+  "fgm": true,
+  "top": "F002 Straw Man; F033 Causal Oversimplification; F034 False Cause; F040 Loaded Language; F061 Is-Ought Jump (tie)",
+  "lean": "neu",
+  "uncited": 34,
+  "sentences": 122,
+  "dangling": 0
+ },
+ {
+  "n": 22,
+  "title": "Religion and circumcision",
+  "slug": "religion-and-circumcision",
+  "flags": 3,
+  "side": {
+   "pro": 2,
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority; F026 Poisoning the Well; F040 Loaded Language (tie)",
+  "lean": "pro",
+  "uncited": 54,
+  "sentences": 178,
+  "dangling": 0
+ },
+ {
+  "n": 23,
+  "title": "Stapler circumcision",
+  "slug": "stapler-circumcision",
+  "flags": 2,
+  "side": {
+   "neu": 2
+  },
+  "fgm": false,
+  "top": "F011 Hasty Generalization; F034 False Cause (tie)",
+  "lean": "neu",
+  "uncited": 79,
+  "sentences": 160,
+  "dangling": 0
+ },
+ {
+  "n": 24,
+  "title": "Views on circumcision",
+  "slug": "views-on-circumcision",
+  "flags": 8,
+  "side": {
+   "pro": 7,
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F003 Red Herring; F040 Loaded Language (2) (tie)",
+  "lean": "pro",
+  "uncited": 32,
+  "sentences": 151,
+  "dangling": 112
+ },
+ {
+  "n": 25,
+  "title": "Ashley Montagu Resolution",
+  "slug": "ashley-montagu-resolution",
+  "flags": 9,
+  "side": {
+   "pro": 7,
+   "anti": 2
+  },
+  "fgm": false,
+  "top": "F040 Loaded Language (4)",
+  "lean": "pro",
+  "uncited": 40,
+  "sentences": 189,
+  "dangling": 0
+ },
+ {
+  "n": 26,
+  "title": "Brit milah",
+  "slug": "brit-milah",
+  "flags": 7,
+  "side": {
+   "pro": 6,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F040 Loaded Language (2)",
+  "lean": "pro",
+  "uncited": 47,
+  "sentences": 281,
+  "dangling": 0
+ },
+ {
+  "n": 27,
+  "title": "Children Act 1989 (Amendment) (Female Genital Mutilation) Act 2019",
+  "slug": "children-act-1989-amendment-female-genital-mutilation-act-2019",
+  "flags": 2,
+  "side": {
+   "neu": 1,
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F031 Post Hoc; F061 Is-Ought Jump (tie)",
+  "lean": "mixed (anti/neu tie)",
+  "uncited": 10,
+  "sentences": 106,
+  "dangling": 1
+ },
+ {
+  "n": 28,
+  "title": "Clitoridectomy",
+  "slug": "clitoridectomy",
+  "flags": 4,
+  "side": {
+   "anti": 4
+  },
+  "fgm": true,
+  "top": "F020 Division; F032 Cum Hoc; F034 False Cause; F061 Is-Ought Jump (tie)",
+  "lean": "anti",
+  "uncited": 30,
+  "sentences": 204,
+  "dangling": 0
+ },
+ {
+  "n": 29,
+  "title": "Female genital mutilation",
+  "slug": "female-genital-mutilation",
+  "flags": 7,
+  "side": {
+   "pro": 3,
+   "anti": 3,
+   "neu": 1
+  },
+  "fgm": true,
+  "top": "F003 Red Herring; F011 Hasty Generalization; F026 Poisoning the Well; F032 Cum Hoc; F034 False Cause; F040 Loaded Language; F056 Exception Fallacy (tie)",
+  "lean": "mixed (pro/anti tie)",
+  "uncited": 134,
+  "sentences": 291,
+  "dangling": 73
+ },
+ {
+  "n": 30,
+  "title": "Female Genital Mutilation Act 2003",
+  "slug": "female-genital-mutilation-act-2003",
+  "flags": 5,
+  "side": {
+   "pro": 1,
+   "anti": 2,
+   "neu": 2
+  },
+  "fgm": true,
+  "top": "F001 Ad Hominem; F003 Red Herring; F004 Appeal to Authority; F033 Causal Oversimplification; F061 Is-Ought Jump (tie)",
+  "lean": "mixed (anti/neu tie)",
+  "uncited": 42,
+  "sentences": 200,
+  "dangling": 0
+ },
+ {
+  "n": 31,
+  "title": "Female genital mutilation in India",
+  "slug": "female-genital-mutilation-in-india",
+  "flags": 5,
+  "side": {
+   "pro": 2,
+   "anti": 2,
+   "neu": 1
+  },
+  "fgm": true,
+  "top": "F010 Appeal to Ignorance; F022 Accident; F034 False Cause; F040 Loaded Language; F080 Nirvana Fallacy (tie)",
+  "lean": "mixed (pro/anti tie)",
+  "uncited": 35,
+  "sentences": 201,
+  "dangling": 1
+ },
+ {
+  "n": 32,
+  "title": "Female genital mutilation in New Zealand",
+  "slug": "female-genital-mutilation-in-new-zealand",
+  "flags": 7,
+  "side": {
+   "neu": 4,
+   "pro": 1,
+   "anti": 2
+  },
+  "fgm": true,
+  "top": "F034 False Cause (2)",
+  "lean": "neu",
+  "uncited": 27,
+  "sentences": 121,
+  "dangling": 0
+ },
+ {
+  "n": 33,
+  "title": "Female genital mutilation in Nigeria",
+  "slug": "female-genital-mutilation-in-nigeria",
+  "flags": 5,
+  "side": {
+   "anti": 2,
+   "neu": 2,
+   "pro": 1
+  },
+  "fgm": true,
+  "top": "F032 Cum Hoc (2)",
+  "lean": "mixed (anti/neu tie)",
+  "uncited": 33,
+  "sentences": 154,
+  "dangling": 0
+ },
+ {
+  "n": 34,
+  "title": "Female genital mutilation in Sudan",
+  "slug": "female-genital-mutilation-in-sudan",
+  "flags": 4,
+  "side": {
+   "neu": 3,
+   "pro": 1
+  },
+  "fgm": true,
+  "top": "F010 Appeal to Ignorance; F031 Post Hoc; F033 Causal Oversimplification; F040 Loaded Language (tie)",
+  "lean": "neu",
+  "uncited": 24,
+  "sentences": 215,
+  "dangling": 0
+ },
+ {
+  "n": 35,
+  "title": "Female genital mutilation in the Gambia",
+  "slug": "female-genital-mutilation-in-the-gambia",
+  "flags": 2,
+  "side": {
+   "anti": 1,
+   "neu": 1
+  },
+  "fgm": true,
+  "top": "F040 Loaded Language; F071 Base Rate Neglect (tie)",
+  "lean": "mixed (anti/neu tie)",
+  "uncited": 22,
+  "sentences": 122,
+  "dangling": 0
+ },
+ {
+  "n": 36,
+  "title": "Female genital mutilation in the United Kingdom",
+  "slug": "female-genital-mutilation-in-the-united-kingdom",
+  "flags": 3,
+  "side": {
+   "neu": 3
+  },
+  "fgm": true,
+  "top": "F002 Straw Man; F033 Causal Oversimplification; F034 False Cause (tie)",
+  "lean": "neu",
+  "uncited": 51,
+  "sentences": 168,
+  "dangling": 0
+ },
+ {
+  "n": 37,
+  "title": "Female genital mutilation in the United States",
+  "slug": "female-genital-mutilation-in-the-united-states",
+  "flags": 2,
+  "side": {
+   "neu": 1,
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F003 Red Herring; F040 Loaded Language (tie)",
+  "lean": "mixed (anti/neu tie)",
+  "uncited": 28,
+  "sentences": 187,
+  "dangling": 0
+ },
+ {
+  "n": 38,
+  "title": "Female genital mutilation laws by country",
+  "slug": "female-genital-mutilation-laws-by-country",
+  "flags": 1,
+  "side": {
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F061 Is-Ought Jump",
+  "lean": "anti",
+  "uncited": 71,
+  "sentences": 243,
+  "dangling": 0
+ },
+ {
+  "n": 39,
+  "title": "Foreskin",
+  "slug": "foreskin",
+  "flags": 8,
+  "side": {
+   "pro": 6,
+   "anti": 2
+  },
+  "fgm": false,
+  "top": "F032 Cum Hoc; F036 Suppressed Evidence; F040 Loaded Language (2) (tie)",
+  "lean": "pro",
+  "uncited": 25,
+  "sentences": 225,
+  "dangling": 0
+ },
+ {
+  "n": 40,
+  "title": "Foreskin Man",
+  "slug": "foreskin-man",
+  "flags": 1,
+  "side": {
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F031 Post Hoc",
+  "lean": "neu",
+  "uncited": 15,
+  "sentences": 115,
+  "dangling": 0
+ },
+ {
+  "n": 41,
+  "title": "Foreskin restoration",
+  "slug": "foreskin-restoration",
+  "flags": 2,
+  "side": {
+   "pro": 1,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F003 Red Herring; F040 Loaded Language (tie)",
+  "lean": "mixed (pro/anti tie)",
+  "uncited": 51,
+  "sentences": 210,
+  "dangling": 0
+ },
+ {
+  "n": 42,
+  "title": "Gishiri cutting",
+  "slug": "gishiri-cutting",
+  "flags": 1,
+  "side": {
+   "neu": 1
+  },
+  "fgm": true,
+  "top": "F034 False Cause",
+  "lean": "neu",
+  "uncited": 10,
+  "sentences": 147,
+  "dangling": 0
+ },
+ {
+  "n": 43,
+  "title": "Infibulation",
+  "slug": "infibulation",
+  "flags": 2,
+  "side": {
+   "pro": 1,
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F034 False Cause; F036 Suppressed Evidence (tie)",
+  "lean": "mixed (pro/anti tie)",
+  "uncited": 25,
+  "sentences": 187,
+  "dangling": 0
+ },
+ {
+  "n": 44,
+  "title": "International Day of Zero Tolerance for Female Genital Mutilation",
+  "slug": "international-day-of-zero-tolerance-for-female-genital-mutilation",
+  "flags": 2,
+  "side": {
+   "pro": 1,
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F003 Red Herring; F040 Loaded Language (tie)",
+  "lean": "mixed (pro/anti tie)",
+  "uncited": 18,
+  "sentences": 191,
+  "dangling": 0
+ },
+ {
+  "n": 45,
+  "title": "Meatal stenosis",
+  "slug": "meatal-stenosis",
+  "flags": 2,
+  "side": {
+   "anti": 2
+  },
+  "fgm": false,
+  "top": "F036 Suppressed Evidence; F040 Loaded Language (tie)",
+  "lean": "anti",
+  "uncited": 16,
+  "sentences": 130,
+  "dangling": 0
+ },
+ {
+  "n": 46,
+  "title": "Mohel",
+  "slug": "mohel",
+  "flags": 4,
+  "side": {
+   "pro": 4
+  },
+  "fgm": false,
+  "top": "F003 Red Herring; F011 Hasty Generalization; F026 Poisoning the Well; F032 Cum Hoc (tie)",
+  "lean": "pro",
+  "uncited": 51,
+  "sentences": 181,
+  "dangling": 0
+ },
+ {
+  "n": 47,
+  "title": "Penile subincision",
+  "slug": "penile-subincision",
+  "flags": 3,
+  "side": {
+   "anti": 3
+  },
+  "fgm": false,
+  "top": "F003 Red Herring; F040 Loaded Language; F042 False Analogy (tie)",
+  "lean": "anti",
+  "uncited": 14,
+  "sentences": 115,
+  "dangling": 0
+ },
+ {
+  "n": 48,
+  "title": "Prevalence of female genital mutilation",
+  "slug": "prevalence-of-female-genital-mutilation",
+  "flags": 2,
+  "side": {
+   "neu": 2
+  },
+  "fgm": true,
+  "top": "F032 Cum Hoc (2)",
+  "lean": "neu",
+  "uncited": 36,
+  "sentences": 198,
+  "dangling": 0
+ },
+ {
+  "n": 49,
+  "title": "Religious views on female genital mutilation",
+  "slug": "religious-views-on-female-genital-mutilation",
+  "flags": 3,
+  "side": {
+   "neu": 2,
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F011 Hasty Generalization; F033 Causal Oversimplification; F036 Suppressed Evidence (tie)",
+  "lean": "neu",
+  "uncited": 40,
+  "sentences": 156,
+  "dangling": 0
+ },
+ {
+  "n": 50,
+  "title": "Restoration device",
+  "slug": "restoration-device",
+  "flags": 3,
+  "side": {
+   "anti": 2,
+   "pro": 1
+  },
+  "fgm": false,
+  "top": "F001 Ad Hominem; F011 Hasty Generalization; F033 Causal Oversimplification (tie)",
+  "lean": "anti",
+  "uncited": 66,
+  "sentences": 205,
+  "dangling": 0
+ },
+ {
+  "n": 51,
+  "title": "Ulwaluko",
+  "slug": "ulwaluko",
+  "flags": 5,
+  "side": {
+   "pro": 3,
+   "neu": 2
+  },
+  "fgm": false,
+  "top": "F022 Accident; F027 Genetic Fallacy; F028 Appeal to Tradition; F033 Causal Oversimplification; F040 Loaded Language (tie)",
+  "lean": "pro",
+  "uncited": 20,
+  "sentences": 169,
+  "dangling": 0
+ },
+ {
+  "n": 52,
+  "title": "Women unaffected by female genital cutting",
+  "slug": "women-unaffected-by-female-genital-cutting",
+  "flags": 7,
+  "side": {
+   "pro": 6,
+   "anti": 1
+  },
+  "fgm": true,
+  "top": "F003 Red Herring; F011 Hasty Generalization; F026 Poisoning the Well; F032 Cum Hoc; F034 False Cause; F040 Loaded Language; F042 False Analogy (tie)",
+  "lean": "pro",
+  "uncited": 41,
+  "sentences": 146,
+  "dangling": 0
+ },
+ {
+  "n": 53,
+  "title": "Brit shalom (naming ceremony)",
+  "slug": "brit-shalom-naming-ceremony",
+  "flags": 3,
+  "side": {
+   "pro": 1,
+   "anti": 2
+  },
+  "fgm": false,
+  "top": "F002 Straw Man; F025 Guilt by Association; F040 Loaded Language (tie)",
+  "lean": "anti",
+  "uncited": 36,
+  "sentences": 106,
+  "dangling": 0
+ },
+ {
+  "n": 54,
+  "title": "Holy Prepuce",
+  "slug": "holy-prepuce",
+  "flags": 2,
+  "side": {
+   "neu": 2
+  },
+  "fgm": false,
+  "top": "F004 Appeal to Authority (2)",
+  "lean": "neu",
+  "uncited": 45,
+  "sentences": 117,
+  "dangling": 2
+ },
+ {
+  "n": 55,
+  "title": "Lipodermos",
+  "slug": "lipodermos",
+  "flags": 1,
+  "side": {
+   "neu": 1
+  },
+  "fgm": false,
+  "top": "F058 Presentism",
+  "lean": "neu",
+  "uncited": 36,
+  "sentences": 107,
+  "dangling": 0
+ },
+ {
+  "n": 56,
+  "title": "Paraphimosis",
+  "slug": "paraphimosis",
+  "flags": 0,
+  "side": {},
+  "fgm": false,
+  "top": "n/a",
+  "lean": "none (0 flags)",
+  "uncited": 49,
+  "sentences": 157,
+  "dangling": 0
+ },
+ {
+  "n": 57,
+  "title": "Phimosis",
+  "slug": "phimosis",
+  "flags": 3,
+  "side": {
+   "pro": 2,
+   "anti": 1
+  },
+  "fgm": false,
+  "top": "F022 Accident; F032 Cum Hoc; F034 False Cause (tie)",
+  "lean": "pro",
+  "uncited": 69,
+  "sentences": 261,
+  "dangling": 0
+ },
+ {
+  "n": 58,
+  "title": "Redundant Prepuce",
+  "slug": "redundant-prepuce",
+  "flags": 0,
+  "side": {},
+  "fgm": false,
+  "top": "n/a",
+  "lean": "none (0 flags)",
+  "uncited": 37,
+  "sentences": 113,
+  "dangling": 0
+ }
+]
