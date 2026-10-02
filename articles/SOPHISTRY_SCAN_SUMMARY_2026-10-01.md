@@ -81,44 +81,48 @@ Lean is the side with the most flags in that article (ties shown as mixed). ‡ 
 - Side split, articles not marked ‡ (male circumcision and related): pro 108, anti 32, neu 30.
 - Side split, ‡ articles (female genital cutting): pro 18, anti 24, neu 27.
 
-## Violations by fallacy type and side
+## Violations by fallacy type and side, run 1 vs run 2
 
-Tallied by script from the flag tables in all 58 `sophistry_scan.md` files. Every flag is a judgment call, not a measurement. In ‡ (female genital cutting) articles, 'pro' means the flag favors cutting or a male/female distinction.
+Run 1 (this file) read about 30% of sentences; run 2, the blind rerun in [SOPHISTRY_RERUN_2026-10-01](SOPHISTRY_RERUN_2026-10-01/COMPARISON.md), read every sentence. Counted by script from both runs' flags. Every flag is a judgment call. In FGM articles, 'pro' means the flag favors cutting or a male/female distinction.
 
-| Fallacy (engine ID) | Total | Pro | Anti | Neither |
+| Fallacy (engine ID) | Run 1 | Run 2 | Run 1 pro / anti / neither | Run 2 pro / anti / neither |
 |---|---|---|---|---|
-| F040 Loaded Language | 39 | 25 | 11 | 3 |
-| F011 Hasty Generalization | 20 | 8 | 8 | 4 |
-| F032 Cum Hoc | 19 | 11 | 5 | 3 |
-| F034 False Cause | 17 | 5 | 5 | 7 |
-| F003 Red Herring | 16 | 13 | 2 | 1 |
-| F026 Poisoning the Well | 16 | 13 | 2 | 1 |
-| F036 Suppressed Evidence | 16 | 12 | 2 | 2 |
-| F004 Appeal to Authority | 13 | 3 | 1 | 9 |
-| F033 Causal Oversimplification | 13 | 1 | 4 | 8 |
-| F061 Is-Ought Jump | 10 | 3 | 7 | 0 |
-| F002 Straw Man | 7 | 4 | 1 | 2 |
-| F010 Appeal to Ignorance | 7 | 3 | 0 | 4 |
-| F022 Accident | 6 | 5 | 1 | 0 |
-| F031 Post Hoc | 6 | 1 | 0 | 5 |
-| F042 False Analogy | 6 | 5 | 1 | 0 |
-| F041 False Equivalence | 4 | 0 | 3 | 1 |
-| F073 McNamara Fallacy | 4 | 4 | 0 | 0 |
-| F001 Ad Hominem | 3 | 2 | 0 | 1 |
-| F005 Appeal to Popularity | 2 | 0 | 0 | 2 |
-| F020 Division | 2 | 0 | 1 | 1 |
-| F025 Guilt by Association | 2 | 2 | 0 | 0 |
-| F056 Exception Fallacy | 2 | 2 | 0 | 0 |
-| F027 Genetic Fallacy | 1 | 0 | 0 | 1 |
-| F028 Appeal to Tradition | 1 | 1 | 0 | 0 |
-| F035 Texas Sharpshooter | 1 | 1 | 0 | 0 |
-| F053 Argument from Repetition | 1 | 0 | 0 | 1 |
-| F055 Ecological Fallacy | 1 | 0 | 1 | 0 |
-| F058 Presentism | 1 | 0 | 0 | 1 |
-| F071 Base Rate Neglect | 1 | 0 | 1 | 0 |
-| F075 Appeal to Consequences | 1 | 1 | 0 | 0 |
-| F080 Nirvana Fallacy | 1 | 1 | 0 | 0 |
-| **Total** | **239** | **126** | **56** | **57** |
+| F040 Loaded Language | 39 | 37 | 25 / 11 / 3 | 28 / 9 / 0 |
+| F036 Suppressed Evidence | 16 | 26 | 12 / 2 / 2 | 21 / 3 / 2 |
+| F032 Cum Hoc | 19 | 15 | 11 / 5 / 3 | 5 / 1 / 9 |
+| F011 Hasty Generalization | 20 | 14 | 8 / 8 / 4 | 10 / 2 / 2 |
+| F026 Poisoning the Well | 16 | 14 | 13 / 2 / 1 | 10 / 3 / 1 |
+| F003 Red Herring | 16 | 10 | 13 / 2 / 1 | 10 / 0 / 0 |
+| F034 False Cause | 17 | 8 | 5 / 5 / 7 | 2 / 6 / 0 |
+| F010 Appeal to Ignorance | 7 | 13 | 3 / 0 / 4 | 7 / 3 / 3 |
+| F033 Causal Oversimplification | 13 | 6 | 1 / 4 / 8 | 3 / 3 / 0 |
+| F031 Post Hoc | 6 | 12 | 1 / 0 / 5 | 3 / 7 / 2 |
+| F002 Straw Man | 7 | 10 | 4 / 1 / 2 | 7 / 3 / 0 |
+| F004 Appeal to Authority | 13 | 2 | 3 / 1 / 9 | 0 / 1 / 1 |
+| F042 False Analogy | 6 | 8 | 5 / 1 / 0 | 8 / 0 / 0 |
+| F061 Is-Ought Jump | 10 | 1 | 3 / 7 / 0 | 1 / 0 / 0 |
+| F001 Ad Hominem | 3 | 8 | 2 / 0 / 1 | 6 / 2 / 0 |
+| F022 Accident | 6 | 3 | 5 / 1 / 0 | 3 / 0 / 0 |
+| F073 McNamara Fallacy | 4 | 5 | 4 / 0 / 0 | 4 / 0 / 1 |
+| F055 Ecological Fallacy | 1 | 7 | 0 / 1 / 0 | 5 / 2 / 0 |
+| F041 False Equivalence | 4 | 3 | 0 / 3 / 1 | 0 / 2 / 1 |
+| F028 Appeal to Tradition | 1 | 4 | 1 / 0 / 0 | 4 / 0 / 0 |
+| F005 Appeal to Popularity | 2 | 3 | 0 / 0 / 2 | 2 / 1 / 0 |
+| F025 Guilt by Association | 2 | 2 | 2 / 0 / 0 | 2 / 0 / 0 |
+| F013 False Dilemma | 0 | 4 | 0 / 0 / 0 | 4 / 0 / 0 |
+| F027 Genetic Fallacy | 1 | 3 | 0 / 0 / 1 | 2 / 1 / 0 |
+| F056 Exception Fallacy | 2 | 1 | 2 / 0 / 0 | 1 / 0 / 0 |
+| F020 Division | 2 | 0 | 0 / 1 / 1 | 0 / 0 / 0 |
+| F035 Texas Sharpshooter | 1 | 1 | 1 / 0 / 0 | 1 / 0 / 0 |
+| F039 No True Scotsman | 0 | 2 | 0 / 0 / 0 | 2 / 0 / 0 |
+| F053 Argument from Repetition | 1 | 1 | 0 / 0 / 1 | 1 / 0 / 0 |
+| F077 Fallacy of Relative Privation | 0 | 1 | 0 / 0 / 0 | 1 / 0 / 0 |
+| F058 Presentism | 1 | 0 | 0 / 0 / 1 | 0 / 0 / 0 |
+| F075 Appeal to Consequences | 1 | 0 | 1 / 0 / 0 | 0 / 0 / 0 |
+| F071 Base Rate Neglect | 1 | 0 | 0 / 1 / 0 | 0 / 0 / 0 |
+| F019 Composition | 0 | 1 | 0 / 0 / 0 | 1 / 0 / 0 |
+| F080 Nirvana Fallacy | 1 | 0 | 1 / 0 / 0 | 0 / 0 / 0 |
+| **Total** | **239** | **225** | **126 / 56 / 57** | **154 / 49 / 22** |
 
 ## Cross-article patterns (judgment-based reading of the flags)
 
