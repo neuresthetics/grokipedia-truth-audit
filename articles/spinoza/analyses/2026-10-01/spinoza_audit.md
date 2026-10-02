@@ -1,8 +1,7 @@
 # Truth audit: Grokipedia, "Baruch Spinoza"
 
-**Prepared for:** Jason Burns
-**Page audited:** grokipedia.com Baruch Spinoza article, using the supplied `spinoza.html`. A live re-fetch on Thu 1 Oct 2026 (PT) returned the same byte size (629,108) and the same 152-source list.
-**Run:** first test run of the standing audit method. Tool: `audit_tool/grokaudit.py`. Log: `spinoza_audit_log.csv`.
+**Page audited:** grokipedia.com Baruch Spinoza article, using the saved page [`snapshots/2026-10-01.html`](../../snapshots/2026-10-01.html). A live re-fetch on Thu 1 Oct 2026 (PT) returned the same byte size (629,108) and the same 152-source list.
+**Run:** first test run of the standing audit method. Tool: [`tools/grokaudit/grokaudit.py`](../../../../tools/grokaudit/README.md). Log: `spinoza_audit_log.csv`.
 
 ## 1. Summary
 
@@ -22,7 +21,7 @@ Framing is mostly even-handed on pantheism versus atheism, but leans on an unexp
 
 All numbers below come from `grokaudit.py parse`/`linkcheck`/`soft404` (structure) and `grokaudit.py report spinoza_audit_log.csv` (verdicts). None are estimated.
 
-**Structure** (`audit_tool/out/structure.json`, `linkcheck.csv`)
+**Structure** (`data/structure.json`, `data/linkcheck.csv`)
 
 | item | count |
 |---|---|
@@ -216,11 +215,11 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
 
 ## 6. Methods and limits
 
-- **Inputs.** `grokipedia_spinoza.md` and `spinoza.html`. The live page re-fetched on 1 Oct 2026 (PT) was the same size and had the same source count.
+- **Inputs.** The page saved as Markdown and HTML (in this repo: `articles/spinoza/snapshots/2026-10-01.md` and `.html`). The live page re-fetched on 1 Oct 2026 (PT) was the same size and had the same source count.
 - **Parsing.** `grokaudit.py parse` splits `<span data-tts-block>` paragraphs into sentences and keeps inline citation numbers. Sources come from `<li id="ref-N">`.
 - **Link checks.** `linkcheck` uses HEAD with a GET fallback, at least 2 s between hits on the same host. `fetch` caches source text; `soft404` flags 200-status error pages and bot walls. Everything was read-only: nothing was edited, posted or submitted, and no one was contacted.
 - **Numbering shift.** Detected with `offset`: full-text word overlap of each claim against source n and n ± k. The −9 shift is statistically clear for [90]–[152]. **[81]–[89] are ambiguous** (11 markers), so I judged them as linked and noted the ambiguity. The likely mechanism (9 duplicate entries dropped from the displayed list without renumbering the text) is an inference; I did not see Grokipedia's build process.
-- **Verdict rules.** Verdicts are judgments recorded in `audit_tool/verdicts_spinoza.psv` and merged by `grokaudit.py buildlog`. The `verdict` column scores the citation *as linked*. `verdict_vs_intended` re-scores shifted citations against source n − 9. For shifted cites, MISCITED reflects the established shift even where the linked page was itself unreadable.
+- **Verdict rules.** Verdicts are judgments recorded in `data/verdicts_spinoza.psv` and merged by `grokaudit.py buildlog`. The `verdict` column scores the citation *as linked*. `verdict_vs_intended` re-scores shifted citations against source n − 9. For shifted cites, MISCITED reflects the established shift even where the linked page was itself unreadable.
 - **Depth.** `check_depth` records how each verdict was reached: read / skim / primary / title / none / script. "Skim" means keyword search plus reading the best-matching passage in the cached source, not a full read. A skim-level SUPPORTED is weaker than a read-level one.
 - **Not reachable.**
   - Paywalled or abstract-only: WSJ (34), OUP chapters and TOCs (32, 36, 40), Cambridge Lexicon entries. These were marked UNVERIFIABLE where they were the only support.
@@ -236,20 +235,20 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
 - **Re-running on another page.**
 
   ```
-  python3 audit_tool/grokaudit.py parse page.html -o out/
-  python3 audit_tool/grokaudit.py linkcheck out/sources.csv -o out/linkcheck.csv
-  python3 audit_tool/grokaudit.py fetch out/sources.csv --cache out/cache
-  python3 audit_tool/grokaudit.py soft404 --cache out/cache
-  python3 audit_tool/grokaudit.py offset out/claims.csv --cache out/cache
-  python3 audit_tool/grokaudit.py priority out/claims.csv -o out/worksheet.csv
-  python3 audit_tool/grokaudit.py evidence out/worksheet.csv --cache out/cache --only-priority
+  python3 tools/grokaudit/grokaudit.py parse page.html -o out/
+  python3 tools/grokaudit/grokaudit.py linkcheck out/sources.csv -o out/linkcheck.csv
+  python3 tools/grokaudit/grokaudit.py fetch out/sources.csv --cache out/cache
+  python3 tools/grokaudit/grokaudit.py soft404 --cache out/cache
+  python3 tools/grokaudit/grokaudit.py offset out/claims.csv --cache out/cache
+  python3 tools/grokaudit/grokaudit.py priority out/claims.csv -o out/worksheet.csv
+  python3 tools/grokaudit/grokaudit.py evidence out/worksheet.csv --cache out/cache --only-priority
   ```
 
   Then write the verdicts file by hand and run:
 
   ```
-  python3 audit_tool/grokaudit.py buildlog out/worksheet.csv verdicts.psv out/sources.csv -o audit_log.csv
-  python3 audit_tool/grokaudit.py report audit_log.csv
+  python3 tools/grokaudit/grokaudit.py buildlog out/worksheet.csv verdicts.psv out/sources.csv -o audit_log.csv
+  python3 tools/grokaudit/grokaudit.py report audit_log.csv
   ```
 
 ## Peer cross-check (freedom_of_necessity, 2026-10-01)

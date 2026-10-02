@@ -1,3 +1,5 @@
+> **Status:** an early one-off estimate for the 2025-11-30 snapshot of the Circumcision article, kept as a record. It has no published method or script, the percentages are a single overall judgment, and it is not comparable with the sophistry scans described in the [README](../../../../README.md).
+
 ### Bias Quantification of the Provided Article  
 (≈9 500 words, 200+ references)
 

@@ -1,31 +1,29 @@
-### Revised Grokipedia Articles for Audit (High Social Impact Focus)
+# Candidate articles to audit next
 
-I've updated the list to prioritize **highly controversial topics** with significant potential for social impact. Audits here could expose AI-generated biases, misinformation, poor sourcing (e.g., far-right sites like Stormfront, Infowars, VDare), omissions, or ideological slants that influence public opinion, policy, elections, health decisions, or social divisions.
+Grokipedia articles on contested topics that could be audited next with the same tools (the sophistry scan and `tools/grokaudit`). The circumcision-related articles are already covered: see [ARTICLE_LIST.md](../articles/ARTICLE_LIST.md). Nothing on this list has been audited yet, and "what to check" is a starting question, not a finding.
 
-All circumcision-related entries have been removed. The focus shifts to areas with documented 2025 criticisms: political figures/events, geopolitics (e.g., Israel-Palestine), health misinformation (e.g., vaccines/AIDS), identity issues (e.g., transgender topics), historical sensitivities (e.g., slavery/Holocaust), and self-referential biases (e.g., Musk/Trump).
+Pages follow the pattern `grokipedia.com/page/<Title>`.
 
-| Category                  | Article Title                          | Example URL (Pattern: grokipedia.com/page/Title)                  | Reason for Audit (Social Impact Potential)                                        | Priority |
-|---------------------------|----------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------|
-| Biographies/Politics     | Elon Musk                              | /page/Elon_Musk                                                          | Omits major controversies (e.g., 2025 gesture seen as Nazi salute); rapturous tone, self-referential bias. | High    |
-| Biographies/Politics     | Donald Trump                           | /page/Donald_Trump                                                       | Potential election-related framing/slants; aligns with owner views.                  | High    |
-| Politics/Events          | January 6 United States Capitol attack | /page/January_6_United_States_Capitol_attack                              | Event minimization or alternative narratives; impacts democracy perceptions.     | High    |
-| Politics/Events          | 2024 United States presidential election | /page/2024_United_States_presidential_election                          | Misinfo on elections/voting; high stakes for public trust.                       | High    |
-| Geopolitics              | Israeli–Palestinian conflict           | /page/Israeli–Palestinian_conflict                                       | Biased framing (e.g., Kfar Aza massacre); state media or far-right sources. | High    |
-| Geopolitics              | Gaza War (2023–present)                | /page/Gaza_War_(2023–present)                                            | Potential omissions or slanted casualty/event reporting; fuels division.         | High    |
-| Geopolitics              | Kfar Aza massacre                      | /page/Kfar_Aza_massacre                                                  | Cited as partisan exposé example.                                               | High    |
-| Health/Misinformation    | COVID-19 vaccines                      | /page/COVID-19_vaccines                                                  | Vaccine hesitancy/misinfo amplification; public health impact.                   | High    |
-| Health/Misinformation    | AIDS epidemic                          | /page/AIDS_epidemic                                                      | False claims (e.g., pornography links); stigmatization risks. | High    |
-| Health/Misinformation    | Pornography                            | /page/Pornography                                                        | Mental health/social claims criticized as far-right talking points.             | High    |
-| Identity/Social Issues   | Gender dysphoria                       | /page/Gender_dysphoria                                                   | Transgender medicine framing; heavily criticized for bias.                       | High    |
-| Identity/Social Issues   | Transgender                            | /page/Transgender                                                        | Potential downplaying of rights/issues; far-right source risks.                  | High    |
-| History/Sensitive        | Holocaust                              | /page/Holocaust                                                          | Risk of minimization or bad sources (e.g., neo-Nazi links).                      | High    |
-| History/Sensitive        | Adolf Hitler                           | /page/Adolf_Hitler                                                       | References to "Führer"; antisemitic dog-whistles noted.         | High    |
-| History/Sensitive        | Slavery in the United States           | /page/Slavery_in_the_United_States                                       | Detailed "justifications" for slavery; criticizes 1619 Project.             | High    |
-| History/Sensitive        | The 1619 Project                       | /page/The_1619_Project                                                   | Potential ideological attacks; racial history framing.                          | High    |
-| Environment              | Climate change                         | /page/Climate_change                                                     | Denial or downplaying; massive policy/public belief impact.                      | High    |
-| Social/Controversial     | Abortion                               | /page/Abortion                                                           | Rights vs. life debates; polarization amplifier.                                 | High    |
-| AI/Ethics (Neuresthetics Tie) | Artificial consciousness              | /page/Artificial_consciousness                                           | Ties to consciousness debates; potential illusionism/hybrid biases.              | Medium  |
-| AI/Ethics                | Integrated Information Theory          | /page/Integrated_Information_Theory                                      | IIT vs. GNWT accuracy; philosophical implications.                               | Medium  |
-| Other/Examples           | Wikipedia                              | /page/Wikipedia                                                          | Hypocrisy in bias claims while copying content.                           | Medium  |
-
-This ~20-item list is tighter and impact-focused—start with **High** priority (documented criticisms). These could reveal systemic issues (e.g., far-right sourcing, owner-aligned omissions) with real-world consequences like misinformation spread or eroded trust in knowledge sources. Expand via community input or new criticisms. An audit template (e.g., source quality check, omission ledger, tetralemma bias probe) would maximize rigor. Which category to tackle first?
+| Area | Article | Page | What to check | Priority |
+|---|---|---|---|---|
+| People | Elon Musk | /page/Elon_Musk | Coverage of controversies; tone; sourcing on xAI's own owner | High |
+| People | Donald Trump | /page/Donald_Trump | Framing of elections and disputes; balance of sources | High |
+| Politics | January 6 United States Capitol attack | /page/January_6_United_States_Capitol_attack | How the event is described; sources used | High |
+| Politics | 2024 United States presidential election | /page/2024_United_States_presidential_election | Claims about voting and results; sources used | High |
+| Geopolitics | Israeli–Palestinian conflict | /page/Israeli–Palestinian_conflict | Framing; balance and quality of sources | High |
+| Geopolitics | Gaza War (2023–present) | /page/Gaza_War_(2023–present) | Casualty figures and event reporting; omissions | High |
+| Geopolitics | Kfar Aza massacre | /page/Kfar_Aza_massacre | Framing and sourcing | High |
+| Health | COVID-19 vaccines | /page/COVID-19_vaccines | Safety and efficacy claims against cited sources | High |
+| Health | AIDS epidemic | /page/AIDS_epidemic | Causal claims about transmission; sources | High |
+| Health | Pornography | /page/Pornography | Health and social-effect claims; sources | High |
+| Identity | Gender dysphoria | /page/Gender_dysphoria | Framing of medical evidence; sources | High |
+| Identity | Transgender | /page/Transgender | Framing; terminology; sources | High |
+| History | Holocaust | /page/Holocaust | Accuracy; source quality | High |
+| History | Adolf Hitler | /page/Adolf_Hitler | Accuracy; terminology; source quality | High |
+| History | Slavery in the United States | /page/Slavery_in_the_United_States | How justifications for slavery are presented; sources | High |
+| History | The 1619 Project | /page/The_1619_Project | Balance between the project and its critics | High |
+| Environment | Climate change | /page/Climate_change | Claims against the cited scientific sources | High |
+| Social issues | Abortion | /page/Abortion | Balance between positions; sources | High |
+| AI and philosophy | Artificial consciousness | /page/Artificial_consciousness | Accuracy on competing theories | Medium |
+| AI and philosophy | Integrated Information Theory | /page/Integrated_Information_Theory | Accuracy on IIT vs global workspace theory | Medium |
+| Other | Wikipedia | /page/Wikipedia | How Grokipedia describes Wikipedia, given that some Grokipedia content is adapted from it | Medium |

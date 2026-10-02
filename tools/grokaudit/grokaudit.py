@@ -803,7 +803,7 @@ def main(argv=None):
     a = sub.add_parser("soft404"); a.add_argument("--cache", default="cache"); a.add_argument("--min-len", type=int, default=400)
     a.set_defaults(fn=cmd_soft404)
     a = sub.add_parser("buildlog"); a.add_argument("worksheet"); a.add_argument("verdicts"); a.add_argument("sources")
-    a.add_argument("-o", "--out", default="audit_log.csv"); a.add_argument("--shift", default="", help="e.g. 81-161:-9")
+    a.add_argument("-o", "--out", default="audit_log.csv"); a.add_argument("--shift", default="", help="e.g. 90-161:-9")
     a.set_defaults(fn=cmd_buildlog)
     a = sub.add_parser("parse"); a.add_argument("html"); a.add_argument("-o", "--out", default="out")
     a.set_defaults(fn=cmd_parse)
