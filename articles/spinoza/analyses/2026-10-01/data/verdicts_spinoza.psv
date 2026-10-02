@@ -1,0 +1,267 @@
+# claim_id|check_depth|verdict|verdict_vs_intended|reason|correct_fact|correct_link|factual_issue
+# check_depth: read = cited source passage read; skim = best-matching passage + keyword grep; primary = checked against Elwes/Curley/Bennett primary text; title = only title/abstract reachable; none = could not read
+# verdict_vs_intended is only filled for cites >=81 (numbering shift); '-' otherwise
+C001|none|UNVERIFIABLE|-|Ref 1 (PhilArchive) bot-blocked. Dates match standard chronology. C012 says Hanna Deborah was born in Amsterdam, which clashes with "parents who had immigrated"|Dates 24 Nov 1632 – 21 Feb 1677 are standard|https://plato.stanford.edu/entries/spinoza/|N
+C002|read|SUPPORTED|-|Kasher/Biderman and NEH give 27 July 1656, "abominable heresies" and the harshness of the ban||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C003|none|UNVERIFIABLE|-|Ref 4 (UMN journal) came back as an unreadable binary. The claim is a standard summary of the Ethics||https://plato.stanford.edu/entries/spinoza/|N
+C004|skim|MISCITED|-|Ref 5 is a chapter abstract on Leibniz's reception of the TTP and does not make these claims about the TTP's method|The content matches the TTP (Preface; ch. 7)|https://www.gutenberg.org/ebooks/989|N
+C007|read|SUPPORTED|-|Jewish Encyclopedia (ref 8): Michael a merchant; Hannah Deborah his second wife||https://www.jewishencyclopedia.com/articles/13964-Spinoza-baruch-benedict-de-spinoza|N
+C008|read|SUPPORTED|-|JE 1906 does say this, but its genealogy is outdated|Spinoza Web: Michael's first wife Rachel d. 1627. Miriam, Isaac, Rebecca, Gabriel and Baruch were most likely all Hanna Deborah's children|https://spinozaweb.org/people/4|Y
+C009|read|SUPPORTED|-|Ref 8 gives Michael's death as 28 March 1654. The remarriage and Esther details rest on ref 9, which was unreachable (SSL error)||https://www.jewishencyclopedia.com/articles/13964-Spinoza-baruch-benedict-de-spinoza|N
+C011|read|SUPPORTED|-|JE does say this, but modern scholarship differs|Spinoza Web: Abraham de Spinoza (of Nantes) was Michael's uncle and father-in-law, not his father|https://spinozaweb.org/people/4|Y
+C012|none|UNVERIFIABLE|-|Ref 9 unreachable (SSL error). Clashes with C001's "parents who had immigrated"|Not resolved here. Check Nadler, Spinoza: A Life|https://spinozaweb.org/people/4|N
+C013|title|UNVERIFIABLE|-|Ref 9 unreachable; ref 10 is a chapter abstract only. The claim itself is general background||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C015|none|UNVERIFIABLE|-|Ref 9 unreachable. The Antwerp-1570s route could not be checked|Not resolved; check Nadler, Spinoza: A Life, ch. 1||N
+C020|read|SUPPORTED|-|IEP and SEP give Bento name, birth date, Hanna's death in 1638 and "middle son"||https://iep.utm.edu/spinoza/|N
+C022|skim|SUPPORTED|-|SEP describes the community context||https://plato.stanford.edu/entries/spinoza/|N
+C023|skim|SUPPORTED|-|IEP on the Talmud Torah school||https://iep.utm.edu/spinoza/|N
+C025|read|SUPPORTED|-|Ref 13 says he was not a full-time pupil at the upper levels||https://spinozaweb.org/people/4|N
+C029|read|SUPPORTED|-|SEP says "at the age of seventeen", against the article's "around age 18"; minor|Left school around age 17|https://plato.stanford.edu/entries/spinoza/|N
+C030|read|SUPPORTED|-|NEH: the family firm imported dried fruit||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C031|read|MISCITED|-|NEH (ref 3) says "his brother Gabriel", not half-brother|Brother Gabriel (Spinoza Web treats both as Hanna's sons)|https://www.neh.gov/article/why-spinoza-was-excommunicated|Y
+C032|skim|MISCITED|-|NEH calls him "a young merchant" and mentions the business's poor condition, but says nothing of minimal commitment or strained family expectations|||N
+C035|read|SUPPORTED|-|Monoskop/Moreau: Van den Enden a former Jesuit and a Cartesian||https://monoskop.org/Baruch_Spinoza|N
+C037|read|SUPPORTED|-|NEH supports the date and the parnasim. "Aged 23 or 24" is imprecise: he was 23|Aged 23|https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C038|read|UNSUPPORTED|-|Only a Portuguese text of the herem survives, in the community's record book. "Pronounced in Hebrew and Portuguese" is not supported|Extant text is Portuguese (Livro dos Acordos da Nação)|https://www.neh.gov/article/why-spinoza-was-excommunicated|Y
+C039|read|SUPPORTED|-|NEH and ref 16 quote "abominable heresies" / "monstrous deeds" and note the vagueness||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C041|read|UNSUPPORTED|-|Uriel da Costa was excommunicated in 1618 and 1623, readmitted, banned again, and died in 1640; there was no "expulsion in 1640". The rest is plausible|Da Costa bans 1618/1623; suicide 1640|https://plato.stanford.edu/entries/spinoza/|Y
+C043|read|UNSUPPORTED|-|NEH: Spinoza had himself declared an orphan by Amsterdam authorities to escape his father's debts, not to claim an inheritance share|Orphan declaration (1656) to shed the estate's debts|https://www.neh.gov/article/why-spinoza-was-excommunicated|Y
+C044|skim|SUPPORTED|-|Ref 16 discusses the community's converso background and need for orthodoxy||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C045|skim|SUPPORTED|-|Ref 2 (Kasher) discusses lack of documentation and the links to later TTP views||https://www.tau.ac.il/~kasher/pspin.htm|N
+C046|read|MISCITED|-|NEH does not mention Morteira's attempts to reclaim him; the "entrenched heterodoxy" inference is the article's own (see fallacy F-02)|Persuasion attempts are reported in the cherem text itself (ref 18) and early biographies, without naming Morteira|https://capone.mtsu.edu/rbombard/RB/PDFs/Excommunication.pdf|N
+C047|none|UNVERIFIABLE|-|Ref 22 is a webinar landing page with no supporting text. The comparison with da Costa's ban is interpretive|||N
+C048|title|SUPPORTED|-|Ref 23 (Israel chapter abstract) on his Collegiant contacts after 1656||https://academic.oup.com/|N
+C049|read|SUPPORTED|-|Ref 24 on ostracism and support from Collegiants and Mennonites||https://justinmurphy.studio/spinoza/|N
+C051|title|SUPPORTED|-|Ref 23 abstract names Balling and Jelles; the life dates are not in the abstract but are standard||https://academic.oup.com/|N
+C052|read|SUPPORTED|-|Ref 25: Het Licht op den Kandelaar, 1662||https://spinozaweb.org/|N
+C056|read|MISCITED|-|Ref 17 has nothing about Remonstrant or Quaker influences|||N
+C057|skim|SUPPORTED|-|IEP on lens-grinding as his livelihood||https://iep.utm.edu/spinoza/|N
+C059|skim|SUPPORTED|-|Ref 28 on the lens-grinding technique||https://iep.utm.edu/spinoza/|N
+C061|skim|SUPPORTED|-|Ref 31 (kvond blog) on the Huygens brothers and Spinoza's lenses; low-grade source||https://kvond.wordpress.com/2008/07/15/did-the-huygenses-buy-spinozas-lens-polishing-technique/|N
+C062|title|UNVERIFIABLE|-|Ref 32 is a paywalled OUP chapter (abstract only)|Colerus: de Vries offered 2,000 florins, which Spinoza refused. The annuity was from de Vries's will (500, reduced to 300 or 250) after his death in 1667, not "around 1661" (ref 24)|https://justinmurphy.studio/spinoza/|Y
+C063|read|SUPPORTED|-|Ref 24: modest means; the annuity negotiated down||https://justinmurphy.studio/spinoza/|N
+C064|read|MISCITED|-|No "Pieter Serrurier" in ref 33. Probably a garbled Petrus Serrarius, who was a friend and go-between rather than a known patron|Petrus Serrarius (Collegiant millenarian, intermediary for letters)|https://academic.oup.com/|Y
+C065|none|UNVERIFIABLE|-|Ref 34 (WSJ) is paywalled (401). Glass dust making his lung disease worse is a common hypothesis, not established fact|||N
+C066|read|SUPPORTED|-|Spinoza Web: move to Rijnsburg in 1661, Collegiant village||https://spinozaweb.org/locations/6|N
+C068|read|SUPPORTED|-|Spinoza Web: before 29 July 1661 to late April or July 1663||https://spinozaweb.org/locations/6|N
+C069|title|UNVERIFIABLE|-|Ref 36 is an OUP table of contents (Israel 2023); body paywalled|||N
+C070|read|SUPPORTED|-|Spinoza Web: taught Casearius Parts 2–3 of Descartes' Principles||https://spinozaweb.org/locations/6|N
+C071|read|SUPPORTED|-|Spinoza Web: PCP published in early August 1663||https://spinozaweb.org/locations/6|N
+C072|title|UNVERIFIABLE|-|Ref 36 table of contents only|||N
+C073|skim|SUPPORTED|-|IEP on the TIE. Its date is disputed (Mignini dates it about 1656–58; the article implies Rijnsburg)|Date disputed|https://iep.utm.edu/spinoza/|N
+C074|skim|SUPPORTED|-|IEP and Spinoza Web on the Korte Verhandeling||https://iep.utm.edu/spinoza/|N
+C076|read|SUPPORTED|-|Spinoza Web reports a different total, but the standard numbering has exactly 28 Spinoza–Oldenburg letters; 18 fall in 1661–65. This also corrects the article's C327 count.|Exactly 28 letters: Epp. 1–7, 11, 13, 14, 16, 25, 26, 29–33, 61, 62, 68, 71, 73–75, 77–79; 18 fall in 1661–65|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C077|read|SUPPORTED|-|Spinoza Web names Koerbagh, Kerckring and De Volder||https://spinozaweb.org/locations/6|N
+C078|read|SUPPORTED|-|Spinoza Web: Voorburg, Tydeman, Kerklaan, 1663||https://spinozaweb.org/locations/7|N
+C079|skim|SUPPORTED|-|IEP; motivation unclear||https://iep.utm.edu/spinoza/|N
+C080|skim|SUPPORTED|-|SEP on lens-grinding and correspondence||https://plato.stanford.edu/entries/spinoza/|N
+C081|none|UNVERIFIABLE|-|Ref 38 (Workers' Liberty) shows a bot wall. "Until late 1669" fits Spinoza Web's window (Sep 1669 – Feb 1671)||https://spinozaweb.org/locations/7|N
+C083|skim|SUPPORTED|-|IEP on the motives for the TTP||https://iep.utm.edu/spinoza/|N
+C084|read|SUPPORTED|-|Partial support: ref 39 covers anonymous 1670 publication and later edicts. The false Hamburg imprint and the July 1674 Court of Holland ban are confirmed elsewhere; "200-page" was not verified|False imprint "Hamburgi, Henricus Künraht"; banned by the Court of Holland in July 1674|https://www.mdpi.com/2409-9287/6/3/67|N
+C085|title|UNVERIFIABLE|-|Ref 40 is an OUP table of contents only|||N
+C086|none|UNVERIFIABLE|-|Ref 38 bot wall|||N
+C087|read|SUPPORTED|-|Spinoza Web: Stille Veerkade (now no. 32), then Paviljoensgracht||https://spinozaweb.org/locations/9|N
+C088|none|UNVERIFIABLE|-|Ref 43 page fetched with no usable text|||N
+C089|skim|SUPPORTED|-|Ref 44 is a catalogue record for the Elwes Chief Works. The claim matches the TTP Preface and ch. 20||https://www.gutenberg.org/ebooks/989|N
+C090|skim|SUPPORTED|-|SEP (political) on condemnations and democracy as "most natural" (TTP 16)||https://plato.stanford.edu/entries/spinoza-political/|N
+C091|read|SUPPORTED|-|New Yorker: lynching of the de Witts and "ultimi barbarorum"||https://www.newyorker.com/magazine/2024/02/12/baruch-spinoza-and-the-art-of-thinking-in-dangerous-times|N
+C092|skim|SUPPORTED|-|SEP covers the TP's content but gives no start date. The standard date is 1675/76||https://plato.stanford.edu/entries/spinoza-political/|N
+C094|read|SUPPORTED|-|Fabritius's offer (Ep. 47) and Spinoza's refusal (Ep. 48), 1673||https://sacred-texts.com/phi/spinoza/corr/|N
+C096|skim|SUPPORTED|-|SEP supports the factual part. The "causal realism" label is the article's framing (see F-06)||https://plato.stanford.edu/entries/spinoza-political/|N
+C099|skim|SUPPORTED|-|EMLO and Bennett correspondence||http://emlo-portal.bodleian.ox.ac.uk/collections/?catalogue=baruch-spinoza|N
+C103|skim|SUPPORTED|-|Supported by ref 50 (Bennett correspondence). Refs 51 and 52 are dead (404)||https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|N
+C105|read|UNSUPPORTED|-|Ep. 69 is to Lambert van Velthuysen and dates from Sep–Nov 1675, not 1671; the 1671 Velthuysen items are Epp. 42–43. It is not a Leibniz letter and does not make the article’s claim.|Ep. 69 to van Velthuysen, Sep–Nov 1675; the 1671 Velthuysen items are Epp. 42–43. Leibniz–Spinoza letters are Epp. 45–46 (1671, optics)|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C108|read|UNSUPPORTED|-|The Blyenbergh correspondence ended with Ep. 27 on 3 June 1665. “Letter 38” is the old Elwes numbering for Ep. 27 (ref 53’s title: “LETTER XXXVIII (XXVII)”); the article’s March date is wrong. Ref 53 is a soft-404.|Ep. 27, 3 June 1665; old Letter 38 numbering confirmed|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C111|skim|SUPPORTED|-|Boxel letters (sacred-texts) and Bennett||https://sacred-texts.com/phi/spinoza/corr/corr53.htm|N
+C114|skim|MISCITED|-|IEP says only 1670; "May 1670" is not in the source. Spinoza Web gives the move as between Sep 1669 and Feb 1671|Moved to The Hague between late 1669 and early Feb 1671|https://spinozaweb.org/locations/9|Y
+C115|skim|SUPPORTED|-|SEP on the TP||https://plato.stanford.edu/entries/spinoza/|N
+C116|skim|SUPPORTED|-|Ref 56 on Oldenburg, Boyle and the Royal Society||https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|N
+C117|read|SUPPORTED|-|Ref 57 on tuberculosis. The glass-dust link is a hypothesis||https://spinozaweb.org/|N
+C118|read|UNSUPPORTED|-|The physician is contested. Colerus gives only “L.M.”; W. Meijer (1897) and Steenbakkers (1994) argue for Schuller, while other early evidence points to Meyer. Do not attribute a position to Nadler.|Contested: Colerus gives only “L.M.”; W. Meijer (1897) and Steenbakkers (1994) argue for Schuller; early evidence points to Meyer|https://www.jewishencyclopedia.com/articles/13964-Spinoza-baruch-benedict-de-spinoza|Y
+C119|skim|MISCITED|-|IEP mentions Meyer only for the 1663 PCP preface; it does not say he oversaw the posthumous release|The Opera Posthuma was prepared by a group (Jelles, Meyer, Rieuwertsz, Schuller, Bouwmeester)|https://iep.utm.edu/spinoza/|N
+C120|read|UNSUPPORTED|-|Spinoza was buried on 25 February 1677 in rented vault no. 162 in the Nieuwe Kerk, The Hague, a shared grave near de Witt’s grave no. 77. The vault was cleared in 1738; the present stone is a 1927 memorial. Grotius is buried in Delft.|Nieuwe Kerk shared grave: rented vault no. 162, 25 Feb 1677, near Johan de Witt’s grave no. 77; vault cleared 1738, present stone 1927; Grotius is in Delft|https://www.spinozaweb.org/locations/156|Y
+C121|primary|SUPPORTED|-|E1D3 matches Elwes verbatim||https://www.gutenberg.org/ebooks/3800|N
+C122|skim|SUPPORTED|-|SEP on substance vs modes (E1D3, E1D5)||https://plato.stanford.edu/entries/spinoza/|N
+C123|primary|MISCITED|-|E1D6 defines God, not substance in general. The argument uses E1P5 (no shared attributes), E1P8 (every substance necessarily infinite) and E1P14 (only one substance). “Absolutely infinite” appears in E1D6, but applies to God; the error is applying it to substance in general.|E1P5, E1P8 and E1P14; E1D6’s “absolutely infinite” applies to God, not substance in general|https://www.gutenberg.org/ebooks/3800|Y
+C124|primary|SUPPORTED|-|The reference E1P14 is correct. The quote mixes Elwes ("Besides God no substance can be granted or conceived") and Curley ("Except God, no substance can be or be conceived")|Quote one translation exactly|https://www.gutenberg.org/ebooks/3800|N
+C125|skim|SUPPORTED|-|IEP; Deus sive Natura (E4 Preface)||https://iep.utm.edu/spinoz-m/|N
+C126|primary|SUPPORTED|-|E1D6 matches; SEP quotes it||https://plato.stanford.edu/entries/spinoza/|N
+C127|skim|SUPPORTED|-|SEP on God without will, purposes or miracles (E1 Appendix)||https://plato.stanford.edu/entries/spinoza/|N
+C130|read|SUPPORTED|-|The rejection of teleology matches IEP (E1 Appendix). The Daoist ziran comparison rests on ref 61, an undergraduate "comparative philosophy sample" essay on a business-services WordPress site (low-grade source)||https://iep.utm.edu/spinoz-m/|N
+C131|skim|SUPPORTED|-|Ref 60 on finite modes (E1P15, E1P25C)||https://iep.utm.edu/spinoz-m/|N
+C132|skim|SUPPORTED|-|SEP on the immanent cause (E1P18)||https://plato.stanford.edu/entries/spinoza/|N
+C133|primary|SUPPORTED|-|E1 Appendix quote matches Curley||https://www.gutenberg.org/ebooks/3800|N
+C134|primary|SUPPORTED|-|E1P29 (and E1P33) on necessity||https://www.gutenberg.org/ebooks/3800|N
+C136|skim|SUPPORTED|-|SEP on the TTP critique of superstition||https://plato.stanford.edu/entries/spinoza/|N
+C138|primary|SUPPORTED|-|E1D6||https://www.gutenberg.org/ebooks/3800|N
+C140|primary|SUPPORTED|-|E1D5 (Curley "is in another"; article has "exists in another", a minor variant)||https://www.gutenberg.org/ebooks/3800|N
+C143|primary|SUPPORTED|-|E1P16||https://www.gutenberg.org/ebooks/3800|N
+C149|skim|SUPPORTED|-|Ref 60 on Descartes' interactionism||https://iep.utm.edu/spinoz-m/|N
+C160|primary|SUPPORTED|-|E2P40S2 (three kinds of knowledge)||https://www.gutenberg.org/ebooks/3800|N
+C163|primary|UNVERIFIABLE|-|Ref 71 is dead (404). The content is correct: E2P40S2, "random experience" (experientia vaga) and signs||https://www.gutenberg.org/ebooks/3800|N
+C164|skim|SUPPORTED|-|SEP (mind) on mutilated and confused ideas (E2P29C)||https://plato.stanford.edu/entries/spinoza-psychological/|N
+C171|primary|UNVERIFIABLE|-|Ref 71 is dead (404). The content is correct: E2P40S1–S2, E2P38–39 common notions||https://www.gutenberg.org/ebooks/3800|N
+C172|skim|SUPPORTED|-|Ref 69 on reason (E2P42)||https://plato.stanford.edu/|N
+C178|none|UNVERIFIABLE|-|Ref 72 bot-blocked. "No explicit method" is debatable given E5P25–28|||N
+C179|skim|SUPPORTED|-|IEP (geometrical method) on composition and structure||https://iep.utm.edu/|N
+C180|read|SUPPORTED|-|Bennett Ethics: definitions and axioms||https://www.earlymoderntexts.com/assets/pdfs/spinoza1665.pdf|N
+C181|skim|SUPPORTED|-|IEP on structure||https://iep.utm.edu/spinoza/|N
+C182|skim|SUPPORTED|-|Ref 75 on the geometric method (generic)|||N
+C183|primary|SUPPORTED|-|E1P7 correct (Curley wording)||https://www.gutenberg.org/ebooks/3800|N
+C184|skim|SUPPORTED|-|Five-part structure||https://www.gutenberg.org/ebooks/3800|N
+C185|skim|SUPPORTED|-|IEP geometrical method on Euclid||https://iep.utm.edu/|N
+C188|skim|SUPPORTED|-|IEP on adequate ideas and causal definition||https://iep.utm.edu/|N
+C190|skim|MISCITED|-|IEP (ref 11) has nothing on Leibniz charging circularity|||N
+C193|primary|SUPPORTED|-|The E2P17 quote matches Elwes verbatim||https://www.gutenberg.org/ebooks/3800|N
+C195|primary|SUPPORTED|-|E2P25 matches Elwes||https://www.gutenberg.org/ebooks/3800|N
+C196|primary|SUPPORTED|-|E2P28 (confused ideas)||https://www.gutenberg.org/ebooks/3800|N
+C198|primary|SUPPORTED|-|E2P41 (Curley "only cause of falsity"; Elwes "only source")||https://www.gutenberg.org/ebooks/3800|N
+C199|primary|MISCITED|-|The sun “about two hundred feet” example is in E2P35S, and is repeated at E4P1S. E2P35S points back to E2P17S for the theory, but the example itself is not in E2P17S.|E2P35S (also E4P1S); E2P35S points back to E2P17S for the theory, not the example|https://www.gutenberg.org/ebooks/3800|Y
+C200|primary|SUPPORTED|-|E2P18 and Scholium on association and memory||https://www.gutenberg.org/ebooks/3800|N
+C201|primary|MISCITED|-|E2P3 concerns God's idea of his essence. The mind's passivity from inadequate ideas is E3P1 and E3P3|E3P1, E3P3|https://www.gutenberg.org/ebooks/3800|Y
+C202|skim|SUPPORTED|-|Elwes E2P40S2; ref 77 is Elwes||https://www.gutenberg.org/ebooks/3800|N
+C203|primary|SUPPORTED|-|E3P6 quote matches Curley (via IEP)||https://www.gutenberg.org/ebooks/3800|N
+C204|skim|SUPPORTED|-|SEP (psychological), E3P6 demonstration||https://plato.stanford.edu/entries/spinoza-psychological/|N
+C205|skim|SUPPORTED|-|SEP (psychological), E3P7||https://plato.stanford.edu/entries/spinoza-psychological/|N
+C206|primary|MISCITED|-|DefAff 1 Explanation restates E3P9S, so the article’s citation is a near miss rather than a fabrication. The quoted sentence is located in E3P9S (Curley), not in the definition proper.|E3P9S; DefAff 1 Explanation restates E3P9S, so the locator is a near miss|https://www.gutenberg.org/ebooks/3800|Y
+C207|skim|SUPPORTED|-|SEP (psychological)||https://plato.stanford.edu/entries/spinoza-psychological/|N
+C208|primary|SUPPORTED|-|E3P11S (joy and sadness) and E3P58–59 (active affects)||https://www.gutenberg.org/ebooks/3800|N
+C209|primary|MISCITED|-|“Acting according to the laws of one’s own nature” is in E4P24 Dem and the underlying E4D8; E4P18S also bears on the rational redirection of striving. E4P37 is about wanting for others the good one wants for oneself.|E4D8, E4P18S and E4P24 Dem; E4P37 concerns wanting for others the good one wants for oneself|https://www.gutenberg.org/ebooks/3800|Y
+C210|primary|SUPPORTED|-|E4P22C ("first and only foundation of virtue")||https://www.gutenberg.org/ebooks/3800|N
+C211|none|UNVERIFIABLE|-|Ref 80 is a malformed Wikisource URL, cut off at "Ethics_(Spinoza" (404). The content matches the E3 Preface||https://en.wikisource.org/wiki/Ethics_(Spinoza)/Part_3|N
+C212|skim|MISCITED|-|Linked ref 81 (Look, Leibniz–Spinoza essay) does not discuss this; numbers 81–89 are in the ambiguous zone of the renumbering|E3 Preface, E3P1–3|https://www.gutenberg.org/ebooks/3800|N
+C220|none|UNVERIFIABLE|-|Ref 87 bot-blocked (81–89 ambiguous zone)||https://www.gutenberg.org/ebooks/3800|N
+C221|skim|UNVERIFIABLE|-|Refs 88 and 89 are in the ambiguous 81–89 zone and neither states this. The content matches the E3 Preface and E4P5||https://www.gutenberg.org/ebooks/3800|N
+C223|primary|MISCITED|SUPPORTED|Numbering shift: [90] links to Wikisource TTP ch. 14. The intended ref 81 discusses the passions. The 48 definitions of the affects at the end of E3 are confirmed in Elwes|E3 Definitions of the Affects 1–48|https://www.gutenberg.org/ebooks/3800|N
+C225|skim|MISCITED|SUPPORTED|Shift: [91] is dead; the intended ref 82 (NDPR review) supports it||https://ndpr.nd.edu/reviews/spinoza-on-human-freedom-reason-autonomy-and-the-good-life/|N
+C226|skim|MISCITED|SUPPORTED|Shift: [92] links to IEP political (equally weak match); the intended ref 83 discusses conatus and reason||https://www.gutenberg.org/ebooks/3800|N
+C231|skim|MISCITED|UNVERIFIABLE|Shift: [96] links to JSTOR Daily; the intended ref 87 is bot-blocked||https://www.gutenberg.org/ebooks/3800|N
+C232|primary|SUPPORTED|-|Partly supported, misleading. E5P23 leaves “something which is eternal” remaining, and E5P40C identifies it as the intellect. What Spinoza rejects is eternity read as duration or memory (E5P23S, E5P34S, E5P21). “Beyond bodily death” is misleading, but “its intellectual capacities” is supported.|Partly supported, misleading: E5P23, E5P40C, E5P23S, E5P34S and E5P21; intellectual capacities are supported, “beyond bodily death” is misleading|https://www.gutenberg.org/ebooks/3800|Y
+C234|read|MISCITED|SUPPORTED|Shift: [98] links to a Cambridge Lexicon entry on the Short Treatise. The intended ref 89 (Bennett TTP ch. 1) has "certain knowledge… revealed by God"|TTP ch. 1|https://www.earlymoderntexts.com/assets/pdfs/spinoza1669.pdf|N
+C239|skim|MISCITED|SUPPORTED|Shift [98] -> 89; TTP ch. 3 (prophets of other nations, Balaam)|TTP ch. 3|https://www.earlymoderntexts.com/assets/pdfs/spinoza1669.pdf|N
+C244|read|MISCITED|SUPPORTED|Shift [98] -> 89; TTP ch. 7 method|TTP ch. 7|https://www.earlymoderntexts.com/assets/pdfs/spinoza1669.pdf|N
+C252|read|MISCITED|SUPPORTED|Shift [99] -> 90 (Wikisource TTP ch. 14, justice and charity)|TTP ch. 14|https://en.wikisource.org/wiki/Theologico-Political_Treatise_1862/Chapter_14|N
+C256|skim|SUPPORTED|-|SEP (political), TTP 15 separation thesis||https://plato.stanford.edu/entries/spinoza-political/|N
+C262|read|SUPPORTED|-|SEP (political): natural right equals power (TTP 16; TP 2.3–4)||https://plato.stanford.edu/entries/spinoza-political/|N
+C267|skim|SUPPORTED|-|SEP (political). The TP's democracy chapter (ch. 11) breaks off unfinished, so "best preserves" rests more on TTP 16 and 20||https://plato.stanford.edu/entries/spinoza-political/|N
+C268|skim|SUPPORTED|-|SEP (political)||https://plato.stanford.edu/entries/spinoza-political/|N
+C271|skim|SUPPORTED|-|SEP (political), TTP 20||https://plato.stanford.edu/entries/spinoza-political/|N
+C272|skim|SUPPORTED|-|Supported by ref 45 (SEP political). Ref [101] is a shifted Hackett PCP page||https://plato.stanford.edu/entries/spinoza-political/|N
+C274|read|SUPPORTED|-|Partial: ref 5 says "late in 1669 or early in 1670". Rieuwertsz and 1665 are not in ref 5 but are standard (Ep. 30, 1665)||https://spinozaweb.org/|N
+C276|primary|MISCITED|SUPPORTED|Shift [98] -> 89. The sentence paraphrases the TTP title page and Preface, not chapter 20, and should not be presented as a verbatim quotation without naming a translation. The paraphrase also weakens Spinoza’s claim: freedom cannot be removed without destroying piety and peace.|TTP title page and Preface (Elwes): freedom may be granted without prejudice to peace, while without it piety cannot flourish nor public peace be secure|https://www.gutenberg.org/ebooks/989|Y
+C278|skim|SUPPORTED|-|SEP (political), accommodation (TTP 2, 13)||https://plato.stanford.edu/entries/spinoza-political/|N
+C279|skim|MISCITED|SUPPORTED|Shift [98] -> 89 (TTP chs. 1–2, 6)|TTP chs. 1–2, 6|https://www.earlymoderntexts.com/assets/pdfs/spinoza1669.pdf|N
+C281|skim|SUPPORTED|-|SEP (political), TTP 19||https://plato.stanford.edu/entries/spinoza-political/|N
+C284|read|MISCITED|SUPPORTED|Shift [102] -> 93 (MDPI). It confirms the synodal condemnations of 1670 and the July 1674 ban by the Court of Holland||https://www.mdpi.com/2409-9287/6/3/67|N
+C287|skim|SUPPORTED|-|IEP; Bennett Ethics; Opera Posthuma 1677||https://iep.utm.edu/spinoz-m/|N
+C290|skim|MISCITED|SUPPORTED|Shift [103][104] -> 94/95 (generic matches on the geometric method)||https://www.philosophers.world/spinoza/ethics.html|N
+C291|primary|MISCITED|-|"The order and connection of ideas is the same as the order and connection of things" is E2P7, not Part I Prop 7. The cited ref 74 (Bennett Ethics) has it under Part II. The article itself gives E1P7 correctly in C183|E2P7|https://www.gutenberg.org/ebooks/3800|Y
+C293|primary|SUPPORTED|-|Part I content is correct. Part titles throughout mix Elwes and Curley wording||https://www.gutenberg.org/ebooks/3800|N
+C294|skim|SUPPORTED|-|IEP epistemology; E2P13 (mind as idea of body)||https://iep.utm.edu/spino-ep/|N
+C295|primary|MISCITED|SUPPORTED|Shift [103] -> 94. E3 content is correct||https://www.gutenberg.org/ebooks/3800|N
+C296|skim|SUPPORTED|-|IEP; E4D8 virtue||https://iep.utm.edu/spinoz-m/|N
+C297|primary|MISCITED|SUPPORTED|Shift [103] -> 94. E5 content is correct (E5P32C–36)||https://www.gutenberg.org/ebooks/3800|N
+C298|skim|SUPPORTED|-|IEP||https://iep.utm.edu/spinoz-m/|N
+C299|read|MISCITED|SUPPORTED|Shift [105] -> 96 (JSTOR Daily). Posthumous works banned by the States of Holland on 25 June 1678|States of Holland placard, 25 June 1678|https://spinozaweb.org/works/date/asc|N
+C300|skim|MISCITED|-|IEP metaphysics (ref 59) does not mention Hegel or Einstein|||N
+C301|read|SUPPORTED|-|SEP (political) on the TP||https://plato.stanford.edu/entries/spinoza-political/|N
+C302|skim|SUPPORTED|-|SEP (political)||https://plato.stanford.edu/entries/spinoza-political/|N
+C305|skim|SUPPORTED|-|SEP (political), TP 1–4||https://plato.stanford.edu/entries/spinoza-political/|N
+C306|skim|SUPPORTED|-|SEP (political), TP 5||https://constitution.org/2-Authors/bs/poltr-02.htm|N
+C309|primary|SUPPORTED|-|TP 6.15ff (king's council)||https://constitution.org/2-Authors/bs/poltr-02.htm|N
+C310|read|SUPPORTED|-|SEP: centralized (Venetian-model) vs decentralized aristocracy (TP 8–9)||https://plato.stanford.edu/entries/spinoza-political/|N
+C311|primary|SUPPORTED|-|TP 11.3 excludes women and servants/slaves||https://constitution.org/2-Authors/bs/poltr-02.htm|N
+C312|primary|SUPPORTED|-|TP 8.46 (patricians of "that most simple and general religion"); TTP 14||https://constitution.org/2-Authors/bs/poltr-02.htm|N
+C313|primary|MISCITED|MISCITED|Shift [101] -> 92 (IEP political). The TP has only 11 chapters, so “TP 16:204” cannot exist; it probably means TTP ch. 16 plus a page number. TTP 16 tells subjects to obey even absurd commands. The limits on sovereign power are TP 3.9, 4.4 and 4.6, where general indignation is decisive.|TP 3.9, 4.4 and 4.6 (sovereign loses right when it provokes general indignation); TTP 16 for natural right|https://constitution.org/2-Authors/bs/poltr-02.htm|Y
+C314|skim|SUPPORTED|-|SEP (political)||https://plato.stanford.edu/entries/spinoza-political/|N
+C316|skim|MISCITED|SUPPORTED|Shift [106][107] -> 97/98 (Hackett Complete Works contents; Cambridge Lexicon). The TIE's c. 1661–62 date is disputed|TIE dating disputed (c. 1656–58 vs 1661–62)|https://www.gutenberg.org/ebooks/1016|N
+C319|primary|MISCITED|SUPPORTED|Shift [108][109] -> 99/100 (TIE text). It breaks off unfinished||https://www.gutenberg.org/ebooks/1016|N
+C324|read|MISCITED|UNSUPPORTED|Shift [110] -> 101 (Hackett PCP page). “Published anonymously” is wrong: the 1663 PCP carried Spinoza’s name and was the only work published under his name in his lifetime, with Meyer's preface (IEP, ref 11).|PCP published under Spinoza’s name in 1663, the only work published under his name in his lifetime|https://iep.utm.edu/spinoza/|Y
+C329|skim|MISCITED|-|The EMLO collection page describes the corpus but says nothing about a "guarded style"|||N
+C334|skim|MISCITED|SUPPORTED|Shift [111] -> 102 (natura naturans, Deus sive Natura)||https://www.gutenberg.org/ebooks/3800|N
+C335|none|MISCITED|UNVERIFIABLE|Shift [112] -> 103 (bot-blocked)|||N
+C337|skim|SUPPORTED|-|NEH (herem); TTP banned 1674||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C339|none|MISCITED|UNVERIFIABLE|Shift [114] -> 105 (bot-blocked). The fact is correct: Jacobi, Über die Lehre des Spinoza (1785)|||N
+C340|skim|MISCITED|SUPPORTED|Shift [111][112] -> 102/103 (102 discusses whether Spinoza believed in God)||https://plato.stanford.edu/entries/spinoza/|N
+C341|skim|MISCITED|SUPPORTED|Shift [115] -> 106 (no traditional theistic God). The "equates to atheism" side is stated as if settled (see F-05)||https://plato.stanford.edu/entries/spinoza/|N
+C342|none|MISCITED|UNVERIFIABLE|Shift [116] -> 107 (unreadable). "Causal realism" framing (see F-06)|||N
+C343|none|MISCITED|UNVERIFIABLE|Shift [114] -> 105 (bot-blocked)|||N
+C344|skim|SUPPORTED|-|SEP; E1P29, E1P33||https://plato.stanford.edu/entries/spinoza/|N
+C348|primary|MISCITED|UNVERIFIABLE|Shift [117] -> 108 (bot-blocked). E2P49C says will and understanding are one. E2P48S says will is the faculty of affirming, “not the desire”; E3P9S calls striving related to the mind alone “will”. The article both mislocates the line and runs will together with desire.|E2P48S, E2P49C and E3P9S: will is affirmation/intellect, while desire is treated in E3P9S|https://www.gutenberg.org/ebooks/3800|Y
+C351|primary|MISCITED|SUPPORTED|Shift [118] -> 109 (conatus paper). E3P6 is correct||https://www.gutenberg.org/ebooks/3800|N
+C352|primary|MISCITED|UNVERIFIABLE|Shift [119] -> 110 (bot-blocked). Content correct (E4D1–2, E4P20)||https://www.gutenberg.org/ebooks/3800|N
+C354|skim|SUPPORTED|-|SEP; E5P32C–36||https://plato.stanford.edu/entries/spinoza/|N
+C355|none|MISCITED|UNVERIFIABLE|Shift [121] -> 112 (unreadable)|||N
+C356|none|MISCITED|UNVERIFIABLE|Shift [122] -> 113 (bot-blocked)|||N
+C357|none|MISCITED|UNVERIFIABLE|Shift [123] -> 114 (bot-blocked)|||N
+C358|none|MISCITED|UNVERIFIABLE|Shift [124] -> 115 (bot-blocked)|||N
+C359|none|MISCITED|UNVERIFIABLE|Shift [125] -> 116 (unreadable). Fact correct: Hume, Treatise 1.4.5 ("hideous hypothesis")||https://www.gutenberg.org/ebooks/4705|N
+C360|read|MISCITED|MISCITED|Shift [126] -> 117 (Garrett interview), which does not say this. Hume's explicit discussion of Spinoza (Treatise 1.4.5) is about the simplicity and immateriality of substance and the soul, not about over-extending causal necessity|Hume, Treatise 1.4.5|https://www.gutenberg.org/ebooks/4705|Y
+C361|none|MISCITED|UNVERIFIABLE|Shift [127] -> 118 (bot-blocked)|||N
+C364|read|MISCITED|MISCITED|Shift [129] -> 120 (no Leibniz content). Ref 38 is bot-walled. The visit should be written c. 18–21 Nov 1676: Academy edition A VI 3, 578 prints the date with a “(?)”.|Leibniz in The Hague c. 18–21 Nov 1676 (Academy Edition A VI 3, 578, with “(?)” )|https://www.leibniz-translations.com/perfectbeing|Y
+C366|skim|MISCITED|SUPPORTED|Shift [130][131] -> 121/122 (Diderot paper)|||N
+C368|read|MISCITED|UNSUPPORTED|Shift [132–134] -> 123–125. Diderot/Encyclopédie is supported, but none mentions a “1678 papal condemnation”. The Dutch civil ban is dated 25 June 1678: Wiltens names the States of Holland and West Friesland, while Spinoza Web credits the Supreme Court. The Court of Holland had already banned the TTP on 19 July 1674.|Dutch civil ban, 25 June 1678: Wiltens says States of Holland and West Friesland; Spinoza Web credits the Supreme Court. Court of Holland banned the TTP 19 July 1674|https://spinozaweb.org/works/date/asc|Y
+C370|read|SUPPORTED|-|NEH for date, age and harshness. [135] shifts to 126 (Times of Israel), which also supports it||https://www.neh.gov/article/why-spinoza-was-excommunicated|N
+C371|read|SUPPORTED|-|NEH and ref 18 (cherem text, "four ells")||https://capone.mtsu.edu/rbombard/RB/PDFs/Excommunication.pdf|N
+C372|skim|MISCITED|MISCITED|Shift [136] -> 127, which is about the 2021 Serfaty/Melamed episode, not the 1656 motive|||N
+C373|skim|SUPPORTED|-|Ref 19 (Jewish reception)||https://plato.stanford.edu/entries/spinoza/|N
+C374|skim|MISCITED|MISCITED|Shift [137] -> 128, which has no mention of Mendelssohn. The fact is broadly right (Mendelssohn, Philosophische Gespräche 1755; Morgenstunden 1785)|||N
+C376|skim|MISCITED|-|SEP (ref 12) does not mention Bayle. The fact is correct (Bayle, Dictionnaire, "Spinoza", 1697)|||N
+C377|none|MISCITED|MISCITED|Shift [138] -> 129 (weak topical match only). Ref 138 returned HTTP 500|||N
+C378|skim|MISCITED|SUPPORTED|Shift [138][139] -> 129/130 (130 covers the universal religion and incarnation)|||N
+C379|none|MISCITED|UNVERIFIABLE|Shift [140] -> 131 (bot-blocked). "Hamann's opponents" is vague|||N
+C380|skim|MISCITED|MISCITED|Shift [141] -> 132 (weak match). Sweeping generalization (see F-09)|||N
+C383|read|MISCITED|SUPPORTED|Shift [143][144] -> 134/135. The intended source quotes Einstein's reply to Rabbi Goldstein. It was a 1929 cable reply, not an "interview"; the wording is a translation variant|April 1929 cable to Rabbi Herbert S. Goldstein: "I believe in Spinoza's God, who reveals himself in the harmony of all that exists…"|https://philosophybreak.com/articles/pantheism-spinoza-and-the-god-that-einstein-believed-in/|Y
+C384|skim|MISCITED|MISCITED|Shift [145] -> 136 (Einstein and Spinoza, no conatus claim)|||N
+C387|none|MISCITED|UNVERIFIABLE|Shift [147][148] -> 138/139 (HTTP 500 / blocked)|||N
+C390|skim|MISCITED|SUPPORTED|Shift [149][150] -> 140/141 (UW political philosophy page)|||N
+C392|title|MISCITED|SUPPORTED|Shift [152] -> 143. The ResearchGate 2025 paper "What kind of monism is Spinoza's? A new analysis" is bot-blocked, so the title alone matches||https://www.researchgate.net/publication/395745031_What_kind_of_monism_is_Spinoza%27s-A_new_analysis|N
+C394|skim|SUPPORTED|-|SEP||https://plato.stanford.edu/entries/spinoza/|N
+C395|none|UNVERIFIABLE|UNVERIFIABLE|Dangling [154] (only 152 sources listed). Intended 145 is unreadable (gzip)|||N
+C396|skim|SUPPORTED|-|Supported by ref 79 (IEP free will). [155] is dangling||https://iep.utm.edu/spinoza-free-will-determinism/|N
+C399|skim|UNVERIFIABLE|SUPPORTED|Dangling [157][158]. Intended 148 (Sources journal) and 149 (UW Schwartz) support it||https://www.sourcesjournal.org/articles/lifting-the-ban-spinoza-and-the-boundaries-of-belonging|N
+C400|read|UNVERIFIABLE|SUPPORTED|Dangling [159]. Intended 150 (Times of Israel, 30 Nov 2021) supports the Melamed/Serfaty episode||https://www.timesofisrael.com/in-echo-of-excommunication-top-spinoza-scholar-banned-from-amsterdam-synagogue/|N
+C401|read|UNVERIFIABLE|SUPPORTED|Dangling [160][161]. Intended 151 (MDPI special issue "1670–2020") supports it, though its papers appeared in 2021; "blueprints for secular governance" is the article's framing (F-04)|Special issue titled for 1670–2020, published 2021|https://www.mdpi.com/2409-9287/6/3/67|N
+# ---- priority UNCITED claims: verdict UNCITED, with factual note ----
+C053|skim|UNCITED|-|No citation. De Vries's 2,000 florins was a gift Spinoza refused; the annuity came later via his will (ref 24: 500 cut to 300/250). "Wealthy ship-owner" for Jelles is unverified (ref 17: he financed the PCP)|Colerus via ref 24|https://justinmurphy.studio/spinoza/|Y
+C097|read|UNCITED|-|88 letters is confirmed by EMLO (ref 49). The 50/38 split was not verified||http://emlo-portal.bodleian.ox.ac.uk/collections/?catalogue=baruch-spinoza|N
+C098|skim|UNCITED|-|Correspondent list is correct||https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|N
+C100|read|UNCITED|-|Oldenburg visited in July 1661; his first letter (Ep. 1) is dated 26 Aug 1661|Ep. 1, 26 Aug 1661|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|N
+C101|read|UNCITED|-|Letter 32 (20 Nov 1665) is about parts agreeing with the whole (the worm in the blood), but Spinoza does not "reject mechanistic alternatives like Descartes". He says Descartes' rules of motion are false|Ep. 32|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C102|read|UNCITED|-|The nitre experiments were Boyle's (Ep. 6, 1662), not Huygens'. Letter 73 is from late 1675, not June 1666. It does contain the immanent-cause passage|Boyle nitre: Epp. 6, 11, 13. Ep. 73: late 1675|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C104|read|UNCITED|-|Epp. 45–46 (Oct and Nov 1671) are the surviving Leibniz–Spinoza letters and concern optics. Leibniz sought the Ethics through Schuller in Nov 1675 (Epp. 70 and 72), and the 1676 contact was an in-person visit, so “around 1676” is not baseless.|Epp. 45–46 (Oct–Nov 1671); Ethics sought through Schuller in Nov 1675 (Epp. 70, 72); visit c. 18–21 Nov 1676|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C106|read|UNCITED|-|Blyenbergh (from 12 Dec 1664) questioned the PCP and its appendix (Cogitata Metaphysica), not the Short Treatise|Ep. 18 on the PCP/CM|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C107|read|UNCITED|-|The replies to Blyenbergh are Epp. 19 (5 Jan 1665), 21 (28 Jan), 23 (13 Mar) and 27 (3 Jun); Ep. 28 is to Bouwmeester and Ep. 29 is from Oldenburg.|Epp. 19 (5 Jan 1665), 21 (28 Jan), 23 (13 Mar) and 27 (3 Jun 1665)|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C109|read|UNCITED|-|Boxel 1674 (Ep. 51ff), citing ancient authorities. Correct||https://sacred-texts.com/phi/spinoza/corr/|N
+C110|read|UNCITED|-|The Boxel exchange is Epp. 51–56 (Sep–Nov 1674), with Spinoza’s replies in 52, 54 and 56. Ep. 57 is from Tschirnhaus, and Ep. 58 is via Schuller.|Epp. 52, 54, 56 (Spinoza to Boxel); Tschirnhaus correspondence: direct Epp. 57, 59, 60, 65, 66, 80–83, and via Schuller Epp. 58, 63, 64, 70, 72|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C112|read|UNCITED|-|The direct Tschirnhaus letters are Epp. 57, 59, 60, 65, 66 and 80–83; letters via Schuller are Epp. 58, 63, 64, 70 and 72. The article’s topics fit Epp. 59–60 and 63–66 better than Epp. 81–82, which concern deriving bodies from extension.|Tschirnhaus direct: Epp. 57, 59, 60, 65, 66, 80–83; via Schuller: Epp. 58, 63, 64, 70, 72. Epp. 81–82 concern deriving bodies from extension|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C137|primary|UNCITED|-|E1D4 (no locator given). The quote mixes Elwes and Curley wording|E1D4|https://www.gutenberg.org/ebooks/3800|N
+C144|primary|UNCITED|-|E2P2 quote is correct (Curley)|E2P2|https://www.gutenberg.org/ebooks/3800|N
+C147|skim|UNCITED|-|PCP 1663. Correct||https://spinozaweb.org/locations/6|N
+C148|skim|UNCITED|-|Interpretive; plausible|||N
+C150|skim|UNCITED|-|Correct (E1P14)||https://www.gutenberg.org/ebooks/3800|N
+C152|skim|UNCITED|-|Plausible (E1P5–8, E1P10S)|||N
+C155|primary|UNCITED|-|E2P7 correctly cited here. "Numerically identical" is an interpretation (E2P7S: "one and the same thing")|E2P7, E2P7S|https://www.gutenberg.org/ebooks/3800|N
+C158|primary|UNCITED|-|E1D4, which defines attribute, is a fair supporting citation, and “conceived through itself” is E1P10. Only E1D5 is wrong: it defines mode. The claim is therefore half right.|Half right: E1D4 supports the attribute definition; “conceived through itself” is E1P10; E1D5 defines mode|https://www.gutenberg.org/ebooks/3800|Y
+C191|primary|UNCITED|-|E2P40S2 "opinion or imagination". Correct|E2P40S2|https://www.gutenberg.org/ebooks/3800|N
+C213|skim|UNCITED|-|Contains a leaked markup fragment "./Part_3#Proposition_6)" (broken link)|E3P6–7|https://www.gutenberg.org/ebooks/3800|N
+C242|primary|UNCITED|-|TTP 7 "history" of Scripture, including its language. Correct|TTP ch. 7|https://www.gutenberg.org/ebooks/989|N
+C251|primary|UNCITED|-|TTP 14–15. Correct||https://www.gutenberg.org/ebooks/989|N
+C289|skim|UNCITED|-|Correct||https://www.gutenberg.org/ebooks/3800|N
+C308|primary|UNCITED|-|TP chs. 6–11. Correct||https://constitution.org/2-Authors/bs/poltr-02.htm|N
+C315|skim|UNCITED|-|Correct|||N
+C317|primary|UNCITED|-|TIE aims. Correct||https://www.gutenberg.org/ebooks/1016|N
+C325|read|UNCITED|-|88 letters (EMLO). The 50/38 split was not verified||http://emlo-portal.bodleian.ox.ac.uk/collections/?catalogue=baruch-spinoza|N
+C326|skim|UNCITED|-|Opera Posthuma included the letters. Correct|||N
+C327|read|UNCITED|-|“13 letters with Oldenburg” and “four with Blyenbergh” are wrong. The standard numbering has exactly 28 Oldenburg letters, 18 in 1661–65, and 8 Blyenbergh letters (Epp. 18–24, 27).|Oldenburg exactly 28 (18 in 1661–65); Blyenbergh 8 (Epp. 18–24, 27)|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C328|read|UNCITED|-|The surviving Leibniz–Spinoza letters are Epp. 45–46 (Oct–Nov 1671, optics), not late-1670s letters. “Around 1676” is not baseless for the broader contact: Leibniz sought the Ethics through Schuller in Nov 1675 (Epp. 70, 72) and visited in c. 18–21 Nov 1676.|Epp. 45–46 (Oct–Nov 1671, optics); Ethics sought through Schuller Nov 1675 (Epp. 70, 72); visit c. 18–21 Nov 1676|https://www.earlymoderntexts.com/assets/pdfs/spinoza1661.pdf|Y
+C330|skim|UNCITED|-|Compendium Grammatices, unfinished. Correct|||N
+C331|skim|UNCITED|-|OP 1677 is correct. "The language from which he was expelled" is loaded and inaccurate: he was expelled from a community, not a language (F-07)|||N
+C333|skim|UNCITED|-|Puts "open project" in quotation marks with no source|||N
+C347|primary|UNCITED|-|E1 Appendix; E2P35S. Correct||https://www.gutenberg.org/ebooks/3800|N
+C363|skim|UNCITED|-|Generic. Correct|||N
+C365|skim|UNCITED|-|Generic; Israel's "Radical Enlightenment" thesis stated as fact (F-08)|||N
+C367|skim|UNCITED|-|Generic; Israel thesis stated as fact (F-08)|||N
+C385|primary|UNCITED|-|E3 Def. Aff.; E3P11S. Correct||https://www.gutenberg.org/ebooks/3800|N
+C388|skim|UNCITED|-|Generic. Correct|||N
+C398|read|UNCITED|-|Ref 126: in 2012 the community was asked to lift the ban and declined; ref 148 describes a 2015 review. "Concluded they lacked the authority" was not found in either|2012 request declined; 2015 symposium/review|https://www.sourcesjournal.org/articles/lifting-the-ban-spinoza-and-the-boundaries-of-belonging|Y
