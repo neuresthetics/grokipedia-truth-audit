@@ -53,7 +53,8 @@ Counted by script from the scan's flag file. In FGM articles, "pro" means the fl
 
 - All flags with exact quotes: [flags.csv](articles/SOPHISTRY_RERUN_2026-10-01/flags.csv)
 - Reproducibility check against an earlier partial read: [COMPARISON.md](articles/SOPHISTRY_RERUN_2026-10-01/COMPARISON.md)
-- Index of the 58 articles: [INDEX_circumcision_related.md](articles/INDEX_circumcision_related.md)
+- All 58 articles with snapshot and Grokipedia links and why each was included: [ARTICLE_LIST.md](articles/ARTICLE_LIST.md)
+- Full index with counts and dates: [INDEX_circumcision_related.md](articles/INDEX_circumcision_related.md)
 
 ## Why this repo exists
 - Grokipedia launched 27 Oct 2025 with the claim of being “Wikipedia without the propaganda”.
