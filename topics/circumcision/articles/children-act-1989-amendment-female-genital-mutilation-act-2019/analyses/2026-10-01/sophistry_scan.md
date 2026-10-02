@@ -2,7 +2,7 @@
 
 - **Article:** Children Act 1989 (Amendment) (Female Genital Mutilation) Act 2019
 - **URL:** https://grokipedia.com/page/children_act_1989_amendment_female_genital_mutilation_act_2019
-- **Snapshot file:** `articles/children-act-1989-amendment-female-genital-mutilation-act-2019/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
+- **Snapshot file:** `topics/circumcision/articles/children-act-1989-amendment-female-genital-mutilation-act-2019/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
 - **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
 - **Reading coverage:** 106/106 units read in full (106 paragraphs, 0 table rows).
@@ -55,4 +55,4 @@ Run 2 flag counts by side: pro 0, anti 0, neutral 1. These are judgment-based la
 
 - No outside fact-checking or source verification was performed.
 - Labels are judgment-based flags, not computed findings.
-- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).
+- Reproducibility comparison: [COMPARISON.md](../../../../runs/2026-10-01_run2_full/COMPARISON.md).

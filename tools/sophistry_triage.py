@@ -9,7 +9,7 @@ N = min(body sentences, max(25, round(0.33 * body sentences)), cap) with cap = 4
 Sentences not shown were not read closely. Output: numbered sentences, 'c' = has own citation,
 'U' = none; citation markers are stripped in the view only.
 
-Usage: python3 tools/sophistry_triage.py --date 2026-10-01 --slug <slug> [--cap 45]
+Usage: python3 tools/sophistry_triage.py --date 2026-10-01 --slug <slug> [--cap 45] [--topic circumcision]
 """
 import argparse, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -36,7 +36,9 @@ def main():
     ap.add_argument("--date", required=True)
     ap.add_argument("--slug", required=True)
     ap.add_argument("--cap", type=int, default=45)
+    ap.add_argument("--topic", default=sc.DEFAULT_TOPIC)
     a = ap.parse_args()
+    sc.set_topic(a.topic)
     sents, lead, pick = view(a.slug, a.date, a.cap)
     print(f"## {a.slug}: {len(sents)} sentences; lead {len(lead)} shown in full; "
           f"{len(pick)} of {len(sents) - len(lead)} body sentences shown (top cue score)")

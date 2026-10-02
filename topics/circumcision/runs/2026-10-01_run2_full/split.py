@@ -4,8 +4,8 @@ Writes sentences.jsonl (slug, sid, kind, start, end, quote) where quote is an ex
 substring of the snapshot (trailing citation markers removed), and read/<slug>.txt
 reading views (citation markers stripped, for reading only)."""
 import re, json, os
-REPO='articles'
-idx=open(f'{REPO}/INDEX_circumcision_related.md').read()
+REPO='topics/circumcision/articles'  # run from the repo root
+idx=open('topics/circumcision/SNAPSHOT_INDEX.md').read()
 slugs=re.findall(r'^\| \d+ \| .*? \| https://\S+ \| `([^`]+)` \|',idx,re.M)
 assert len(slugs)==58, len(slugs)
 ABBR=set('Pte e.g i.e U.S U.K Dr St vs al approx No Fig c ca Mr Mrs Ms Jr Sr Inc Ltd Co cf Vol pp p Ch Gen Ex Lev Deut Rom Gal Col Phil Acts Matt Jn Lk Mk Gen etc Prof Rev Mt Num Josh Sam Kgs Esth Isa Jer Ezek Hos Ps Prov Eccl Mic Hab Zech Mal Heb Jas Pet Eph Thess Tim Tit Jud v Sec Art Ed Eds U.N Hon Gov Sen Rep Capt Lt Col Gen Maj Sgt Ste Ave Blvd Dept Univ Assn Inst Corp Bros Mt Ft No Nos Pt Pts B.C A.D B.C.E C.E a.m p.m Ph.D M.D'.split())

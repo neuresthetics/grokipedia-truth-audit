@@ -10,7 +10,7 @@ This page explains how the sophistry scans of Grokipedia's circumcision articles
 
 The scans used one part of the spec, the **`fallacyScanPass`**, which was added in v0.5.9. Three features of it matter here.
 
-- **The fallacy catalogue (F-IDs).** The pass takes its entries from geometric_fallacy_engine v0.1.0, an 80-entry fallacy catalogue. Of the 80, 67 were kept, 6 were dropped because an existing rule in the framework already covers them, and 7 were merged as duplicates. Each kept entry keeps its original ID (F001 to F080), a name, a category (relevance, insufficiency, presumption, ambiguity, causal or formal), a detection cue, and a repair rule. For example, F040 is Loaded Language and F036 is Suppressed Evidence. The 67 kept entries used here are copied in [fid_catalog.json](articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/fid_catalog.json).
+- **The fallacy catalogue (F-IDs).** The pass takes its entries from geometric_fallacy_engine v0.1.0, an 80-entry fallacy catalogue. Of the 80, 67 were kept, 6 were dropped because an existing rule in the framework already covers them, and 7 were merged as duplicates. Each kept entry keeps its original ID (F001 to F080), a name, a category (relevance, insufficiency, presumption, ambiguity, causal or formal), a detection cue, and a repair rule. For example, F040 is Loaded Language and F036 is Suppressed Evidence. The 67 kept entries used here are copied in [fid_catalog.json](../topics/circumcision/runs/2026-10-02_run3_title24/fid_catalog.json).
 - **Both sides by default.** The spec's `dual_case_rule` says every check must run on both the claim under review and the strongest counter-case, with the same effort for each, and that a scan of one side only is incomplete. In these scans, that meant reasoning on both sides of the circumcision debate was checked, and every flag is tagged with the side it favours: **pro** (favours circumcision), **anti** (favours the opposing side) or **neutral** (favours neither). In the female genital cutting articles, "pro" means the flag favours cutting or a male/female distinction.
 - **A flag is not a disproof.** The spec says a flag only withdraws support from the step it is on. It does not show the conclusion is false.
 
@@ -20,7 +20,7 @@ The spec also says that none of its 67 entries has a working argument-checker in
 
 What was actually done, in every run:
 
-1. **Snapshots.** Each article was saved as a text snapshot on 2026-10-01 (`articles/<slug>/snapshots/2026-10-01.txt`). All three runs read the same snapshots. The 58 articles and why each was included are listed in [ARTICLE_LIST.md](articles/ARTICLE_LIST.md).
+1. **Snapshots.** Each article was saved as a text snapshot on 2026-10-01 (`topics/circumcision/articles/<slug>/snapshots/2026-10-01.txt`). All three runs read the same snapshots. The 58 articles and why each was included are listed in [ARTICLE_LIST.md](../topics/circumcision/ARTICLE_LIST.md).
 2. **Sentence segmentation.** A script split each snapshot into units: prose sentences and table rows.
 3. **A model read of each sentence.** A model read each unit against the fallacy catalogue and flagged it only when the article's *own* reasoning matched an entry's detection cue. Positions the article explicitly attributes to others ("critics argue", "proponents contend") were not counted as the article's reasoning. Each flag records the exact quote, the F-ID, the side and a short note.
 4. **Quote verification.** A script checked that every quoted passage occurs verbatim in its snapshot, so every flag can be traced to real text.
@@ -36,7 +36,7 @@ No outside fact-checking was done. The scans judge whether an article's reasonin
 
 Run 1 covered all 58 circumcision-related articles. Instead of reading every sentence, it read each article's lead plus a subset of body sentences picked by a cue-word triage script (`tools/sophistry_triage.py`). That came to about 30% of sentences (2,969 of 10,016 by run 1's own count). It raised 239 flags. In the 39 male-circumcision articles, 77% of the flags that took a side were pro; across all 58 articles, including the female genital cutting articles, the figure was 69%.
 
-Results: [SOPHISTRY_SCAN_SUMMARY_2026-10-01.md](articles/SOPHISTRY_SCAN_SUMMARY_2026-10-01.md), plus a `sophistry_scan_run1_partial.md` file in each article's `analyses/2026-10-01/` folder (for example [Circumcision](articles/circumcision/analyses/2026-10-01/sophistry_scan_run1_partial.md)).
+Results: [runs/2026-10-01_run1_partial/README.md](../topics/circumcision/runs/2026-10-01_run1_partial/README.md), plus a `sophistry_scan_run1_partial.md` file in each article's `analyses/2026-10-01/` folder (for example [Circumcision](../topics/circumcision/articles/circumcision/analyses/2026-10-01/sophistry_scan_run1_partial.md)).
 
 **Weakness:** the triage script decided what got read, so unread sentences could hide flags, and the shortcut itself could bias the result.
 
@@ -48,7 +48,7 @@ Run 2 read every unit of all 58 articles: 10,258 units. It was done without open
 
 Compared with run 1, run 2 re-flagged 44% of the sentences run 1 had flagged. Where both runs flagged the same sentence, they gave the same F-ID 67% of the time and the same side 90% of the time. The Spearman correlation of per-article flag counts was 0.75. The pro lean in the male-circumcision articles held (77% in run 1, 85% in run 2). The lean of the female genital cutting articles did not hold.
 
-Results: [SOPHISTRY_RERUN_2026-10-01/COMPARISON.md](articles/SOPHISTRY_RERUN_2026-10-01/COMPARISON.md) and [flags.csv](articles/SOPHISTRY_RERUN_2026-10-01/flags.csv).
+Results: [runs/2026-10-01_run2_full/COMPARISON.md](../topics/circumcision/runs/2026-10-01_run2_full/COMPARISON.md) and [flags.csv](../topics/circumcision/runs/2026-10-01_run2_full/flags.csv).
 
 **Weakness:** runs 1 and 2 read different amounts of text, so some of their disagreement comes from coverage rather than judgment.
 
@@ -64,7 +64,7 @@ Run 3 re-read, blind and in full, only the 24 "title match" articles (the title 
 - Sentence overlap: 77 sentences flagged by both, 51 only by run 2, 34 only by run 3 (Jaccard 0.475). Run 3 reproduced 60% of run 2's flagged sentences. Where both flagged the same sentence, the F-ID matched 79% of the time and the side 97% of the time.
 - The heaviest articles stayed heaviest. Ethics of circumcision went from 24 to 21 flags (all pro in both runs), Circumcision controversies from 21 to 13, Circumcision from 15 to 6, and Views on circumcision stayed at 9. Forced circumcision stayed at 7, all anti in both runs.
 
-Results: [SOPHISTRY_RUN3_TITLE24_2026-10-02/README.md](articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/README.md) and [COMPARISON.md](articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/COMPARISON.md).
+Results: [runs/2026-10-02_run3_title24/README.md](../topics/circumcision/runs/2026-10-02_run3_title24/README.md) and [COMPARISON.md](../topics/circumcision/runs/2026-10-02_run3_title24/COMPARISON.md).
 
 ### The three phases side by side
 
@@ -107,7 +107,7 @@ Agreement went up between the run 1/run 2 comparison and the run 2/run 3 compari
 
 | Phase | Folder or file |
 |---|---|
-| Run 1 | [articles/SOPHISTRY_SCAN_SUMMARY_2026-10-01.md](articles/SOPHISTRY_SCAN_SUMMARY_2026-10-01.md) and `articles/<slug>/analyses/2026-10-01/sophistry_scan_run1_partial.md` |
-| Run 2 | [articles/SOPHISTRY_RERUN_2026-10-01/](articles/SOPHISTRY_RERUN_2026-10-01/COMPARISON.md) (flags, coverage, comparison with run 1) |
-| Run 3 | [articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/](articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/README.md) (flags, coverage, comparison with run 2, scripts) |
+| Run 1 | [topics/circumcision/runs/2026-10-01_run1_partial/](../topics/circumcision/runs/2026-10-01_run1_partial/README.md) and `topics/circumcision/articles/<slug>/analyses/2026-10-01/sophistry_scan_run1_partial.md` |
+| Run 2 | [topics/circumcision/runs/2026-10-01_run2_full/](../topics/circumcision/runs/2026-10-01_run2_full/COMPARISON.md) (flags, coverage, comparison with run 1) |
+| Run 3 | [topics/circumcision/runs/2026-10-02_run3_title24/](../topics/circumcision/runs/2026-10-02_run3_title24/README.md) (flags, coverage, comparison with run 2, scripts) |
 | Framework | [neuresthetics/substance_lens](https://github.com/neuresthetics/substance_lens), spec [substance_lens_0.5.9.json](https://github.com/neuresthetics/substance_lens/blob/main/substance_lens_0.5.9.json) |

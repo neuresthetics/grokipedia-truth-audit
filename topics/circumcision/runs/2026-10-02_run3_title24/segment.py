@@ -1,14 +1,15 @@
 """Split a 2026-10-01 snapshot into readable units (prose sentences, table rows, headings).
 
 Shared by verify_quotes.py, make_coverage.py and compare.py so that both runs are mapped
-onto the same sentence ids. Paths are relative to the repo root (two levels up from here).
+onto the same sentence ids. Snapshots are read from the topic folder (two levels up from here:
+topics/circumcision/articles/).
 """
 import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-REPO = HERE.parents[1]
-ARTICLES = REPO / "articles"
+TOPIC = HERE.parents[1]  # topics/circumcision
+ARTICLES = TOPIC / "articles"
 SNAP = "snapshots/2026-10-01.txt"
 
 TITLE24 = [

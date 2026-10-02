@@ -10,7 +10,8 @@ from collections import Counter
 from pathlib import Path
 
 DATE = "2026-10-01"
-RERUN_DIR = Path("articles/SOPHISTRY_RERUN_2026-10-01")
+TOPIC_DIR = Path("topics/circumcision")
+RERUN_DIR = TOPIC_DIR / "runs/2026-10-01_run2_full"
 PARTIAL_NAME = "sophistry_scan_run1_partial.md"
 SCAN_NAME = "sophistry_scan.md"
 
@@ -54,7 +55,7 @@ def extract_code_counts(partial: str) -> str:
 
 
 def render_one(repo: Path, slug: str, coverage: dict[str, str], flags: list[dict[str, str]], counts: dict) -> Path:
-    article_dir = repo / "articles" / slug
+    article_dir = repo / TOPIC_DIR / "articles" / slug
     partial_path = article_dir / "analyses" / DATE / PARTIAL_NAME
     if not partial_path.is_file():
         raise FileNotFoundError(partial_path)
@@ -65,7 +66,7 @@ def render_one(repo: Path, slug: str, coverage: dict[str, str], flags: list[dict
     total = len(flags)
     title = counts["title"]
     url = counts["url"]
-    snapshot = f"articles/{slug}/snapshots/{DATE}.txt"
+    snapshot = f"topics/circumcision/articles/{slug}/snapshots/{DATE}.txt"
     units_read = coverage["units_read"]
     units_total = coverage["units_total"]
     paras = coverage["paras"]
@@ -129,7 +130,7 @@ def render_one(repo: Path, slug: str, coverage: dict[str, str], flags: list[dict
             "",
             "- No outside fact-checking or source verification was performed.",
             "- Labels are judgment-based flags, not computed findings.",
-            "- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).",
+            "- Reproducibility comparison: [COMPARISON.md](../../../../runs/2026-10-01_run2_full/COMPARISON.md).",
             "",
         ]
     )
@@ -149,7 +150,7 @@ def main() -> int:
     with (rerun / "coverage.tsv").open(newline="", encoding="utf-8") as fh:
         coverage_rows = list(csv.DictReader(fh, delimiter="\t"))
     coverage = {row["slug"]: row for row in coverage_rows if row["slug"] != "TOTAL"}
-    with (repo / "tools/output/sophistry_counts_2026-10-01.json").open(encoding="utf-8") as fh:
+    with (repo / TOPIC_DIR / "code_counts/sophistry_counts_2026-10-01.json").open(encoding="utf-8") as fh:
         counts_rows = json.load(fh)
     counts = {row["slug"]: row for row in counts_rows}
     flags_by_slug: dict[str, list[dict[str, str]]] = {}

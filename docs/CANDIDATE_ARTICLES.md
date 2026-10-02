@@ -1,6 +1,6 @@
 # Candidate articles to audit next
 
-Grokipedia articles on contested topics that could be audited next with the same tools (the sophistry scan and `tools/grokaudit`). The circumcision-related articles are already covered: see [ARTICLE_LIST.md](../articles/ARTICLE_LIST.md). Nothing on this list has been audited yet, and "what to check" is a starting question, not a finding.
+Grokipedia articles on contested topics that could be audited next with the same tools (the sophistry scan and `tools/grokaudit`). The circumcision-related articles are already covered: see [ARTICLE_LIST.md](../topics/circumcision/ARTICLE_LIST.md). Nothing on this list has been audited yet, and "what to check" is a starting question, not a finding.
 
 Pages follow the pattern `grokipedia.com/page/<Title>`.
 

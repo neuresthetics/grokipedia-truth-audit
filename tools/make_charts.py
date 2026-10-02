@@ -5,13 +5,14 @@ Run from the repo root (needs matplotlib):
     python3 tools/make_charts.py
 
 Reads (relative to the repo root, nothing is typed in by hand):
-  articles/ARTICLE_LIST.md                                      58 article slugs, 24 'Title match'
+All inputs are under topics/circumcision/:
+  ARTICLE_LIST.md                                         58 article slugs, 24 'Title match'
   articles/<slug>/analyses/2026-10-01/sophistry_scan_run1_partial.md   run 1 flag tables
-  articles/SOPHISTRY_RERUN_2026-10-01/flags.csv                 run 2 flags (58 articles)
-  articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/flags.csv          run 3 flags (24 title matches)
-  articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/comparison_units.csv  sentence-level run 2 vs run 3 match table
-  articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/fid_catalog.json   fallacy names
-Writes PNGs to docs/img/. Prints every number it draws so it can be checked against the docs.
+  runs/2026-10-01_run2_full/flags.csv                     run 2 flags (58 articles)
+  runs/2026-10-02_run3_title24/flags.csv                  run 3 flags (24 title matches)
+  runs/2026-10-02_run3_title24/comparison_units.csv       sentence-level run 2 vs run 3 match table
+  runs/2026-10-02_run3_title24/fid_catalog.json           fallacy names
+Writes PNGs to docs/img/circumcision/. Prints every number it draws so it can be checked against the docs.
 Every flag counted here is a model's judgment, not a measurement.
 """
 import csv
@@ -28,11 +29,12 @@ import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.patches import Patch  # noqa: E402
 
 sys.dont_write_bytecode = True
-ART = Path("articles")
-RUN2_DIR = ART / "SOPHISTRY_RERUN_2026-10-01"
-RUN3_DIR = ART / "SOPHISTRY_RUN3_TITLE24_2026-10-02"
-OUT = Path("docs/img")
-if not (ART / "ARTICLE_LIST.md").exists():
+TOPIC = Path("topics/circumcision")
+ART = TOPIC / "articles"
+RUN2_DIR = TOPIC / "runs/2026-10-01_run2_full"
+RUN3_DIR = TOPIC / "runs/2026-10-02_run3_title24"
+OUT = Path("docs/img/circumcision")
+if not (TOPIC / "ARTICLE_LIST.md").exists():
     sys.exit("Run this from the repo root: python3 tools/make_charts.py")
 
 SIDES = ("pro", "anti", "neutral")
@@ -53,8 +55,8 @@ plt.rcParams.update({
 # ---------------------------------------------------------------- data
 def article_list():
     rows = []
-    pat = re.compile(r"^\| \d+ \| (.+?) \| (.+?) \| \[snapshot\]\(([^/]+)/snapshots/")
-    for ln in (ART / "ARTICLE_LIST.md").read_text(encoding="utf-8").splitlines():
+    pat = re.compile(r"^\| \d+ \| (.+?) \| (.+?) \| \[snapshot\]\(articles/([^/]+)/snapshots/")
+    for ln in (TOPIC / "ARTICLE_LIST.md").read_text(encoding="utf-8").splitlines():
         m = pat.match(ln)
         if m:
             rows.append({"title": m.group(1), "category": m.group(2), "slug": m.group(3)})
@@ -147,6 +149,10 @@ def titles(fig, title, subtitle=None, top=0.985):
                  color="#333333")
 
 
+# The data-source footnotes drawn on the charts name the run folders as they were called when the
+# charts were first made (SOPHISTRY_RERUN_2026-10-01 = runs/2026-10-01_run2_full,
+# SOPHISTRY_RUN3_TITLE24_2026-10-02 = runs/2026-10-02_run3_title24). They are left unchanged so the
+# committed PNGs stay byte-identical when this script is re-run.
 def footnote(fig, text):
     """One-line data-source note; the font shrinks until the line fits inside the image."""
     t = fig.text(0.01, 0.008, text, ha="left", va="bottom", fontsize=7.5, color="#555555")

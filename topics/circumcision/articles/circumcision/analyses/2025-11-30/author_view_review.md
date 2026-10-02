@@ -1,6 +1,6 @@
 # Author's-view review of the Circumcision article (2025-11-30, one-off)
 
-This is an early, one-off review of the 2025-11-30 snapshot of the Grokipedia Circumcision article ([snapshot](../../snapshots/2025-11-30.txt)). It records the author's view, scored with a values framework the author was using at the time. It is not a finding of this repo's scan method: it has no published method or script, every score is a judgment, and it is not comparable with the sophistry scans described in the [README](../../../../README.md).
+This is an early, one-off review of the 2025-11-30 snapshot of the Grokipedia Circumcision article ([snapshot](../../snapshots/2025-11-30.txt)). It records the author's view, scored with a values framework the author was using at the time. It is not a finding of this repo's scan method: it has no published method or script, every score is a judgment, and it is not comparable with the sophistry scans described in the [README](../../../../../../README.md).
 
 The original version used framework-specific terms and a simulated panel of named "judges". This file replaces `psi_square_evaluation.md` and restates it in plain terms; the original text is in the repo history at that path (for example in commit `eeb413e`).
 

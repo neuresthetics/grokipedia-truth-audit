@@ -6,7 +6,7 @@ snapshot (trailing citation markers removed). fname is taken from the spec JSON.
 Also writes coverage.tsv."""
 import csv, json, re, sys
 from collections import Counter, defaultdict
-REPO='articles'
+REPO='topics/circumcision/articles'
 spec=json.load(open('substance_lens v0.5.9 spec'))
 def find_kept(o):
     if isinstance(o,dict):

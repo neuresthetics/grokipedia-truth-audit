@@ -3,7 +3,7 @@
 
 - **Article:** Prohibition of Female Circumcision Act 1985
 - **URL:** https://grokipedia.com/page/prohibition_of_female_circumcision_act_1985
-- **Snapshot file:** `articles/prohibition-of-female-circumcision-act-1985/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
+- **Snapshot file:** `topics/circumcision/articles/prohibition-of-female-circumcision-act-1985/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
 - **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
 - **Reading coverage:** lead (9 sentences) read in full, plus 37 of 113 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.

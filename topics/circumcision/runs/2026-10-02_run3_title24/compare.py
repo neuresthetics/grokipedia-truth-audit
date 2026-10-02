@@ -1,7 +1,7 @@
 """Compare sophistry-scan run 3 (this directory) with run 2 on the 24 'Title match' articles.
 
-Run from anywhere:  python3 articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/compare.py
-Reads  : flags.csv (run 3), ../SOPHISTRY_RERUN_2026-10-01/flags.csv (run 2, restricted to TITLE24),
+Run from anywhere:  python3 topics/circumcision/runs/2026-10-02_run3_title24/compare.py
+Reads  : flags.csv (run 3), ../2026-10-01_run2_full/flags.csv (run 2, restricted to TITLE24),
          fid_catalog.json, and the 2026-10-01 snapshots (via segment.py).
 Writes : COMPARISON.md and comparison_units.csv (per-unit match table) in this directory.
 
@@ -21,7 +21,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import segment  # noqa: E402
 
-RUN2_PATH = HERE.parent / "SOPHISTRY_RERUN_2026-10-01" / "flags.csv"
+RUN2_PATH = HERE.parent / "2026-10-01_run2_full" / "flags.csv"
 RUN3_PATH = HERE / "flags.csv"
 SIDES = ("pro", "anti", "neutral")
 

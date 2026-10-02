@@ -4,12 +4,12 @@ Run 3 is the third phase of a three-phase test of the sophistry scan. It re-read
 
 The short answer is that the big picture comes back and the fine detail only partly does. Both runs find a strong pro-circumcision lean in the articles' own reasoning (84.0% of sided flags in run 2, 82.7% in run 3), and they rank the articles in much the same order (Spearman 0.837). Only 60% of run 2's flagged sentences were flagged again, though, so individual flags should be treated as leads to check by hand.
 
-For how this run fits with runs 1 and 2, and what the test does and doesn't show, see [METHOD_THREE_PHASE_TEST.md](../../METHOD_THREE_PHASE_TEST.md). The full computed comparison is in [COMPARISON.md](COMPARISON.md).
+For how this run fits with runs 1 and 2, and what the test does and doesn't show, see [METHOD_THREE_PHASE_TEST.md](../../../../docs/METHOD_THREE_PHASE_TEST.md). The full computed comparison is in [COMPARISON.md](COMPARISON.md).
 
 ## What was scanned
 
-- **Articles:** the 24 "Title match" articles in [ARTICLE_LIST.md](../ARTICLE_LIST.md). These are the core articles: the title contains "circumcision".
-- **Text:** the 2026-10-01 snapshots (`articles/<slug>/snapshots/2026-10-01.txt`), the same text runs 1 and 2 used.
+- **Articles:** the 24 "Title match" articles in [ARTICLE_LIST.md](../../ARTICLE_LIST.md). These are the core articles: the title contains "circumcision".
+- **Text:** the 2026-10-01 snapshots (`topics/circumcision/articles/<slug>/snapshots/2026-10-01.txt`), the same text runs 1 and 2 used.
 - **Framework:** [substance_lens v0.5.9](https://github.com/neuresthetics/substance_lens), its `fallacyScanPass` ([spec file](https://github.com/neuresthetics/substance_lens/blob/main/substance_lens_0.5.9.json), [changelog](https://github.com/neuresthetics/substance_lens/blob/main/CHANGELOG_0.5.9.md)). That pass holds 67 fallacy entries, each with an F-ID (F001 to F080) kept from the 80-entry geometric_fallacy_engine catalogue. The 67 entries are copied into [fid_catalog.json](fid_catalog.json).
 
 ## Method
@@ -65,30 +65,30 @@ Lean is whichever of pro or anti has more flags. "Tie" means equal and non-zero;
 
 | Article | Run 2 flags | Run 2 pro / anti / neutral | Run 3 flags | Run 3 pro / anti / neutral | Same lean? |
 |---|---|---|---|---|---|
-| [Circumcision](../circumcision/snapshots/2026-10-01.txt) | 15 | 12 / 2 / 1 | 6 | 6 / 0 / 0 | yes |
-| [Circumcision and HIV](../circumcision-and-hiv/snapshots/2026-10-01.txt) | 5 | 5 / 0 / 0 | 2 | 2 / 0 / 0 | yes |
-| [Circumcision and law](../circumcision-and-law/snapshots/2026-10-01.txt) | 8 | 8 / 0 / 0 | 6 | 6 / 0 / 0 | yes |
-| [Circumcision controversies](../circumcision-controversies/snapshots/2026-10-01.txt) | 21 | 19 / 1 / 1 | 13 | 13 / 0 / 0 | yes |
-| [Circumcision controversy in early Christianity](../circumcision-controversy-in-early-christianity/snapshots/2026-10-01.txt) | 5 | 1 / 3 / 1 | 4 | 1 / 3 / 0 | yes |
-| [Circumcision in Africa](../circumcision-in-africa/snapshots/2026-10-01.txt) | 9 | 9 / 0 / 0 | 5 | 4 / 0 / 1 | yes |
-| [Circumcision in Brunei](../circumcision-in-brunei/snapshots/2026-10-01.txt) | 1 | 1 / 0 / 0 | 3 | 3 / 0 / 0 | yes |
-| [Circumcision in China](../circumcision-in-china/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 3 | 3 / 0 / 0 | **no** (none → pro) |
-| [Circumcision in the Bible](../circumcision-in-the-bible/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 1 | 0 / 1 / 0 | **no** (none → anti) |
-| [Circumcision of Jesus](../circumcision-of-jesus/snapshots/2026-10-01.txt) | 1 | 0 / 0 / 1 | 1 | 0 / 0 / 1 | yes |
-| [Circumcision surgical procedure](../circumcision-surgical-procedure/snapshots/2026-10-01.txt) | 4 | 2 / 1 / 1 | 2 | 1 / 1 / 0 | **no** (pro → tie) |
-| [Cost of circumcision surgery in Chaozhou](../cost-of-circumcision-surgery-in-chaozhou/snapshots/2026-10-01.txt) | 1 | 1 / 0 / 0 | 2 | 1 / 0 / 1 | yes |
-| [Cultural views on circumcision aesthetics](../cultural-views-on-circumcision-aesthetics/snapshots/2026-10-01.txt) | 2 | 0 / 1 / 1 | 3 | 1 / 1 / 1 | **no** (anti → tie) |
-| [Ethics of circumcision](../ethics-of-circumcision/snapshots/2026-10-01.txt) | 24 | 24 / 0 / 0 | 21 | 21 / 0 / 0 | yes |
-| [Feast of the Circumcision of Christ](../feast-of-the-circumcision-of-christ/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 0 | 0 / 0 / 0 | yes |
-| [Forced circumcision](../forced-circumcision/snapshots/2026-10-01.txt) | 7 | 0 / 7 / 0 | 7 | 0 / 7 / 0 | yes |
-| [Forced circumcision of minors in South Korea](../forced-circumcision-of-minors-in-south-korea/snapshots/2026-10-01.txt) | 1 | 0 / 1 / 0 | 4 | 3 / 1 / 0 | **no** (anti → pro) |
-| [History of circumcision](../history-of-circumcision/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 0 | 0 / 0 / 0 | yes |
-| [Khitan (circumcision)](../khitan-circumcision/snapshots/2026-10-01.txt) | 4 | 3 / 1 / 0 | 4 | 4 / 0 / 0 | yes |
-| [Prevalence of circumcision](../prevalence-of-circumcision/snapshots/2026-10-01.txt) | 1 | 1 / 0 / 0 | 2 | 0 / 2 / 0 | **no** (pro → anti) |
-| [Prohibition of Female Circumcision Act 1985](../prohibition-of-female-circumcision-act-1985/snapshots/2026-10-01.txt) | 6 | 3 / 2 / 1 | 6 | 3 / 2 / 1 | yes |
-| [Religion and circumcision](../religion-and-circumcision/snapshots/2026-10-01.txt) | 2 | 2 / 0 / 0 | 4 | 2 / 0 / 2 | yes |
-| [Stapler circumcision](../stapler-circumcision/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 3 | 3 / 0 / 0 | **no** (none → pro) |
-| [Views on circumcision](../views-on-circumcision/snapshots/2026-10-01.txt) | 9 | 9 / 0 / 0 | 9 | 9 / 0 / 0 | yes |
+| [Circumcision](../../articles/circumcision/snapshots/2026-10-01.txt) | 15 | 12 / 2 / 1 | 6 | 6 / 0 / 0 | yes |
+| [Circumcision and HIV](../../articles/circumcision-and-hiv/snapshots/2026-10-01.txt) | 5 | 5 / 0 / 0 | 2 | 2 / 0 / 0 | yes |
+| [Circumcision and law](../../articles/circumcision-and-law/snapshots/2026-10-01.txt) | 8 | 8 / 0 / 0 | 6 | 6 / 0 / 0 | yes |
+| [Circumcision controversies](../../articles/circumcision-controversies/snapshots/2026-10-01.txt) | 21 | 19 / 1 / 1 | 13 | 13 / 0 / 0 | yes |
+| [Circumcision controversy in early Christianity](../../articles/circumcision-controversy-in-early-christianity/snapshots/2026-10-01.txt) | 5 | 1 / 3 / 1 | 4 | 1 / 3 / 0 | yes |
+| [Circumcision in Africa](../../articles/circumcision-in-africa/snapshots/2026-10-01.txt) | 9 | 9 / 0 / 0 | 5 | 4 / 0 / 1 | yes |
+| [Circumcision in Brunei](../../articles/circumcision-in-brunei/snapshots/2026-10-01.txt) | 1 | 1 / 0 / 0 | 3 | 3 / 0 / 0 | yes |
+| [Circumcision in China](../../articles/circumcision-in-china/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 3 | 3 / 0 / 0 | **no** (none → pro) |
+| [Circumcision in the Bible](../../articles/circumcision-in-the-bible/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 1 | 0 / 1 / 0 | **no** (none → anti) |
+| [Circumcision of Jesus](../../articles/circumcision-of-jesus/snapshots/2026-10-01.txt) | 1 | 0 / 0 / 1 | 1 | 0 / 0 / 1 | yes |
+| [Circumcision surgical procedure](../../articles/circumcision-surgical-procedure/snapshots/2026-10-01.txt) | 4 | 2 / 1 / 1 | 2 | 1 / 1 / 0 | **no** (pro → tie) |
+| [Cost of circumcision surgery in Chaozhou](../../articles/cost-of-circumcision-surgery-in-chaozhou/snapshots/2026-10-01.txt) | 1 | 1 / 0 / 0 | 2 | 1 / 0 / 1 | yes |
+| [Cultural views on circumcision aesthetics](../../articles/cultural-views-on-circumcision-aesthetics/snapshots/2026-10-01.txt) | 2 | 0 / 1 / 1 | 3 | 1 / 1 / 1 | **no** (anti → tie) |
+| [Ethics of circumcision](../../articles/ethics-of-circumcision/snapshots/2026-10-01.txt) | 24 | 24 / 0 / 0 | 21 | 21 / 0 / 0 | yes |
+| [Feast of the Circumcision of Christ](../../articles/feast-of-the-circumcision-of-christ/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 0 | 0 / 0 / 0 | yes |
+| [Forced circumcision](../../articles/forced-circumcision/snapshots/2026-10-01.txt) | 7 | 0 / 7 / 0 | 7 | 0 / 7 / 0 | yes |
+| [Forced circumcision of minors in South Korea](../../articles/forced-circumcision-of-minors-in-south-korea/snapshots/2026-10-01.txt) | 1 | 0 / 1 / 0 | 4 | 3 / 1 / 0 | **no** (anti → pro) |
+| [History of circumcision](../../articles/history-of-circumcision/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 0 | 0 / 0 / 0 | yes |
+| [Khitan (circumcision)](../../articles/khitan-circumcision/snapshots/2026-10-01.txt) | 4 | 3 / 1 / 0 | 4 | 4 / 0 / 0 | yes |
+| [Prevalence of circumcision](../../articles/prevalence-of-circumcision/snapshots/2026-10-01.txt) | 1 | 1 / 0 / 0 | 2 | 0 / 2 / 0 | **no** (pro → anti) |
+| [Prohibition of Female Circumcision Act 1985](../../articles/prohibition-of-female-circumcision-act-1985/snapshots/2026-10-01.txt) | 6 | 3 / 2 / 1 | 6 | 3 / 2 / 1 | yes |
+| [Religion and circumcision](../../articles/religion-and-circumcision/snapshots/2026-10-01.txt) | 2 | 2 / 0 / 0 | 4 | 2 / 0 / 2 | yes |
+| [Stapler circumcision](../../articles/stapler-circumcision/snapshots/2026-10-01.txt) | 0 | 0 / 0 / 0 | 3 | 3 / 0 / 0 | **no** (none → pro) |
+| [Views on circumcision](../../articles/views-on-circumcision/snapshots/2026-10-01.txt) | 9 | 9 / 0 / 0 | 9 | 9 / 0 / 0 | yes |
 | **Total** | **126** | **100 / 19 / 7** | **111** | **86 / 18 / 7** | **17 of 24** |
 
 The biggest movers among the heavily flagged articles: Ethics of circumcision went from 24 to 21 (all pro in both runs), Circumcision controversies from 21 to 13, and Circumcision from 15 to 6. Views on circumcision stayed at 9, and Forced circumcision stayed at 7 (all anti in both runs).
@@ -117,9 +117,9 @@ The biggest movers among the heavily flagged articles: Ethics of circumcision we
 To reproduce, run these from the repo root (Python 3, standard library only):
 
 ```
-python3 articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/verify_quotes.py
-python3 articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/make_coverage.py
-python3 articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/compare.py
+python3 topics/circumcision/runs/2026-10-02_run3_title24/verify_quotes.py
+python3 topics/circumcision/runs/2026-10-02_run3_title24/make_coverage.py
+python3 topics/circumcision/runs/2026-10-02_run3_title24/compare.py
 ```
 
-`flags.csv` sha256: `41fe39774833148eb0286f93a6f62c65f2b946fbe57fc21bdd90f93b1a90f6ca`. Run 2's flags are in [../SOPHISTRY_RERUN_2026-10-01/flags.csv](../SOPHISTRY_RERUN_2026-10-01/flags.csv).
+`flags.csv` sha256: `41fe39774833148eb0286f93a6f62c65f2b946fbe57fc21bdd90f93b1a90f6ca`. Run 2's flags are in [../2026-10-01_run2_full/flags.csv](../2026-10-01_run2_full/flags.csv).

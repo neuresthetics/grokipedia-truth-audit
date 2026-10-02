@@ -3,7 +3,7 @@
 
 - **Article:** Brit shalom (naming ceremony)
 - **URL:** https://grokipedia.com/page/brit_shalom_naming_ceremony
-- **Snapshot file:** `articles/brit-shalom-naming-ceremony/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
+- **Snapshot file:** `topics/circumcision/articles/brit-shalom-naming-ceremony/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
 - **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
 - **Reading coverage:** lead (3 sentences) read in full, plus 34 of 103 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.

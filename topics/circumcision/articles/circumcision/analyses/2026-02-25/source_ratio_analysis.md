@@ -1,4 +1,4 @@
-> **Status:** an early one-off source classification for the 2026-02-25 snapshot of the Circumcision article, kept as a record. It has no published method or script, the Pro / Neutral / Anti labels are judgments, and it is not comparable with the sophistry scans described in the [README](../../../../README.md).
+> **Status:** an early one-off source classification for the 2026-02-25 snapshot of the Circumcision article, kept as a record. It has no published method or script, the Pro / Neutral / Anti labels are judgments, and it is not comparable with the sophistry scans described in the [README](../../../../../../README.md).
 
 **Source Ratio Analysis for the Grokipedia “Circumcision” Article**  
 (Verbatim snapshot provided earlier – 54 references total)

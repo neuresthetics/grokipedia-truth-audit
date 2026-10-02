@@ -1,7 +1,7 @@
 # Truth audit: Grokipedia, "Baruch Spinoza"
 
 **Page audited:** grokipedia.com Baruch Spinoza article, using the saved page [`snapshots/2026-10-01.html`](../../snapshots/2026-10-01.html). A live re-fetch on Thu 1 Oct 2026 (PT) returned the same byte size (629,108) and the same 152-source list.
-**Run:** first test run of the standing audit method. Tool: [`tools/grokaudit/grokaudit.py`](../../../../tools/grokaudit/README.md). Log: `spinoza_audit_log.csv`.
+**Run:** first test run of the standing audit method. Tool: [`tools/grokaudit/grokaudit.py`](../../../../../../tools/grokaudit/README.md). Log: `spinoza_audit_log.csv`.
 
 ## 1. Summary
 
@@ -215,7 +215,7 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
 
 ## 6. Methods and limits
 
-- **Inputs.** The page saved as Markdown and HTML (in this repo: `articles/spinoza/snapshots/2026-10-01.md` and `.html`). The live page re-fetched on 1 Oct 2026 (PT) was the same size and had the same source count.
+- **Inputs.** The page saved as Markdown and HTML (in this repo: `topics/spinoza/articles/baruch-spinoza/snapshots/2026-10-01.md` and `.html`). The live page re-fetched on 1 Oct 2026 (PT) was the same size and had the same source count.
 - **Parsing.** `grokaudit.py parse` splits `<span data-tts-block>` paragraphs into sentences and keeps inline citation numbers. Sources come from `<li id="ref-N">`.
 - **Link checks.** `linkcheck` uses HEAD with a GET fallback, at least 2 s between hits on the same host. `fetch` caches source text; `soft404` flags 200-status error pages and bot walls. Everything was read-only: nothing was edited, posted or submitted, and no one was contacted.
 - **Numbering shift.** Detected with `offset`: full-text word overlap of each claim against source n and n ± k. The −9 shift is statistically clear for [90]–[152]. **[81]–[89] are ambiguous** (11 markers), so I judged them as linked and noted the ambiguity. The likely mechanism (9 duplicate entries dropped from the displayed list without renumbering the text) is an inference; I did not see Grokipedia's build process.

@@ -1,7 +1,7 @@
 """Check every run-3 quote against its 2026-10-01 snapshot.
 
 Usage (from the repo root or anywhere):
-    python3 articles/SOPHISTRY_RUN3_TITLE24_2026-10-02/verify_quotes.py [flags.csv]
+    python3 topics/circumcision/runs/2026-10-02_run3_title24/verify_quotes.py [flags.csv]
 
 Exits non-zero if any quote cannot be found, if a slug is outside the 24-article set,
 or if an F-ID is not one of the 67 kept entries in fid_catalog.json.

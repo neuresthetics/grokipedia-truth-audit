@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run-1 vs run-2 sophistry-scan comparison (2026-10-01 snapshots).
 
-Run 1: flag tables in articles/<slug>/analyses/2026-10-01/sophistry_scan.md (read-only).
+Run 1: flag tables in topics/circumcision/articles/<slug>/analyses/2026-10-01/sophistry_scan_run1_partial.md (read-only).
 Run 2: flags.csv (full read of every sentence).
 Matching: same article, and quotes equal after normalization (citation markers removed,
 curly quotes/dashes unified, whitespace collapsed, case folded), or one normalized quote
@@ -15,8 +15,8 @@ import csv, json, os, re, sys
 from collections import Counter, defaultdict
 sys.dont_write_bytecode = True
 import os
-REPO = os.environ.get('REPO', os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-ART = f'{REPO}/articles'
+REPO = os.environ.get('REPO', os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', '..')))
+ART = f'{REPO}/topics/circumcision/articles'
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATE = '2026-10-01'
 slugs = json.load(open(f'{HERE}/slugs.json'))
@@ -36,7 +36,7 @@ ROW = re.compile(r'^\| (\d+) \| "(.*)" \| (F\d{3}) ([^|]+?) \| ([^|]+?) \| (.*) 
 SIDE1 = {'pro-circumcision': 'pro', 'anti-circumcision': 'anti', 'neutral/structural': 'neutral'}
 run1 = []; caps = {}; cov1 = {}
 for s in slugs:
-    p = f'{ART}/{s}/analyses/{DATE}/sophistry_scan.md'
+    p = f'{ART}/{s}/analyses/{DATE}/sophistry_scan_run1_partial.md'
     txt = open(p, encoding='utf-8').read()
     m = re.search(r'Reading coverage:\*\* lead \((\d+) sentences?\) read in full, plus (\d+) of (\d+) body sentences .*?cap (\d+)\)', txt)
     assert m, s
@@ -50,9 +50,9 @@ for s in slugs:
             run1.append(dict(slug=s, quote=r.group(2), fid=r.group(3), fname=r.group(4).strip(),
                              side=SIDE1[side]))
 # ‡ set from the run-1 summary table
-summ = open(f'{ART}/SOPHISTRY_SCAN_SUMMARY_{DATE}.md', encoding='utf-8').read()
-FGM = set(re.findall(r'\]\(([^/]+)/analyses/[^)]*\)[^\n]*‡', summ))
-# run 2's FGM set, fixed before run 1 was opened (see handoff notes)
+summ = open(f'{REPO}/topics/circumcision/runs/{DATE}_run1_partial/README.md', encoding='utf-8').read()
+FGM = set(re.findall(r'\]\((?:\.\./\.\./articles/)?([^/]+)/analyses/[^)]*\)[^\n]*‡', summ))
+# run 2's FGM set, fixed before run 1 was opened
 RUN2_FGM = {'prohibition-of-female-circumcision-act-1985', 'children-act-1989-amendment-female-genital-mutilation-act-2019',
     'clitoridectomy', 'female-genital-mutilation', 'female-genital-mutilation-act-2003', 'female-genital-mutilation-in-india',
     'female-genital-mutilation-in-new-zealand', 'female-genital-mutilation-in-nigeria', 'female-genital-mutilation-in-sudan',

@@ -11,7 +11,8 @@ DATE = "2026-10-01"
 
 def main() -> int:
     repo = Path(__file__).resolve().parents[1]
-    rerun = repo / "articles/SOPHISTRY_RERUN_2026-10-01"
+    topic = repo / "topics/circumcision"
+    rerun = topic / "runs/2026-10-01_run2_full"
     with (rerun / "flags.csv").open(newline="", encoding="utf-8") as fh:
         flags = list(csv.DictReader(fh))
     by_slug = defaultdict(list)
@@ -20,7 +21,7 @@ def main() -> int:
     failures = []
     occurrences = []
     for slug, rows in sorted(by_slug.items()):
-        snapshot_path = repo / "articles" / slug / "snapshots" / f"{DATE}.txt"
+        snapshot_path = topic / "articles" / slug / "snapshots" / f"{DATE}.txt"
         text = snapshot_path.read_text(encoding="utf-8")
         for i, row in enumerate(rows, 1):
             count = text.count(row["quote"])

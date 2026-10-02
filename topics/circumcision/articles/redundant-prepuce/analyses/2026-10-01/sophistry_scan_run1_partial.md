@@ -3,7 +3,7 @@
 
 - **Article:** Redundant Prepuce
 - **URL:** https://grokipedia.com/page/Redundant_Prepuce
-- **Snapshot file:** `articles/redundant-prepuce/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
+- **Snapshot file:** `topics/circumcision/articles/redundant-prepuce/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
 - **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
 - **Reading coverage:** lead (7 sentences) read in full, plus 35 of 106 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.

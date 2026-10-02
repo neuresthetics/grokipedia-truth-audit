@@ -4,7 +4,7 @@
 Everything here is deterministic string processing. Nothing in this script
 judges whether a sentence is fallacious; it only counts things.
 
-For one snapshot (articles/<slug>/snapshots/<date>.txt + <date>_sources.csv) it reports:
+For one snapshot (topics/<topic>/articles/<slug>/snapshots/<date>.txt + <date>_sources.csv) it reports:
   - sentence count (prose paragraphs and list items; headings, the metadata
     header and [Table] blocks are excluded; table rows are counted separately)
   - sentences with no in-text citation marker [n] of their own
@@ -14,7 +14,7 @@ For one snapshot (articles/<slug>/snapshots/<date>.txt + <date>_sources.csv) it 
   - term counts from the published lists in tools/term_lists/ (whole-word,
     case-insensitive; multi-word phrases matched as phrases)
 
-Usage:
+Usage (--topic defaults to circumcision; output defaults to topics/<topic>/code_counts/):
   python3 tools/sophistry_counts.py --date 2026-10-01 --all            # all article folders, writes CSV + JSON
   python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin  # one article, prints JSON
   python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin --sentences   # numbered sentence list
@@ -32,7 +32,14 @@ import argparse, csv, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-ARTICLES = os.path.join(REPO, "articles")
+DEFAULT_TOPIC = "circumcision"
+ARTICLES = os.path.join(REPO, "topics", DEFAULT_TOPIC, "articles")
+
+
+def set_topic(topic):
+    """Point ARTICLES at topics/<topic>/articles (used by this script and sophistry_triage.py)."""
+    global ARTICLES
+    ARTICLES = os.path.join(REPO, "topics", topic, "articles")
 TERM_FILES = ["wikipedia_mos_words_to_watch.json", "hyland_2005_hedges_boosters.json"]
 
 CITE = re.compile(r"\[(\d+)\]")
@@ -269,8 +276,12 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--sentences", action="store_true")
     ap.add_argument("--verify-quotes", action="store_true")
-    ap.add_argument("--out", default=os.path.join(HERE, "output"))
+    ap.add_argument("--topic", default=DEFAULT_TOPIC, help="topic folder under topics/ (default: circumcision)")
+    ap.add_argument("--out", help="output folder for --all (default: topics/<topic>/code_counts)")
     a = ap.parse_args()
+    set_topic(a.topic)
+    if a.out is None:
+        a.out = os.path.join(REPO, "topics", a.topic, "code_counts")
     if a.verify_quotes:
         total, bad = verify_quotes(a.date)
         print(f"quotes checked: {total}; not verbatim snapshot sentences: {len(bad)}")

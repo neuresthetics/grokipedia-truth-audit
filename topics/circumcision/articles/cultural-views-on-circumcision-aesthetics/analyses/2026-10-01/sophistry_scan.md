@@ -2,7 +2,7 @@
 
 - **Article:** Cultural views on circumcision aesthetics
 - **URL:** https://grokipedia.com/page/Cultural_views_on_circumcision_aesthetics
-- **Snapshot file:** `articles/cultural-views-on-circumcision-aesthetics/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
+- **Snapshot file:** `topics/circumcision/articles/cultural-views-on-circumcision-aesthetics/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
 - **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
 - **Reading coverage:** 96/96 units read in full (96 paragraphs, 0 table rows).
@@ -56,4 +56,4 @@ Run 2 flag counts by side: pro 0, anti 1, neutral 1. These are judgment-based la
 
 - No outside fact-checking or source verification was performed.
 - Labels are judgment-based flags, not computed findings.
-- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).
+- Reproducibility comparison: [COMPARISON.md](../../../../runs/2026-10-01_run2_full/COMPARISON.md).
