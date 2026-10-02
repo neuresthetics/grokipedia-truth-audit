@@ -21,7 +21,7 @@ For how this run fits with runs 1 and 2, and what the test does and doesn't show
 5. **Quote check.** [verify_quotes.py](verify_quotes.py) checks that every quote in `flags.csv` occurs verbatim in its snapshot, that every F-ID is one of the 67 kept entries, and that every side tag is valid. All 111 quotes matched exactly.
 6. **Comparison.** [compare.py](compare.py) maps both runs' quotes to units and writes [COMPARISON.md](COMPARISON.md) and [comparison_units.csv](comparison_units.csv). Every number on this page comes from that script or from a direct count of the two flag files.
 
-Every flag is a judgment by a model, not a measurement. No gate, XNOR or other logic computation was run; the only code is the segmentation, the quote check and the comparison scripts listed here.
+Every flag is a judgment by a model, not a measurement. No gate, XNOR or other logic computation was run (these are the framework's formal logic-gate checks; see [§1 of the method note](../../../../docs/METHOD_THREE_PHASE_TEST.md#1-the-framework-substance_lens)); the only code is the segmentation, the quote check and the comparison scripts listed here.
 
 ## Results
 

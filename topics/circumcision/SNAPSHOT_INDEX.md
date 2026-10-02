@@ -1,10 +1,10 @@
 # Circumcision-related Grokipedia articles: snapshot index (2026-10-01)
 
-Fetched 2026-10-01, 2026-10-01 22:01:41 PDT to 2026-10-01 22:03:07 PDT, with plain HTTP GET (curl). Every page listed returned HTTP 200 with article text in `div.article-body`.
+Fetched 2026-10-01 between 22:01:41 and 22:03:07 PDT, with plain HTTP GET (curl). Every page listed returned HTTP 200 with article text in `div.article-body`.
 
 **Total: 58 articles.** 24 have 'circumcision' in the title, 28 are closely related, and 6 are borderline. (Five title matches that are artworks or a poem, not articles about the practice, were dropped on 2026-10-01; see below.)
 
-Each article has `articles/<slug-folder>/snapshots/2026-10-01.html` (raw page), `2026-10-01.txt` (clean text with headings and a metadata header), and `2026-10-01_sources.csv` (ref_number, title, url, raw_text). The main article's files are in the existing `articles/circumcision/` folder.
+Each article has `articles/<slug-folder>/snapshots/2026-10-01.html` (raw page), `2026-10-01.txt` (clean text with headings and a metadata header), and `2026-10-01_sources.csv` (ref_number, title, url, raw_text). The main article's files are in `articles/circumcision/`.
 
 Column notes: *Paragraphs* counts `span[data-tts-block]` elements; tables are counted separately in each .txt header. *Sources* counts the `li#ref-N` entries on the page. *Last updated* is the page's JSON-LD `dateModified` converted to PT. Grokipedia doesn't show that date as a visible label. The visible header only says "Fact-checked by Grok · <relative time>", relative to the fetch time. No page showed a "last edited" label.
 
@@ -54,7 +54,7 @@ Column notes: *Paragraphs* counts `span[data-tts-block]` elements; tables are co
 | 42 | Gishiri cutting | https://grokipedia.com/page/Gishiri_cutting | `gishiri-cutting` | closely related | 55 | 58 | 2026-01-13 17:34 PST | fact-checked 8 months ago |  |
 | 43 | Infibulation | https://grokipedia.com/page/Infibulation | `infibulation` | closely related | 69 | 126 | 2026-01-13 17:50 PST | fact-checked 8 months ago |  |
 | 44 | International Day of Zero Tolerance for Female Genital Mutilation | https://grokipedia.com/page/International_Day_of_Zero_Tolerance_for_Female_Genital_Mutilation | `international-day-of-zero-tolerance-for-female-genital-mutilation` | closely related | 67 | 97 | 2026-01-13 17:44 PST | fact-checked 8 months ago |  |
-| 45 | Meatal stenosis | https://grokipedia.com/page/Meatal_stenosis | `meatal-stenosis` | closely related | 43 | 60 | 2026-02-23 14:18 PST | fact-checked 7 months ago | listed as closely related in task scope (circumcision complication) |
+| 45 | Meatal stenosis | https://grokipedia.com/page/Meatal_stenosis | `meatal-stenosis` | closely related | 43 | 60 | 2026-02-23 14:18 PST | fact-checked 7 months ago | included as closely related (circumcision complication) |
 | 46 | Mohel | https://grokipedia.com/page/Mohel | `mohel` | closely related | 59 | 126 | 2026-09-27 11:05 PDT | fact-checked 4 days ago |  |
 | 47 | Penile subincision | https://grokipedia.com/page/Penile_subincision | `penile-subincision` | closely related | 40 | 45 | 2026-01-13 17:00 PST | fact-checked 8 months ago |  |
 | 48 | Prevalence of female genital mutilation | https://grokipedia.com/page/Prevalence_of_female_genital_mutilation | `prevalence-of-female-genital-mutilation` | closely related | 66 | 129 | 2026-02-20 20:11 PST | fact-checked 7 months ago |  |
@@ -136,7 +136,7 @@ The main Circumcision article had no internal `/page/` links, either in its HTML
 
 ## Candidates that exist but were left out of scope
 
-- **Artworks and a poem (title contains 'circumcision', dropped by the operator's choice):** Circumcision of Christ (Bellini), Circumcision of Christ (Guercino), The Circumcision (Rubens), The Circumcision (Signorelli), Upon the Circumcision (Milton poem).
+- **Artworks and a poem (title contains 'circumcision', left out by choice):** Circumcision of Christ (Bellini), Circumcision of Christ (Guercino), The Circumcision (Rubens), The Circumcision (Signorelli), Upon the Circumcision (Milton poem).
 
 These pages loaded, but their main subject isn't circumcision or genital cutting, or the title only contains 'circumcised' or 'uncircumcised':
 
@@ -156,5 +156,5 @@ These pages loaded, but their main subject isn't circumcision or genital cutting
 
 - The site search API, `/api/full-text-search` (paged to offset 1000 for 'circumcision' and 'genital mutilation') and `/api/typeahead?v=2`, with about 45 queries: circumcision, circumcised, foreskin, prepuce, genital mutilation/cutting, brit milah, bris, khitan, mohel, metzitzah, intactivism, intactivist, phimosis, subincision, meatal stenosis, plastibell, gomco, mogen, genital modification, female circumcision, sunat, neonatal/male/infant circumcision, Shang Ring, periah, epispasm, kynodesme, lipodermos, clitoridectomy, infibulation, genital autonomy, NOCIRC, Bloodstained Men, Doctors Opposing Circumcision, ulwaluko, VMMC, foreskin restoration, brit shalom, hatafat dam, sandek, uncircumcised, and others.
 - The site search page, `/search?q=circumcision`, which server-renders 12 results. All 12 are included above.
-- WebSearch with `site:grokipedia.com` (this turned up ashley_montagu_resolution and brit_shalom_naming_ceremony).
+- A web search with `site:grokipedia.com` (this turned up ashley_montagu_resolution and brit_shalom_naming_ceremony).
 - Direct URL checks. A URL only counted if it loaded with article text.

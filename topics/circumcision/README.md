@@ -22,7 +22,7 @@ Run 2 read every sentence of the 58 articles against the [substance_lens](https:
 
 | Measure | Result |
 |---|---|
-| Sentences read | all 10,258 units in 58 articles (100%) |
+| Units read (sentences and table rows) | all 10,258 units in 58 articles (100%) |
 | Flags (pro / anti / neutral) | 225 (154 / 49 / 22) |
 | Male-circumcision articles (39): pro / anti / neutral | 123 / 22 / 9 (85% of sided flags pro) |
 | FGM articles (19): pro / anti / neutral | 31 / 27 / 13 (53% of sided flags pro; one article supplies 14 of the 31) |
@@ -102,4 +102,4 @@ The 18 most-used fallacy types on the 24 title matches (at least 5 flags across 
 
 - Charts: [tools/make_charts.py](../../tools/make_charts.py) draws all five from the committed flag files and prints every number it draws. Run `python3 tools/make_charts.py` from the repo root (needs matplotlib).
 - Run 3's scripts run from the repo as they are (standard library only).
-- Run 2's `build_flags.py` can't be re-run from the repo: its inputs (`raw_flags.tsv` and a local copy of the substance_lens spec) are not published, so `flags.csv` is the record. Run 2's `compare.py` needs the files `split.py` regenerates and a one-line filename change (Files section of [COMPARISON.md](runs/2026-10-01_run2_full/COMPARISON.md)).
+- Run 2's `build_flags.py` can't be re-run from the repo: its inputs (`raw_flags.tsv` and a local copy of the substance_lens spec) are not published, so `flags.csv` is the record. Run 2's `compare.py` needs only the files `split.py` regenerates (Files section of [COMPARISON.md](runs/2026-10-01_run2_full/COMPARISON.md#files)). The per-article run 2 write-ups are rendered from `flags.csv` by `tools/render_run2_scans.py`; see [tools/README.md](../../tools/README.md).

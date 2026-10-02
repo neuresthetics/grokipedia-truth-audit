@@ -18,9 +18,10 @@ Usage (--topic defaults to circumcision; output defaults to topics/<topic>/code_
   python3 tools/sophistry_counts.py --date 2026-10-01 --all            # all article folders, writes CSV + JSON
   python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin  # one article, prints JSON
   python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin --sentences   # numbered sentence list
-  python3 tools/sophistry_counts.py --date 2026-10-01 --verify-quotes   # check every flags-table quote in
-                                                                         # analyses/<date>/sophistry_scan.md is a
-                                                                         # verbatim sentence of the snapshot
+  python3 tools/sophistry_counts.py --date 2026-10-01 --verify-quotes   # check every run 1 flags-table quote in
+                                                                         # analyses/<date>/sophistry_scan_run1_partial.md
+                                                                         # is a verbatim sentence of the snapshot
+                                                                         # (run 2 quotes: tools/verify_run2_scan_quotes.py)
 
 Known limits of the sentence splitter: it is a regex splitter with an abbreviation
 guard. It can mis-split on unusual abbreviations or initials, and it treats a
@@ -246,10 +247,10 @@ def compress(nums):
 
 
 def verify_quotes(date):
-    """Check that every quoted sentence in a sophistry_scan.md flags table is a verbatim snapshot sentence."""
+    """Check that every quoted sentence in a run 1 flags table (sophistry_scan_run1_partial.md) is a verbatim snapshot sentence."""
     bad, total = [], 0
     for slug in article_slugs():
-        md = os.path.join(ARTICLES, slug, "analyses", date, "sophistry_scan.md")
+        md = os.path.join(ARTICLES, slug, "analyses", date, "sophistry_scan_run1_partial.md")
         snap = os.path.join(ARTICLES, slug, "snapshots", f"{date}.txt")
         if not (os.path.exists(md) and os.path.exists(snap)):
             continue

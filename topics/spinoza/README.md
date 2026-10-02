@@ -4,7 +4,7 @@ A sentence-by-sentence check of the citations and facts in the Grokipedia articl
 
 ## Result (2026-10-01)
 
-From citation [90] onward the numbers seem to be shifted by nine places. As a result, 110 of the 389 citation markers (28%) lead to an unrelated or missing source, in 97 of the 401 sentences. Of the 263 sentences checked against their sources or primary texts, 41 were judged to have a factual problem. Full report and counts: [spinoza_audit.md](articles/baruch-spinoza/analyses/2026-10-01/spinoza_audit.md).
+From citation [90] onward the numbers seem to be shifted by nine places. As a result, 110 of the 389 citation markers (28%) lead to an unrelated or missing source, in 97 of the 401 sentences. Of the 263 sentences judged (all priority sentences plus a seeded sample of 40), 41 were judged to have a factual problem. Full report and counts: [spinoza_audit.md](articles/baruch-spinoza/analyses/2026-10-01/spinoza_audit.md).
 
 ## What's in this folder
 

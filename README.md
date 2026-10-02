@@ -34,7 +34,7 @@ Run 2 read every sentence of the 58 articles against the [substance_lens](https:
 
 ## Spinoza: citation and fact check
 
-From citation [90] onward the Baruch Spinoza article's numbers appear shifted by nine places, so 110 of the 389 citation markers (28%) lead to an unrelated or missing source. Of the 263 sentences checked against their sources or primary texts, 41 were judged to have a factual problem. Details: [topics/spinoza/](topics/spinoza/README.md).
+From citation [90] onward the Baruch Spinoza article's numbers appear shifted by nine places, so 110 of the 389 citation markers (28%) lead to an unrelated or missing source. Of the 263 sentences judged (all priority sentences plus a seeded sample of 40), 41 were judged to have a factual problem. Details: [topics/spinoza/](topics/spinoza/README.md).
 
 ## Caveats
 

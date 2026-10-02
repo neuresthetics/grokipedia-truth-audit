@@ -14,7 +14,7 @@ The scans used one part of the spec, the **`fallacyScanPass`**, which was added 
 - **Both sides by default.** The spec's `dual_case_rule` says every check must run on both the claim under review and the strongest counter-case, with the same effort for each, and that a scan of one side only is incomplete. In these scans, that meant reasoning on both sides of the circumcision debate was checked, and every flag is tagged with the side it favours: **pro** (favours circumcision), **anti** (favours the opposing side) or **neutral** (favours neither). In the female genital cutting articles, "pro" means the flag favours cutting or a male/female distinction.
 - **A flag is not a disproof.** The spec says a flag only withdraws support from the step it is on. It does not show the conclusion is false.
 
-The spec also says that none of its 67 entries has a working argument-checker in code: 48 are judgment only, 10 have a partial mechanical sub-check, and 9 could be checked by code once an argument is put into formal shape. So every flag is a model's judgment. Rule **I10** ("trace honesty") forbids claiming a logic-gate computation unless its inputs, gates and outputs are shown. The framework's wider machinery (boolean gates, XNOR stability, the construction graph) was **not** run in any of these scans, and no such result is claimed.
+The spec also says that none of its 67 entries has a working argument-checker in code: 48 are judgment only, 10 have a partial mechanical sub-check, and 9 could be checked by code once an argument is put into formal shape. So every flag is a model's judgment. Rule **I10** ("trace honesty") forbids claiming a logic-gate computation unless its inputs, gates and outputs are shown. The framework also has formal machinery, in which an argument's steps are written as boolean logic gates (AND, XNOR and so on) and computed, plus a construction graph. None of it was run in any of these scans, and no such result is claimed.
 
 ## 2. How the framework was applied
 
@@ -73,7 +73,7 @@ Results: [runs/2026-10-02_run3_title24/README.md](../topics/circumcision/runs/20
 | Date | 2026-10-01 | 2026-10-01 | 2026-10-02 |
 | Articles | 58 | 58 | 24 (title matches) |
 | What was read | Lead + triage-picked sentences, about 30% | Every unit (10,258) | Every unit of the 24 |
-| Blind to earlier flags | First run | Yes (blind to run 1) | Yes (blind to run 2) |
+| Blind to earlier flags | First run | Yes (blind to run 1) | Yes (blind to runs 1 and 2) |
 | Flags (pro / anti / neutral) | 239 (126 / 56 / 57) | 225 (154 / 49 / 22) | 111 (86 / 18 / 7) |
 | Pro share of sided flags | 77% in male-circumcision articles | 85% in male-circumcision articles | 82.7% on the 24 (run 2 on the same 24: 84.0%) |
 | Compared against | (none) | Run 1 | Run 2, same 24 articles |
@@ -99,7 +99,7 @@ Agreement went up between the run 1/run 2 comparison and the run 2/run 3 compari
 - **Correctness.** All three runs used the same model family and the same method. Agreement between them measures **consistency (reliability), not correctness (validity)**. A blind spot or bias shared by the runs would show up as agreement. No independent human or second-model judge reviewed the flags.
 - **Full independence.** The "blind" runs did not see earlier flags, but all three runs used the same framework, the same catalogue and the same attribution rule.
 - **That the articles' facts are wrong.** A flag points to a gap in the article's reasoning, not a false claim. No outside fact-checking was done.
-- **Any logic-gate result.** No XNOR, gate or other formal computation from substance_lens was run. The only computations were the scripts listed above: segmentation, quote checks and comparisons.
+- **Any logic-gate result.** No XNOR, gate or other formal computation from substance_lens was run (see §1). The only computations were the scripts listed above: segmentation, quote checks and comparisons.
 
 **What would strengthen it:** an independent check of a sample of flags by human reviewers, a different model family run against the same catalogue, or both.
 

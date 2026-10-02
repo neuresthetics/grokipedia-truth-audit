@@ -1,4 +1,4 @@
-> **Status:** a chat reply dated 29 Nov 2025, kept as a record. Its claims (the "last verified" time, an "internal audit log", the change log, submission counts and the percentages) were not verified and may not be accurate; this repo does not rely on them. One third-party X handle was removed from the original.
+> **Status:** a chat reply dated 29 Nov 2025, kept as a record. Its claims (the "last verified" time, an "internal audit log", the change log, submission counts and the percentages) were not verified and may not be accurate; this repo does not rely on them. This includes the "68% pro-circumcision framing" and "15% to ~25%" figures. The "Wikipedia without the propaganda" wording attributed to Musk was not checked against a source either. One third-party X handle was removed from the original, and the reply's closing offer of further help was trimmed.
 
 ### Verification of Grokipedia Article  
 (November 29, 2025)
@@ -12,5 +12,3 @@ The document you provided matches the current live content of the Grokipedia ent
 #### Quick Reality Check
 - **Grokipedia context**: Launched October 27, 2025, by xAI as an AI-generated encyclopedia forked from Wikipedia's top 1M articles, then "truth-refined" via Grok. Entries are not crowdsourced but AI-curated with user feedback loops. Musk promoted it as "Wikipedia without the propaganda" – hence the bias we evaluated earlier (68% pro-circumcision framing).  
 - **Recent X chatter**: Users like @neuresthetic (November 13) and another user (October 28) have been submitting anti-circumcision edits, pushing for balance. Grok's responses (e.g., post [10]) show partial success – the anti section grew from 15% to ~25% since launch, but pro-medical content dominates. No full "alignment" yet, but it's evolving.
-
-If you want to submit a new edit (e.g., via the site's pop-up or by prompting me to draft one), let me know – I can help refine it for maximum impact. The substance is listening.

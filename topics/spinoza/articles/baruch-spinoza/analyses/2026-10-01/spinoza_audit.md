@@ -5,7 +5,7 @@
 
 ## 1. Summary
 
-The article's prose gets the outline of Spinoza's life and the Ethics' main doctrines broadly right. Its citation apparatus, however, is badly broken. From about [90] onward every inline number points to the wrong source: the intended source is the listed one nine places earlier. Numbers [153]–[161] point to nothing at all. So 110 of the 389 citation markers (28%) lead a reader to an unrelated or missing source; 97 sentences are affected. The other bot's report of "153–161 missing" is correct but understates the problem.
+The article's prose gets the outline of Spinoza's life and the Ethics' main doctrines broadly right. Its citation apparatus, however, is badly broken. From about [90] onward every inline number points to the wrong source: the intended source is the listed one nine places earlier. Numbers [153]–[161] point to nothing at all. So 110 of the 389 citation markers (28%) lead a reader to an unrelated or missing source; 97 sentences are affected. An earlier automated check reported "153–161 missing"; that is correct but understates the problem.
 
 Below the citation layer there are real factual errors, concentrated in the correspondence section and in several Ethics locators:
 - misnumbered letters: Blyenbergh replies Epp. 19, 21, 23 and 27 (old Letter 38), Boxel Epp. 51–56, Ep. 69 to van Velthuysen, and Tschirnhaus correspondence; Letter 73 is not from June 1666;
@@ -60,7 +60,7 @@ For the shifted citations, each claim was also checked against the source it was
 - all 42 priority uncited claims;
 - a seeded random sample of 40 of the remaining 144 non-priority cited claims (seed 1656).
 
-The remaining 104 cited non-priority claims are NOT_CHECKED. Hand checks were done at four depths: read the source passage (72), keyword plus best-passage skim (106), checked against the primary text (51), and title/abstract only (8). The remaining rows are script-only (34) or not checked (130).
+The remaining 104 cited non-priority claims are NOT_CHECKED. Hand checks were done at four depths: read the source passage (72), keyword plus best-passage skim (106), checked against the primary text (51), and title/abstract only (8). The remaining rows are script-only (34) or have no source check (130). Those 130 are the 104 NOT_CHECKED claims plus 26 priority claims judged without reading a source: 13 MISCITED by the shift rule and 13 UNVERIFIABLE.
 
 ## 3. Problem claims
 
@@ -120,7 +120,7 @@ Next, every claim with a factual problem or an UNSUPPORTED verdict (41 rows, gen
 
 **Standard and method.** Ethics references were checked against Elwes (Project Gutenberg #3800); Curley was consulted only through SEP entries and published papers. Ethics citations below use Part/Proposition/Definition/Scholium locators only, with no page numbers. TTP and TP were checked against Elwes; TIE against Elwes (PG #1016). Letters were checked by Gebhardt numbering against Spinoza Web and Bennett. The sacred-texts Elwes edition uses a different numbering, shown in brackets in its titles.
 
-**The two items the other bot spotted:**
+**The two items flagged by an earlier automated check:**
 1. *[153]–[161] dangling.* **Confirmed** by the script: 9 numbers, 9 markers, 7 sentences. The cause is larger than missing entries. The source list was evidently renumbered, so citations from about [90] onward are off by nine (§3). The "missing" sources are actually refs 144–152.
 2. *"The order and connection of ideas is the same as the order and connection of things" labelled Part I Prop 7.* **Confirmed wrong; it is E2P7.** The wording is confirmed in Elwes and through the permitted Curley sources. The cited source (ref 74, Bennett's Ethics) has it in Part II. The article contradicts itself: C183 gives E1P7 correctly ("it pertains to the nature of a substance to exist"). C155 also cites "Ethics 2p7" correctly for parallelism.
 
@@ -176,7 +176,7 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
 | C097, C325 | 88 letters | **Correct** (EMLO: "just eighty-eight letters"). The 50/38 split was not verified |
 | C094 | Heidelberg chair declined, 1673 | **Correct**: Epp. 47–48 |
 
-## 5. Fallacy and framing pass (substance lens v0.5.9, `fallacyScanPass`)
+## 5. Fallacy and framing pass (substance_lens v0.5.9, `fallacyScanPass`)
 
 **Honesty rules.**
 - Every flag below is a **judgment** by the auditor. None was computed; no argument graph was built, and there are no scores.
@@ -218,20 +218,20 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
 - **Inputs.** The page saved as Markdown and HTML (in this repo: `topics/spinoza/articles/baruch-spinoza/snapshots/2026-10-01.md` and `.html`). The live page re-fetched on 1 Oct 2026 (PT) was the same size and had the same source count.
 - **Parsing.** `grokaudit.py parse` splits `<span data-tts-block>` paragraphs into sentences and keeps inline citation numbers. Sources come from `<li id="ref-N">`.
 - **Link checks.** `linkcheck` uses HEAD with a GET fallback, at least 2 s between hits on the same host. `fetch` caches source text; `soft404` flags 200-status error pages and bot walls. Everything was read-only: nothing was edited, posted or submitted, and no one was contacted.
-- **Numbering shift.** Detected with `offset`: full-text word overlap of each claim against source n and n ± k. The −9 shift is statistically clear for [90]–[152]. **[81]–[89] are ambiguous** (11 markers), so I judged them as linked and noted the ambiguity. The likely mechanism (9 duplicate entries dropped from the displayed list without renumbering the text) is an inference; I did not see Grokipedia's build process.
+- **Numbering shift.** Detected with `offset`: full-text word overlap of each claim against source n and n ± k. The −9 shift is statistically clear for [90]–[152]. **[81]–[89] are ambiguous** (11 markers), so they were judged as linked and the ambiguity was noted. The likely mechanism (9 duplicate entries dropped from the displayed list without renumbering the text) is an inference; Grokipedia's build process could not be seen.
 - **Verdict rules.** Verdicts are judgments recorded in `data/verdicts_spinoza.psv` and merged by `grokaudit.py buildlog`. The `verdict` column scores the citation *as linked*. `verdict_vs_intended` re-scores shifted citations against source n − 9. For shifted cites, MISCITED reflects the established shift even where the linked page was itself unreadable.
 - **Depth.** `check_depth` records how each verdict was reached: read / skim / primary / title / none / script. "Skim" means keyword search plus reading the best-matching passage in the cached source, not a full read. A skim-level SUPPORTED is weaker than a read-level one.
 - **Not reachable.**
   - Paywalled or abstract-only: WSJ (34), OUP chapters and TOCs (32, 36, 40), Cambridge Lexicon entries. These were marked UNVERIFIABLE where they were the only support.
-  - Bot-blocked: PhilArchive, ResearchGate, umich (14 refs), plus ref 138 (HTTP 500) and ref 68 (redirect loop). I did not try to get around these blocks.
+  - Bot-blocked: PhilArchive, ResearchGate, umich (14 refs), plus ref 138 (HTTP 500) and ref 68 (redirect loop). No attempt was made to get around these blocks.
   - Unreachable: ref 9 (SSL failure). This leaves the genealogy claims C012–C015 unverifiable.
 - **Sampling.** The priority set (223 claims) was chosen by regex tags plus manual review. Non-priority cited claims were sampled at 40 of 144 (seed 1656), leaving **104 cited claims NOT_CHECKED**. The non-sampled claims C165/C173/C177, noted in §4, show that errors exist outside the sample. The sample error rate should not be extrapolated as a precise figure.
 - **Primary texts.**
   - Elwes: Gutenberg Ethics, TTP, TP and TIE.
   - Curley: consulted only through SEP entries and published papers.
   - Bennett's Early Modern Texts versions: these are the article's own refs 50, 74 and 89.
-- **Biographical facts.** Where the article follows the 1906 Jewish Encyclopedia (genealogy) and that has been superseded, I marked it "SUPPORTED by citation, factual issue Y" and gave the modern source (Spinoza Web). Contested points, such as Schuller vs Meyer at the deathbed and the TIE's date, are marked as contested rather than wrong.
-- **No invented material.** Where I could not confirm a quote or fact, it is marked UNVERIFIABLE or "not verified". All corrections link to a public source or name the primary-text locator.
+- **Biographical facts.** Where the article follows the 1906 Jewish Encyclopedia (genealogy) and that has been superseded, the claim is marked "SUPPORTED by citation, factual issue Y" and gave the modern source (Spinoza Web). Contested points, such as Schuller vs Meyer at the deathbed and the TIE's date, are marked as contested rather than wrong.
+- **No invented material.** Where a quote or fact could not be confirmed, it is marked UNVERIFIABLE or "not verified". All corrections link to a public source or name the primary-text locator.
 - **Re-running on another page.**
 
   ```
@@ -251,9 +251,9 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
   python3 tools/grokaudit/grokaudit.py report audit_log.csv
   ```
 
-## Peer cross-check (freedom_of_necessity, 2026-10-01)
+## Second-reviewer cross-check (2026-10-01)
 
-**Confirmed.** The peer cross-check used Elwes for the Ethics, TTP and TP; Spinoza Web with Gebhardt numbering and Bennett for the letters; and Curley only through SEP entries and published papers. It confirmed the citation-shift diagnosis, E2P7, the Ethics locator corrections, the Oldenburg total of exactly 28 letters (18 in 1661–65), the PCP as the only lifetime publication under Spinoza’s name, and the TP’s 11-chapter limit.
+**Confirmed.** The second reviewer used Elwes for the Ethics, TTP and TP; Spinoza Web with Gebhardt numbering and Bennett for the letters; and Curley only through SEP entries and published papers. It confirmed the citation-shift diagnosis, E2P7, the Ethics locator corrections, the Oldenburg total of exactly 28 letters (18 in 1661–65), the PCP as the only lifetime publication under Spinoza’s name, and the TP’s 11-chapter limit.
 
 **Changed.** The verdict file and merged log now correct Blyenbergh’s Ep. 27 date (3 June 1665), Ep. 69’s Sep–Nov 1675 date, the Tschirnhaus direct/via-Schuller lists and topic placement, and the Leibniz chronology (Epp. 45–46; Epp. 70 and 72; visit c. 18–21 Nov 1676). C232 is now **SUPPORTED** in the schema’s closest category, with a note that it is partly supported but misleading; C276’s intended-source assessment is now supported as a paraphrase of the TTP title page and Preface. The notes now distinguish E1D4/E1P10, E4P18S/E4P24/E4D8, E2P35S/E4P1S, E3P9S, E2P48S/E2P49C/E3P9S, and the E1P5/E1P8/E1P14 argument.
 

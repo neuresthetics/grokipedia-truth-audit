@@ -8,11 +8,11 @@
 
 ## How run 2 was done
 
-- **Blinding.** Run 2 was scanned without opening run 1's per-article scans, the run 1 summary, `tools/sophistry_triage.py` or `(unpublished run-1 scratch)`. `flags.csv` was finalized at 2026-10-01 23:14 PT (sha256 `fc6978a1…95d3`), and only then were those files opened for this comparison.
+- **Blinding.** Run 2 was scanned without opening run 1's per-article scans, the run 1 summary, `tools/sophistry_triage.py` or the unpublished run 1 working notes. `flags.csv` was finalized at 2026-10-01 23:14 PT (sha256 `fc6978a1…95d3`), and only then were those files opened for this comparison.
 - **Coverage.** Every unit of every article was read: 10,258 units in total (10,088 prose units, including 33 `[Table]` marker lines, and 170 table rows). Text was split by `split.py` and read in citation-stripped views. Per-article counts are in `coverage.tsv`.
   - By contrast, run 1 read the lead plus a cue-word-selected subset: 2,969 of 10,016 sentences (29.6%) by its own sentence count.
 - **Quotes.** `build_flags.py` maps each flag to its exact snapshot sentence and asserts the quote is a substring of the snapshot. All 225 quotes passed (223 unique matches; 2 sentences that appear twice in an article were mapped to their first occurrence).
-- **Process caveat.** Run 2 was done in several sessions with context summaries between them. Partway through, I found I had been using some F-ID meanings wrongly (e.g. F003 is Red Herring and F036 is Suppressed Evidence). Before the final build I checked every row's F-ID against its note. This was a judgment review, not a computed check.
+- **Process caveat.** Run 2 was done in several sessions with context summaries between them. Partway through, it was found that some F-ID meanings had been used wrongly (e.g. F003 is Red Herring and F036 is Suppressed Evidence). Before the final build, every row's F-ID was checked against its note. This was a judgment review, not a computed check.
 
 ## Matching rules
 

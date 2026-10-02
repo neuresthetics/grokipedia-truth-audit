@@ -111,7 +111,7 @@ def main():
                 problems.append(f"run {k}: {r['fid']} named '{r['fname']}' but spec says '{cat[r['fid']]}'")
         n_span = sum(r["status"] == "exact-span" for r in run[k])
         if n_span:
-            problems.append(f"run {k}: {n_span} quote(s) span two sentences and were mapped to both units")
+            problems.append(f"run {k}: {n_span} quote{'' if n_span == 1 else 's'} span{'s' if n_span == 1 else ''} two sentences and {'was' if n_span == 1 else 'were'} mapped to both units")
 
     # ---- totals and side split
     side = {k: Counter(r["side"] for r in run[k]) for k in run}
@@ -213,7 +213,7 @@ Run 3 was a blind re-read of the same 24 articles under the same spec. It flagge
 
 - **The direction reproduces.** Both runs judge the articles' own reasoning to tilt strongly toward circumcision. Pro flags are {pct(side[2]['pro'], sided[2])} of sided flags in run 2 and {pct(side[3]['pro'], sided[3])} in run 3.
 - **The ranking of articles reproduces.** The Spearman correlation of per-article flag counts is **{rho:.2f}**. ethics-of-circumcision and circumcision-controversies are the two heaviest articles in both runs. feast-of-the-circumcision-of-christ and history-of-circumcision have zero flags in both. forced-circumcision is the clearest anti-leaning article in both runs (7 anti flags each).
-- **Article lean mostly reproduces: {agree}/24 articles get the same lean.** {len(small)} of the {len(disagree_list)} disagreements are on articles with 4 or fewer flags in both runs, where one flag can flip the lean. The {reversals} outright pro/anti reversal(s) ({', '.join(reversal_list) or 'none'}) each rest on 1-4 flags per run.
+- **Article lean mostly reproduces: {agree}/24 articles get the same lean.** {('All ' + str(len(disagree_list))) if len(small) == len(disagree_list) else (str(len(small)) + ' of the ' + str(len(disagree_list)))} disagreements are on articles with 4 or fewer flags in both runs, where one flag can flip the lean. The {reversals} outright pro/anti reversal{'' if reversals == 1 else 's'} ({', '.join(reversal_list) or 'none'}) {'rests' if reversals == 1 else 'each rest'} on 1-4 flags per run.
 - **Sentence-level agreement is moderate.** Run 3 re-flagged {len(inter)} of the {len(U2)} sentences/rows run 2 flagged, reproducing {pct(len(inter), len(U2))} of run 2. Unit-level Jaccard is {len(inter) / len(union):.2f}, and {one_run} of the {len(union)} sentences flagged by either run ({pct(one_run, len(union))}) were flagged by only one. Neither run's list should be treated as complete.
 - **On sentences both runs flagged, the side is nearly always the same ({pct(same_side, len(inter))}). The F-ID usually matches ({pct(same_fid, len(inter))}).** Which way a lapse leans reproduces better than its exact label.
 - **Types.** Stable: {named(stable)}. Noisy: {named(noisy)}. Lowest unit-level agreement among the judged types: {lowest}. F055 Ecological Fallacy was used {fid_count[2]['F055']} times by run 2 and {fid_count[3]['F055']} times by run 3.
@@ -268,7 +268,7 @@ Bottom line: the article-level findings reproduce: a strong pro-circumcision til
           "- Run 3 never used F055 Ecological Fallacy. The clearest run-2 F055 case on these articles (circumcision: US vs Sweden lifetime UTI prevalence) was read by run 3 as part of an attributed 'Critiques ... emphasize' paragraph and skipped under the attribution rule. This is an example of the attribution boundary driving disagreement.",
           "- In cultural-views-on-circumcision-aesthetics, one run-3 quote occurs verbatim twice in the snapshot (the lead and a later section); it is mapped to its first occurrence.",
           "- Run 3 was done blind: its flags.csv and coverage.tsv were written before run 2's files were opened. Unit coverage for run 3 is a self-report of a full read (coverage.tsv), not a measurement.",
-          "- Attribution rule (from the task instructions, applied by judgment in run 3; run 2 was given the same rule): positions explicitly attributed to someone ('critics argue', 'proponents contend', and the rest of such a paragraph) are not counted as the article's own reasoning. Where that boundary is drawn accounts for part of the sentence-level disagreement.",
+          "- Attribution rule (from the scan rules, applied by judgment in run 3; run 2 was given the same rule): positions explicitly attributed to someone ('critics argue', 'proponents contend', and the rest of such a paragraph) are not counted as the article's own reasoning. Where that boundary is drawn accounts for part of the sentence-level disagreement.",
           "- Side is a judgment about which position a lapse favors. In prohibition-of-female-circumcision-act-1985, 'pro' means it favors cutting or a male/female distinction.",
           "\n## Caveat\n",
           "Both runs used the same model family and the same substance_lens v0.5.9 spec (67 kept F-IDs). Agreement between them shows **consistency of the method, not correctness**. Shared blind spots or shared biases would show up as agreement. No outside fact-checking was done; every flag is a judgment about the article's own reasoning, not a measurement.\n",
