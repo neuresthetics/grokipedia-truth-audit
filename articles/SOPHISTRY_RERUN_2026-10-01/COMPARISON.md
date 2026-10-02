@@ -1,6 +1,6 @@
 # Sophistry scan reproducibility: run 1 vs run 2 (58 Grokipedia snapshots, 2026-10-01)
 
-**Compared:** run 1 (`articles/*/analyses/2026-10-01/sophistry_scan.md`) and run 2 (`flags.csv`).
+**Compared:** run 1 (`articles/*/analyses/2026-10-01/sophistry_scan_run1_partial.md`; these files were named `sophistry_scan.md` when this comparison was run, and that name now holds the per-article scans rebuilt from run 2) and run 2 (`flags.csv`).
 **Method (both runs):** substance_lens v0.5.9 `fallacyScanPass` (67 kept F-IDs), both sides, the article's own voice only, no outside fact-checking.
 **Every number below comes from `compare.py`** (output in `comparison.json`; tables in `tables.md`). The flags themselves are judgment calls by a model in both runs, not measurements.
 
@@ -92,12 +92,11 @@ Run 1's read set could be rebuilt exactly.
 
 ## Files
 
-- `flags.csv`: run 2 flags (slug, quote, fid, fname, side, note)
-- `raw_flags.tsv`: the snippets the flags were built from
-- `build_flags.py`: builds the flags and verifies the quotes
+- `flags.csv`: run 2 flags (slug, quote, fid, fname, side, note). This is the published record of run 2.
+- `build_flags.py`: built `flags.csv` from a working file of flag snippets (`raw_flags.tsv`) and verified the quotes. It also read a local copy of the substance_lens v0.5.9 spec for the fallacy names. Neither file is published, so this script shows how the flags were built but can't be re-run from the repo alone.
 - `coverage.tsv`: per-article units read
-- `split.py`, `sentences.jsonl` and `read/`: the sentence units and reading views
-- `compare.py`: this comparison
+- `split.py`: the sentence splitter. It regenerates the sentence units (`sentences.jsonl`), the citation-stripped reading views (`read/<slug>.txt`) and the article list (`slugs.json`). These generated files are not committed. It expects to be run from the repo root and writes them to the current directory; `read/` must exist first.
+- `compare.py`: this comparison. It needs `sentences.jsonl` and `slugs.json` from `split.py` in this folder (move them here after running `split.py`). It was written when run 1's tables were in `sophistry_scan.md`; to re-run it now, change that filename in the script to `sophistry_scan_run1_partial.md`.
 - `comparison.json`: all computed values, including every matched pair
 - `tables.md`: the tables below
 
