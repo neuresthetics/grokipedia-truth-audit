@@ -14,7 +14,7 @@ Sophistry scans of 58 circumcision-related Grokipedia articles, read from snapsh
 | `articles/<slug>/edit_submissions/` | Correction drafts for Grokipedia (one so far: [circumcision, 2025-11-30](articles/circumcision/edit_submissions/2025-11-30.md)) |
 | `articles/circumcision/analyses/2025-11-30/`, `2026-02-25/` | Earlier one-off model reviews of the Circumcision article, with no published method; not comparable with the scans |
 | [code_counts/](code_counts/) | Deterministic text counts per snapshot (uncited sentences, dangling citations, term hits) from `tools/sophistry_counts.py` |
-| [background/](background/) | Background material on the topic itself (not audits) |
+| [background/](background/) | Two of the author's working notes on circumcision ethics: an essay and a model-generated "steel man" debate. Not audits, not checked, and not used by the scans (see the status note at the top of each) |
 
 ## Sophistry scan (2026-10-01)
 

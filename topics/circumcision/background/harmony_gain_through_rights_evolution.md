@@ -1,5 +1,7 @@
 # Circumcision Ethics In General
 
+> **Status: author's working notes, not an audit.** An essay on the ethics of circumcision, written in the vocabulary of the author's own framework (Spinoza-style substance and a "motion law"; symbols such as ρ, P and λ are not defined here). Its figures and claims have not been checked, and it plays no part in the scans or their results.
+
 Harmony Gain Through Rights Evolution
 In Ethics Math Derived From Thermodynamics
 

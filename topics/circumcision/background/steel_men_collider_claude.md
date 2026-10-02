@@ -1,5 +1,7 @@
 # ⚡ STEEL MEN COLLIDER: INITIALIZATION ⚡
 
+> **Status: author's working notes, not an audit.** This is a model-generated adversarial debate (a "steel man" exercise) on infant circumcision ethics; the filename records the model used (Claude). Its arguments, figures and citations have not been checked, and it plays no part in the scans or their results.
+
 ```
 ╔════════════════════════════════════════════════════════════╗
 ║ PARTICLE ACCELERATOR STATUS: ONLINE                        ║
