@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Circumcision_surgical_procedure
 - **Snapshot file:** `articles/circumcision-surgical-procedure/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 254 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 266/266 units read in full (261 paragraphs, 5 table rows).
 
 ## Verdict
 
-This is mostly a technical how-it-is-done article: techniques, devices, anesthesia, aftercare. The ethics and public-health disputes are reported with attribution on both sides, and AAP and CDC caveats are included. Four reasoning flags were found in the sentences read. Two favor circumcision: a mechanism stated as causal on the basis of cohort data, and a 100:1-200:1 benefit-to-risk ratio presented as 'risk-benefit analyses' generally. One is structural: brit milah is grouped with tribal initiations under 'non-sterile conditions and untrained performers'. One favors the critical side: an uncited generalization about low and tight circumcisions. On the sentences read: 2 pro, 1 anti, 1 neutral/structural. These are judgment calls.
+Run 2 found 4 flags: 2 pro, 1 anti, and 1 neutral. The lean is pro. Main patterns were F036 Suppressed Evidence (2); F041 False Equivalence (1); F055 Ecological Fallacy (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,28 +41,21 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug circumci
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "This protective effect stems from the removal of the foreskin, which can harbor bacteria under suboptimal hygiene conditions, as evidenced by cohort studies showing a 10-fold lower incidence in circumcised versus uncircumcised infants. [16]" | F032 Cum Hoc | pro-circumcision | 'This protective effect stems from the removal of the foreskin ... as evidenced by cohort studies': a causal mechanism is asserted with observational cohort data as the evidence named. (sentence 29) |
-| 2 | "Risk-benefit analyses estimate benefits outweighing risks by ratios of 100:1 to 200:1 when aggregating lifetime protections against infections and cancers. [151]" | F004 Appeal to Authority | pro-circumcision | A 100:1-200:1 benefit-to-risk ratio is stated in the article's voice as what 'risk-benefit analyses estimate', with no named author or method, though it sits in a section on disputes. The aggregation method ('aggregating lifetime protections') decides the result and is not shown. Claim needs source check. (sentence 255) |
-| 3 | "Ritual or traditional settings, including Jewish brit milah by mohels or tribal initiations, often forgo anesthesia and modern clamps in favor of sharp instruments like ritual knives, resulting in substantially higher risks—up to 14% severe complications like excessive bleeding or sepsis—due to non-sterile conditions and untrained performers. [10]" | F020 Division | neutral/structural | Assigns the properties of the broad class 'ritual or traditional settings' ('non-sterile conditions and untrained performers', up to 14% severe complications) to each member, including brit milah by mohels, with no member-specific evidence. (sentence 25) |
-| 4 | "In low and tight circumcisions, which remove significant inner foreskin and shaft skin resulting in minimal loose skin and reduced gliding action, masturbation techniques often shift from foreskin rolling or gliding to direct glans and shaft stimulation, frequently requiring lubricant due to increased friction and lack of natural skin movement." | F011 Hasty Generalization | anti-circumcision | Uncited (code count). A general claim about how men with low and tight circumcisions 'often' and 'frequently' masturbate and need lubricant, with no source or sample shown. (sentence 212) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; neutral/structural 1; pro-circumcision 2.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Ritual or traditional settings, including Jewish brit milah by mohels or tribal initiations, often forgo anesthesia and modern clamps in favor of sharp instruments like ritual knives, resulting in substantially higher risks—up to 14% severe complications like excessive bleeding or sepsis—due to non-sterile conditions and untrained performers." | F041 False Equivalence | neutral | Groups mohel-performed brit milah with unsterile tribal initiations under one 'up to 14% severe complications' figure, despite material differences between them. |
+| 2 | "Across settings, neonatal timing in controlled medical environments empirically minimizes morbidity compared to delayed or ceremonial procedures." | F036 Suppressed Evidence | pro | Claims neonatal timing minimizes morbidity although the article's own long-term section reports meatal stenosis risk elevated twofold when circumcision occurs before age one. |
+| 3 | "This reduction is attributed to decreased chronic inflammation, phimosis-related issues, and human papillomavirus (HPV) persistence under the foreskin, conditions that facilitate carcinogenesis; penile cancer remains rare overall, with annual U.S. incidence rates of 1 in 100,000 uncircumcised men versus near-zero in circumcised populations." | F055 Ecological Fallacy | pro | Population-level near-zero rate presented as individual protection, without addressing differences between populations. |
+| 4 | "From a first-principles ethical framework emphasizing autonomy as a core principle in bioethics, infant circumcision contravenes the requirement for voluntary, informed agreement to procedures altering functional anatomy, as the foreskin serves protective, sensory, and immunological roles without posing inherent harm if left intact." | F036 Suppressed Evidence | anti | In the article's own voice, says the intact foreskin poses no inherent harm, leaving out the UTI, phimosis and balanitis risks the article itself reports. |
 
 ## Both-sides balance note
 
-Same-standard check: the 'Ethical Perspectives' and 'Medical and Public Health Disputes' sections pair each proponent claim with a critic reply (239/240, 243, 248/250, 251/253), and attribution verbs are fairly even ('argue', 'contend', 'highlight'). Sentence 210 says earlier observational findings of reduced sensitivity 'have been contradicted' by prospective studies. That is a one-way summary, but it is cited and was not flagged. The article includes Reddit-sourced aftercare tips (185) and labels them anecdotal (187), which is disclosed, not a reasoning fault.
+Run 2 flag counts by side: pro 2, anti 1, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (209 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The '[2014]', '[2021]', '[2024]', '[2025]' brackets counted as dangling citation numbers are years rendered as citation links on the page (see INDEX).
-- Practical medical advice in the aftercare sections was not evaluated.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

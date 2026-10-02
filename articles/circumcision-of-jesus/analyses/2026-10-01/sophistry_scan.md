@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Circumcision_of_Jesus
 - **Snapshot file:** `articles/circumcision-of-jesus/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 139 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 146/146 units read in full (146 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a religious-history and art-history article. The relic sections are skeptical and give reasons, and the historicity section correctly says the event lacks extra-biblical corroboration. The reasoning problems are structural. The article contradicts itself on historicity: it says 'universally accepted via Gospel attestation' in one place and 'a matter of faith tradition rather than empirically corroborated history' in another. It also states theological conclusions in its own voice, once backed by the absence of evidence for the opposite. All 3 flags are neutral/structural; nothing in the sentences read bears on the modern circumcision debate. These are judgment calls.
+Run 2 found 1 flag: 0 pro, 0 anti, and 1 neutral. The lean is neutral. Main patterns were F010 Appeal to Ignorance (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,26 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug circumci
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Interdenominational debates focus less on the event's historicity—universally accepted via Gospel attestation—and more on its soteriological and ecclesial implications, particularly whether it analogizes infant baptism or obligates covenant continuity." | F005 Appeal to Popularity | neutral/structural | Uncited (code count). Historicity is said to be 'universally accepted via Gospel attestation', an appeal to general acceptance. It contradicts sentence 29 ('a matter of faith tradition rather than empirically corroborated history') and sentence 28 on critical analyses. (sentence 58) |
-| 2 | "This framework underscores causal realism in redemption: the physical rite's pain and blood directly anticipate the efficacious atonement, not as symbolic abstraction but as historical pre-enactment ordained by God, ensuring the antitype's reality validates the type's prophetic intent. [29]" | F004 Appeal to Authority | neutral/structural | States in the article's voice that the rite is a 'historical pre-enactment ordained by God' and calls this 'causal realism'. The theological tradition is the only warrant, and its claim is given as fact rather than attributed. (sentence 46) |
-| 3 | "Theological contention persists on typology—whether it strictly prefigures spiritual excision of sin or risks conflating shadows with substance—but consensus holds that Christ's circumcision uniquely qualified him to atone, obviating repetition for justification, as no empirical evidence supports salvific efficacy in the rite absent faith. [37] [19]" | F010 Appeal to Ignorance | neutral/structural | A theological 'consensus' is supported by 'no empirical evidence supports salvific efficacy in the rite absent faith'. Absence of empirical evidence for a non-empirical claim is offered as support for a doctrinal position. (sentence 60) |
-
-Flag tally by side (simple count of the table above): neutral/structural 3.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Apocryphal works such as the Infancy Gospel of Thomas, dated to the mid-second century, elaborate on Jesus' childhood miracles but omit any reference to his circumcision, underscoring their legendary rather than evidentiary character." | F010 Appeal to Ignorance | neutral | A text's silence about the circumcision is taken as showing it is legendary, which is a non sequitur from omission. |
 
 ## Both-sides balance note
 
-Same-standard check: skeptical treatment is applied firmly to relic claims (sentences 118-145), with stated reasons (multiplicity, provenance gaps, decomposition). Comparable scrutiny is applied to the nativity account in sentences 28-29, but sentence 58 then undercuts it. Denominational views are attributed by tradition (Catholic, Orthodox, Reformed). Not applicable to the pro/anti-circumcision lean.
+Run 2 flag counts by side: pro 0, anti 0, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (94 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Art-historical attributions and dates were not checked.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

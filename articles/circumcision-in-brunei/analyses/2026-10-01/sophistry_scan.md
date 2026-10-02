@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Circumcision_in_Brunei
 - **Snapshot file:** `articles/circumcision-in-brunei/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (4 sentences) read in full, plus 25 of 38 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 42/42 units read in full (42 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a short descriptive article on a religious and cultural rite. It mostly reports religious rulings and ceremony details, and it does not argue the ethics either way. The code count shows many uncited sentences (the whole lead has no citation markers). One reasoning flag was found: the medical section applies the WHO recommendation, whose scope depends on HIV prevalence, to Brunei without giving Brunei's HIV situation, and speculates that protection is 'amplified'. The one flag favors pro-circumcision. This is a judgment call.
+Run 2 found 1 flag: 1 pro, 0 anti, and 0 neutral. The lean is pro. Main patterns were F022 Accident (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,24 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug circumci
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "This approach adapts global evidence to Brunei's context, where male circumcision prevalence is estimated at 51.9% due to religious norms, potentially amplifying protective effects against HIV and other sexually transmitted infections. [19]" | F022 Accident | pro-circumcision | A general recommendation scoped to high-HIV-prevalence settings (the Circumcision and HIV article, sentence 79, gives that scope) is applied to Brunei without stating Brunei's HIV prevalence, the condition the rule depends on. The sentence then adds an unsupported 'potentially amplifying protective effects'. (sentence 38) |
-
-Flag tally by side (simple count of the table above): pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "This approach adapts global evidence to Brunei's context, where male circumcision prevalence is estimated at 51.9% due to religious norms, potentially amplifying protective effects against HIV and other sexually transmitted infections." | F022 Accident | pro | VMMC evidence from high-prevalence heterosexual epidemics is applied to Brunei and said to be 'potentially amplifying protective effects'; the general rule is used outside its stated scope. |
 
 ## Both-sides balance note
 
-Same-standard check: the article states benefits in general terms (sentence 39, with its own caveat that Brunei data are limited) and risks only for pre-modern, non-sterile practice (32). Neither side's claims are argued at length, so there is little to compare. No sentence read presents an ethical objection to the practice, so the ethical debate is absent rather than one-sided by argument. Minor internal inconsistency: the usual age is given as 7 to 12 (sentence 2) and as 6 to 12 (sentence 24).
+Run 2 flag counts by side: pro 1, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (13 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Sources 22-24 are listed but never cited (code count); they were not opened.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

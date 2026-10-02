@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Ulwaluko
 - **Snapshot file:** `articles/ulwaluko/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (5 sentences) read in full, plus 45 of 164 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 175/175 units read in full (170 paragraphs, 5 table rows).
 
 ## Verdict
 
-This ethnographic article reports the complication and mortality data plainly (91, 103, 107, 125, 129) and attributes positions to traditionalists, reformers and critics. Five flags were found. Three favor the rite: adult VMMC trial efficacy is extended to 'properly performed Ulwaluko', a different procedure; the risks are traced 'primarily' to modern encroachments 'rather than inherent procedural flaws', even though the article's own description includes no anesthesia, no washing and non-medical healing; and 'empirical persistence' is taken to show the values' 'adaptive fit'. Two are structural: critics are characterized by their origin ('urban or Western-influenced'), and an uncited article-voice sentence on homosexuality presents one 'causal definition of manhood' as rooted in empirical roles while casting the other as imposed. Lean: 3 pro-rite, 0 anti, 2 neutral/structural. These are judgment calls.
+Run 2 found 6 flags: 5 pro, 0 anti, and 1 neutral. The lean is pro. Main patterns were F040 Loaded Language (2); F028 Appeal to Tradition (1); F039 No True Scotsman (1); F036 Suppressed Evidence (1); F031 Post Hoc (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,29 +41,23 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug ulwaluko
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Empirical benefits of male circumcision, applicable to properly performed Ulwaluko, include a 60% reduction in heterosexual HIV acquisition risk for men, as established by randomized controlled trials in sub-Saharan Africa and endorsed by the World Health Organization for voluntary medical programs; South African data align with these findings, showing lower HIV incidence among circumcised males. [42] [43]" | F022 Accident | pro-circumcision | 'Empirical benefits of male circumcision, applicable to properly performed Ulwaluko, include a 60% reduction in heterosexual HIV acquisition'. The RCTs tested voluntary medical male circumcision under clinical conditions, and their result is applied to a traditional procedure performed differently, without evidence that the effect carries over. The 'South African data' on lower incidence among circumcised males are observational. (sentence 94) |
-| 2 | "Empirical audits reveal that core ritual elements under qualified custodians exhibit fewer failures, with escalated risks tracing primarily to modern encroachments such as fee-based, unregulated schools rather than inherent procedural flaws. [46]" | F033 Causal Oversimplification | pro-circumcision | 'Escalated risks tracing primarily to modern encroachments such as fee-based, unregulated schools rather than inherent procedural flaws'. A single cause is chosen, while the article's own description of the core rite (2: no anesthesia; 105: reliance on 'natural healing') includes risk factors that are part of the procedure. (sentence 106) |
-| 3 | "While these values sustain cultural continuity—practiced by over 80% of Xhosa males as of recent surveys—they have drawn critique for entrenching hierarchical gender expectations, such as male primacy in provision, potentially at odds with egalitarian modern ideals, yet empirical persistence underscores their adaptive fit within enduring Xhosa social fabrics. [7] [27]" | F028 Appeal to Tradition | pro-circumcision | 'Empirical persistence underscores their adaptive fit within enduring Xhosa social fabrics'. Continued practice is taken as evidence that the values are well suited to the society, which treats persistence (tradition) as validation and does not answer the critique raised earlier in the same sentence. (sentence 72) |
-| 4 | "Critics, often from urban or Western-influenced viewpoints, argue it entrenches inflexible gender expectations, potentially marginalizing non-conformists. [25]" | F027 Genetic Fallacy | neutral/structural | 'Critics, often from urban or Western-influenced viewpoints, argue it entrenches inflexible gender expectations'. The critics are characterized by their origin, which invites discounting the argument without engaging it (also in 119: 'often from urban or activist perspectives'). (sentence 63) |
-| 5 | "This tension arises from a fundamental clash between indigenous causal definitions of manhood—rooted in empirical roles for reproduction and group survival—and modern Western-influenced frameworks emphasizing individual sexual identity rights, which impose universal inclusion absent in pre-colonial paradigms where non-reproductive attractions were peripheral or suppressed without identity-based rites." | F040 Loaded Language | neutral/structural | Uncited (code count). The article's voice frames the dispute as 'indigenous causal definitions of manhood—rooted in empirical roles for reproduction and group survival' versus 'Western-influenced frameworks ... which impose universal inclusion'. One side gets 'empirical' and 'causal', the other 'impose'. (sentence 120) |
-
-Flag tally by side (simple count of the table above): neutral/structural 2; pro-circumcision 3.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "While these values sustain cultural continuity—practiced by over 80% of Xhosa males as of recent surveys—they have drawn critique for entrenching hierarchical gender expectations, such as male primacy in provision, potentially at odds with egalitarian modern ideals, yet empirical persistence underscores their adaptive fit within enduring Xhosa social fabrics." | F028 Appeal to Tradition | pro | Treats the practice's persistence as evidence of its adaptive value, which is an appeal to tradition or longevity. |
+| 2 | "Rural settings, by contrast, benefit from communal oversight and geographic isolation that enforce stricter adherence to protocols, yielding lower incident rates than urban dilutions where profit motives supplant elder-guided standards." | F040 Loaded Language | pro | 'Urban dilutions' is loaded framing that casts harms as corruption of the authentic rite. The rural-safety claim is asserted, not shown, and the article elsewhere describes unsterilized rural practice. |
+| 3 | "Empirical audits reveal that core ritual elements under qualified custodians exhibit fewer failures, with escalated risks tracing primarily to modern encroachments such as fee-based, unregulated schools rather than inherent procedural flaws." | F039 No True Scotsman | pro | No True Scotsman: failures are assigned to non-genuine practice, even though the article describes unsterilized tools, no anesthesia and fluid restriction as core traditional elements. |
+| 4 | "Data from Mthatha-based research underscores low overt gay participation not as coerced rejection but as practical incompatibility, with initiates navigating dual lives post-ritual, suggesting cultural fit drives outcomes over institutional barriers." | F036 Suppressed Evidence | pro | Ignores the previous sentence's evidence of gay initiates concealing their identities under social pressure, and reframes exclusion as 'fit'. |
+| 5 | "Implementation has yielded measurable safety improvements, with reported deaths in the Eastern Cape dropping from 453 between 2006 and 2011—amid widespread non-compliance—to 11 out of 10,794 initiates in the 2022 winter season, attributable to stricter licensing and health interventions." | F031 Post Hoc | neutral | A six-year cumulative total (453) is set against a single season (11), and the drop is credited to licensing without a like-for-like comparison. |
+| 6 | "Projections indicate persistence among Xhosa communities, driven by identity formation benefits, provided reforms address verifiable complications through verifiable training efficacy rather than unsubstantiated bans." | F040 Loaded Language | pro | 'Unsubstantiated bans' dismissively frames the discontinuation position as baseless. |
 
 ## Both-sides balance note
 
-Same-standard check: traditionalists' benefit claims (96: self-efficacy) are held to an evidence standard ('limited and confounded by cultural selection effects'), but the HIV-benefit claim (94) is transferred without that check. Advocates for discontinuation (97) and state advocates (130) are attributed, and their mortality data are reported in full. The anti-rite side gets origin labels (63, 119), while the traditionalist side gets its arguments stated (110, 118, 127-128, 131).
+Run 2 flag counts by side: pro 5, anti 0, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (119 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Two different Act names and numbers are given for the 2001 Eastern Cape law (122: 'Application of Health Standards in Traditional Circumcision Act No. 6 of 2001'; 140: 'Traditional Circumcision Act (Act No. 5 of 2001)'). This was not resolved.
-- Mortality figures (39 in 2025; 40 in 2010; 60 in 2013; 557 deaths 2006-2014) were not checked.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

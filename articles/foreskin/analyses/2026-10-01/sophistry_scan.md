@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Foreskin
 - **Snapshot file:** `articles/foreskin/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (9 sentences) read in full, plus 71 of 216 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 80). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 231/231 units read in full (226 paragraphs, 5 table rows).
 
 ## Verdict
 
-This is an anatomy article that covers the circumcision debate extensively, and both sides appear in strong form. 'Ethical Arguments for Preservation' (194-202) and 'Critiques of Anti-Circumcision' (203-212) are mostly attributed, and the policy section ends with the article's own recommendation, which favors preservation in low-prevalence settings (224). The flags mostly concern how evidence is stated in the article's own voice. Observational benefit associations are given causal or mediated language. Trial efficacy is presented as proof of a mechanism, while a few sentences earlier the article reports lower Langerhans-cell density. The lead's 'conflicting results' on sensitivity becomes 'systematic reviews confirm no adverse impacts'. An uncited sentence calls the 20,000-nerve-ending figure 'unsubstantiated'. Anonymous attribution ('are seen as ideologically driven') labels autonomy arguments. On the other side, the article itself prescribes policy, and it says benefits 'accrue primarily later in life' despite the infant UTI data it cites. Lean: 6 pro, 2 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 5 flags: 5 pro, 0 anti, and 0 neutral. The lean is pro. Main patterns were F036 Suppressed Evidence (3); F032 Cum Hoc (1); F040 Loaded Language (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,31 +41,22 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Observational studies, including randomized trials in high-HIV-prevalence regions, demonstrate that the foreskin increases heterosexual HIV acquisition risk by enriching target cells (e.g., Langerhans cells) in its inner mucosa, with circumcision conferring 50-60% relative protection against infection; however, these findings derive largely from African cohorts and may attenuate in low-prevalence settings with condom use. [87] [88]" | F034 False Cause | pro-circumcision | 'Observational studies, including randomized trials ... demonstrate that the foreskin increases ... risk by enriching target cells'. The trials measured the effect of circumcision, not the mechanism, which is stated as demonstrated; RCTs are also grouped under 'observational'. Sentence 74 reports a lower Langerhans-cell density in the prepuce, which the article does not reconcile with this. (sentence 126) |
-| 2 | "Circumcision performed in childhood or adolescence substantially lowers the risk of invasive penile cancer, with systematic reviews showing odds ratios as low as 0.33 for circumcised individuals compared to uncircumcised controls. [97]" | F032 Cum Hoc | pro-circumcision | 'Substantially lowers the risk' is causal wording for odds ratios from observational systematic reviews, and the figure is reported 'as low as 0.33', the most favorable end. The same article treats harm-side correlations more cautiously. (sentence 145) |
-| 3 | "Additionally, male circumcision correlates with reduced cervical cancer risk in female partners, mediated by lower penile HPV carriage, as evidenced by cohort studies linking partner circumcision status to cervical cancer incidence. [98]" | F032 Cum Hoc | pro-circumcision | Partner cervical-cancer reduction is said to be 'mediated by lower penile HPV carriage, as evidenced by cohort studies'. A causal mediation pathway is asserted from cohort associations. (sentence 147) |
-| 4 | "Systematic reviews confirm no adverse impacts on sexual function, sensitivity, or satisfaction from circumcision, countering claims of foreskin-specific erogenous loss, as glans keratinization does not demonstrably impair overall penile sensation in controlled studies. [38] [161]" | F036 Suppressed Evidence | pro-circumcision | Article voice: 'Systematic reviews confirm no adverse impacts on sexual function, sensitivity, or satisfaction'. The lead (9) says 'Empirical studies show conflicting results on post-circumcision sensitivity'. Here only the null side is presented, as confirmation. (sentence 220) |
-| 5 | "Total nerve endings across the entire foreskin are estimated at 1,000–10,000 based on modern analyses and pathologist reviews, far lower than unsubstantiated claims of 20,000 derived from misinterpretations of early density measurements." | F040 Loaded Language | pro-circumcision | Uncited (code count). Dismisses the opposing figure as 'unsubstantiated claims of 20,000 derived from misinterpretations', a dismissive label applied to one side without a source. The estimate range itself needs a source check. (sentence 58) |
-| 6 | "Bodily autonomy appeals in advocacy are seen as ideologically driven opinions overriding evidence-based parental decision-making and public health considerations, such as AAP and CDC endorsements of the procedure's net benefits outweighing risks by ratios up to 100:1. [153]" | F040 Loaded Language | pro-circumcision | 'Bodily autonomy appeals ... are seen as ideologically driven opinions' (seen by whom is not said). The 'ideological' label for integrity arguments arrives through an unattributed passive. The '100:1' ratio needs a source check. (sentence 211) |
-| 7 | "Evidence-based policies should thus differentiate contexts: promote adult voluntary circumcision in high-risk epidemics per WHO data, but in low-prevalence regions, default to preservation with parental opt-in only after disclosing absolute risks (e.g., 1 in 500 severe complications) versus benefits, avoiding public funding for non-therapeutic procedures to align incentives with empirical net gains. [103]" | F061 Is-Ought Jump | anti-circumcision | The article's own voice moves from the evidence summary to a policy prescription ('Evidence-based policies should thus ... default to preservation ... avoiding public funding'). Empirical premises are turned into a normative recommendation the article adopts. Its '1 in 500 severe complications' also conflicts with sentence 205's 'fewer than 0.01%'. (sentence 224) |
-| 8 | "Yet, the foreskin's histological role as innervated mucosal tissue warrants consideration in policies emphasizing bodily integrity, particularly since high-quality evidence shows benefits accrue primarily later in life, post-infancy. [37]" | F036 Suppressed Evidence | anti-circumcision | 'High-quality evidence shows benefits accrue primarily later in life, post-infancy' leaves out the infant UTI reduction the article itself reports (139-141, 215). (sentence 221) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 2; pro-circumcision 6.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "The glans penis itself contains thousands of specialized nerve endings (around 4,000–8,000 axons/receptors), forming the primary site for erogenous sensation, which remains unaffected by circumcision." | F036 Suppressed Evidence | pro | States flatly that glans sensation is unaffected, leaving out the article's own account that exposure after circumcision keratinizes and coarsens the glans surface. |
+| 2 | "The condition is nearly absent in circumcised populations, underscoring the foreskin's role in harboring oncogenic factors like high-risk HPV strains, which are 32-43% less prevalent post-circumcision per systematic reviews." | F032 Cum Hoc | pro | Takes an association (OR about 0.33, so not 'nearly absent') as showing the foreskin's causal role. |
+| 3 | "Intactivist narratives promoting the foreskin as possessing uniquely dense nerve endings for erotogenic purposes are contradicted by histological studies revealing lower specialized nerve density compared to the glans, with no empirical link to superior pleasure." | F036 Suppressed Evidence | pro | Calls the claim contradicted while leaving out the article's own anatomy section, which says preputial corpuscular endings are up to 10 times denser than in the glans. |
+| 4 | "These evaluations, drawn from peer-reviewed analyses, underscore a pattern where advocacy prioritizes absolutist positions over causal evidence from prospective trials." | F040 Loaded Language | pro | The article's own summary labels opponents 'absolutist'. Loaded framing caps a section that presents only one side. |
+| 5 | "Systematic reviews confirm no adverse impacts on sexual function, sensitivity, or satisfaction from circumcision, countering claims of foreskin-specific erogenous loss, as glans keratinization does not demonstrably impair overall penile sensation in controlled studies." | F036 Suppressed Evidence | pro | Presents the evidence as settled ('confirm no adverse impacts'), though the lead says empirical studies on sensitivity are conflicting. |
 
 ## Both-sides balance note
 
-Same-standard check: on sexual function, the article applies a strict standard to anti-side evidence ('methodologically flawed surveys ... rather than robust RCTs', 207) but presents pro-side observational benefits causally (145, 147). That is the asymmetry this audit found elsewhere, though here it is moderated by the explicit low-prevalence caveats (128, 150, 216) and the European positions (218). Anti-side ethical claims (194-202) are attributed. The anti-leaning faults are the article's own policy verdict (224) and an omission (221).
+Run 2 flag counts by side: pro 5, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (145 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Internal inconsistencies noted, not resolved: Langerhans density (74 vs 126); severe complication rates (205 vs 224); sensitivity evidence (9 vs 61/220).
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

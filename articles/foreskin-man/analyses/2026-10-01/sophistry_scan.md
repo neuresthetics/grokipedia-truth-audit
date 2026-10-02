@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Foreskin_Man
 - **Snapshot file:** `articles/foreskin-man/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (5 sentences) read in full, plus 36 of 110 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 115/115 units read in full (115 paragraphs, 0 table rows).
 
 ## Verdict
 
-This article is about an advocacy comic, so most of the circumcision-related claims are the comic's or its critics' and are attributed. The health-evidence section is balanced: it gives the RCT findings with low-prevalence caveats, says sensitivity evidence is 'mixed', and covers AAP/CDC positions (62-74). The article also cautions against causal claims about the comic's influence (103, 114). One flag was found: the lead says in the article's voice that the comic contributed to 'the measure's defeat'. The body's own caution about causal links is not applied to this claim, and the ballot history needs a source check. Lean: 0 pro, 0 anti, 1 neutral/structural. This is a judgment call.
+Run 2 found 0 flags: 0 pro, 0 anti, and 0 neutral. The lean is no flagged lean. Main patterns were none. Flags are judgment calls.
 
 ## Code counts
 
@@ -41,24 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "The comics, available in print and digital formats, have sparked significant controversy, particularly for caricatures perceived as invoking anti-Semitic tropes through blond, Aryan-like heroism clashing with hook-nosed mohels, leading even fellow activists to distance themselves and contributing to the measure's defeat amid broader backlash. [1] [6]" | F031 Post Hoc | neutral/structural | Lead, article voice: the controversy led activists to distance themselves 'and contribut[ed] to the measure's defeat amid broader backlash'. The defeat follows the controversy in time, but no evidence of contribution is given in the sentence. Sentences 103 and 114 decline to assert causal links for the comic's other effects, so the lead is held to a looser standard. The ballot-measure history (90, 105) needs a source check; no verdict is given here. (sentence 4) |
-
-Flag tally by side (simple count of the table above): neutral/structural 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| — | No run 2 flags. | — | — | No judgment-based flags were recorded. |
 
 ## Both-sides balance note
 
-Same-standard check: 'purported' is used in the article's voice for both sides, 'purported ethical violations' (37) and 'Purported benefits' (57), so the loaded-term use is symmetric here and was not flagged. Critics' charge of 'fear-mongering' (88) and 'sensationalism' (102) and supporters' claims of 'amplifying awareness' (92) are both reported. The article notes that the comic sidelines RCT data (91), and it also notes the small absolute benefits in low-risk settings (64, 67), so the evidence context cuts both ways.
+Run 2 flag counts by side: pro 0, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (74 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The San Francisco ballot history (23.7% support figure in sentence 90; 'defeat' in sentences 4 and 105) was not checked against sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

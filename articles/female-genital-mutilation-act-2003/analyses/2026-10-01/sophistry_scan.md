@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/female_genital_mutilation_act_2003
 - **Snapshot file:** `articles/female-genital-mutilation-act-2003/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 194 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 200/200 units read in full (200 paragraphs, 0 table rows).
 
 ## Verdict
 
-The statute description (offences, extraterritoriality, protection orders, enforcement record) is clear and mostly well attributed, and the 'Measured Outcomes' section is appropriately cautious about causation (sentence 117). Five flags were found in the sentences read. One is a political ad hominem: critics are said to be 'often exhibiting left-leaning biases'. One is an uncited aside in the definition section comparing FGM with voluntary adult male circumcision, a comparison that does not bear on the offence. Two are anti-cutting overreaches: rights 'override' relativism as a matter of fact, and 'neuroanatomical analyses' are cited for an absence of preventive benefit. One is an uncited single-cause account of the enforcement failure. Lean: 1 pro, 2 anti, 2 neutral/structural. These are judgment calls.
+Run 2 found 5 flags: 2 pro, 3 anti, and 0 neutral. The lean is anti. Main patterns were F036 Suppressed Evidence (2); F001 Ad Hominem (1); F033 Causal Oversimplification (1); F040 Loaded Language (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,30 +41,22 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug female-g
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "In contrast, male circumcision removes the foreskin (with fewer nerve endings and partial sensory role) and, when voluntary and hygienic, reduces heterosexual HIV acquisition by 60% per randomized trials, alongside lower UTI and penile cancer rates, rendering it non-equivalent in harm-benefit calculus." | F003 Red Herring | pro-circumcision | Uncited (code count). In a section defining the FGM offence, it turns to male circumcision's benefits 'when voluntary and hygienic' (adult VMMC data). A voluntary adult procedure is set against a non-consensual procedure on children, and the comparison does not bear on the statute's scope. The 'fewer nerve endings' claim needs a source check. (sentence 45) |
-| 2 | "These harms stem from anatomical disruption of the vulva and clitoris, which contains over 8,000 nerve endings essential for normal function, yielding no hygienic or preventive benefits analogous to those sometimes claimed for male circumcision, per neuroanatomical analyses. [67]" | F004 Appeal to Authority | anti-circumcision | Cites 'neuroanatomical analyses' as authority for 'no hygienic or preventive benefits'. Nerve anatomy is not the field that could establish or rule out preventive benefit, so the authority is outside its domain for this claim. (sentence 127) |
-| 3 | "These norms, while culturally embedded, do not mitigate the empirically verified physical and psychological damages, which override relativistic defenses by violating innate rights to bodily integrity. [13]" | F061 Is-Ought Jump | anti-circumcision | Article voice: the damages 'override relativistic defenses by violating innate rights to bodily integrity'. A normative conclusion is presented as following from the harm data, with 'innate rights' asserted rather than stated as the premise of a position. (sentence 26) |
-| 4 | "In the 2010s, discussions of FGM enforcement faced accusations of Islamophobia, particularly when highlighting its prevalence in certain immigrant communities, with critics in media and academia—often exhibiting left-leaning biases toward multicultural tolerance—arguing that condemnation risks stigmatizing minority cultures despite evidence of ongoing cases in the UK. [71]" | F001 Ad Hominem | neutral/structural | The critics' argument (stigmatization of minority communities) is accompanied by an attribution of motive ('often exhibiting left-leaning biases toward multicultural tolerance') in the article's voice. Their political leaning is offered in place of an answer to their point. (sentence 146) |
-| 5 | "Key causal factors contributing to this deterrence failure include victim non-cooperation and stringent evidential requirements, rather than mere resource constraints." | F033 Causal Oversimplification | neutral/structural | Uncited. Names 'victim non-cooperation and stringent evidential requirements, rather than mere resource constraints' as the causal factors, dismissing a rival cause without evidence shown. (sentence 135) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 2; neutral/structural 2; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "The Act distinguishes female genital mutilation from male circumcision by focusing on the former's inherently non-therapeutic intent and disproportionate harms, absent in the latter when medically indicated." | F036 Suppressed Evidence | pro | Contrasts non-therapeutic FGM with medically indicated male circumcision, leaving out the non-therapeutic male case that is the relevant comparator. |
+| 2 | "In contrast, male circumcision removes the foreskin (with fewer nerve endings and partial sensory role) and, when voluntary and hygienic, reduces heterosexual HIV acquisition by 60% per randomized trials, alongside lower UTI and penile cancer rates, rendering it non-equivalent in harm-benefit calculus." | F036 Suppressed Evidence | pro | Benefits of voluntary adult circumcision are used to settle the harm-benefit comparison with non-consensual childhood FGM, a selective comparator. |
+| 3 | "In the 2010s, discussions of FGM enforcement faced accusations of Islamophobia, particularly when highlighting its prevalence in certain immigrant communities, with critics in media and academia—often exhibiting left-leaning biases toward multicultural tolerance—arguing that condemnation risks stigmatizing minority cultures despite evidence of ongoing cases in the UK." | F001 Ad Hominem | anti | Dismisses critics by imputing political bias instead of answering their stigmatization argument. |
+| 4 | "Enforcement of the 2003 Act has been undermined by gaps in immigration controls and multicultural policies that deter proactive intervention in ethnic enclaves." | F033 Causal Oversimplification | anti | Attributes enforcement failure mainly to immigration and multicultural policy, while the article's own prosecution section identifies evidential hurdles and victim non-cooperation as the key factors. |
+| 5 | "Such measures face opposition labeling them xenophobic, yet data show unintegrated clusters—concentrated in areas like London boroughs with rates up to 47 per 1,000—perpetuate FGM through parallel social structures, underscoring realism that unchecked migration without assimilation enforces de facto exemptions from universal prohibitions." | F040 Loaded Language | anti | Loaded framing ('unchecked migration', 'realism') presented as a conclusion from clustering data that does not establish it. |
 
 ## Both-sides balance note
 
-Same-standard check: right-leaning critiques (140-141) are attributed with a label ('Right-leaning commentators'), and left-leaning critics are attributed with a motive (146). The asymmetry is in kind: one side is labelled, the other is labelled and given a bias motive. On male circumcision, the article twice distinguishes it from FGM (45, 143), once uncited and in the article's voice. No sentence read gives the opposing (equivalence) view a hearing, so that comparison is one-sided here; it is off-topic for a statute article either way. Health-harm claims (123-130) are cited, and causal language there follows WHO study descriptions.
+Run 2 flag counts by side: pro 2, anti 3, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (149 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Case counts (20,000; 9,000; 5,000 investigations) were not reconciled with each other or checked.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

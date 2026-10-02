@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Infibulation
 - **Snapshot file:** `articles/infibulation/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (5 sentences) read in full, plus 45 of 182 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 187/187 units read in full (187 paragraphs, 0 table rows).
 
 ## Verdict
 
-This article sets out the cultural defenses (119-127) and the rights and health critiques (128-137) fairly; both are mostly attributed, and the harm evidence is cited. Two flags were found in the sentences read. The male-comparison section says in the article's voice that male circumcision is 'routine and medically endorsed in contexts like the U.S. ... for its net benefits'. Other articles in this set report the AAP and CDC as stopping short of a routine recommendation, and that qualification is missing here. The diaspora section cites cumulative NHS service-access counts as evidence that Type III cases are 'often performed clandestinely by healthcare providers'. Lean: 1 pro, 1 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 3 flags: 2 pro, 0 anti, and 1 neutral. The lean is pro. Main patterns were F033 Causal Oversimplification (1); F036 Suppressed Evidence (1); F032 Cum Hoc (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,20 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug infibula
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "These disparities in procedure, evidence profile, and physiological impact underpin differing societal and legal treatments: male circumcision remains routine and medically endorsed in contexts like the U.S. and religious communities for its net benefits, while infibulation faces universal condemnation and prohibition under international human rights frameworks due to its demonstrable harm without offsetting gains. [92] [93]" | F036 Suppressed Evidence | pro-circumcision | States that male circumcision 'remains routine and medically endorsed in contexts like the U.S. ... for its net benefits'. The qualification reported in other articles in this set (for example, foreskin-man 72, history-of-circumcision 155) is left out: the AAP and CDC say benefits outweigh risks but do not recommend routine universal circumcision. This needs a source check; no verdict is given here. (sentence 143) |
-| 2 | "Among diasporas in Europe, medicalized infibulation has emerged as a concerning adaptation, with 2023–2025 evidence documenting persistence in African migrant groups despite legal bans; for instance, UK NHS data recorded 37,615 FGM-affected women and girls accessing services cumulatively through March 2024, including Type III cases often performed clandestinely by healthcare providers to evade detection. [116]" | F034 False Cause | anti-circumcision | NHS data on '37,615 FGM-affected women and girls accessing services' (mostly cut before migration) is offered as evidence for 'Type III cases often performed clandestinely by healthcare providers to evade detection' in Europe. Service-access counts do not show where or by whom the procedures were performed. (sentence 174) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "The practice exhibits marked gender asymmetry, with female infibulation imposing irreversible narrowing of the birth canal to constrain sexual access and reproduction—far exceeding male circumcision's scope—due to the evolutionary and economic imperatives of paternal investment in high-dependency offspring within resource-scarce, agrarian contexts." | F033 Causal Oversimplification | pro | Explains the female/male asymmetry with one speculative evolutionary-economic cause, presented as fact, to support the male/female distinction. |
+| 2 | "Anatomically, male circumcision removes a fold of skin (the foreskin) that protects the glans but does not fundamentally alter penile erectile, urinary, or sensory functions, whereas infibulation excises the clitoris—the primary site of female sexual pleasure and orgasm—and constructs a barrier that impedes natural vaginal function, often requiring repeated cutting for intercourse or childbirth." | F036 Suppressed Evidence | pro | Asserts that sensory function is unaltered while leaving out contrary evidence, to sharpen the male/female contrast. |
+| 3 | "This reaction underscores causal limitations of top-down approaches, where coercion correlates with evasion rather than abandonment in low-capacity contexts." | F032 Cum Hoc | neutral | Moves from a correlation (coercion correlates with evasion) to a 'causal' limitation of top-down approaches. |
 
 ## Both-sides balance note
 
-Same-standard check: the comparison section (139-144) uses the most severe FGM type, which is appropriate for an article about infibulation. Its claims about male circumcision are, however, stated more firmly than elsewhere in this set ('does not fundamentally alter ... sensory functions', 142, which is cited and contested elsewhere, and 143). Relativist parallels to piercings and tattoos (124) are attributed and answered with severity and benefit data (144). That reply addresses the severity argument but not the consent-parity argument, though in this section the relativist argument is framed around 'selective moral outrage', so the reply is mostly on point.
+Run 2 flag counts by side: pro 2, anti 0, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (137 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Middle East: 'Modern instances are negligible' (74, uncited) vs Oman continuing practice (68) was not resolved.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

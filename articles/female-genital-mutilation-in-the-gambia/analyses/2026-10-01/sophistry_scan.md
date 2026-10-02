@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/female_genital_mutilation_in_the_gambia
 - **Snapshot file:** `articles/female-genital-mutilation-in-the-gambia/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 38 of 114 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 142/142 units read in full (124 paragraphs, 18 table rows).
 
 ## Verdict
 
-This is a mostly descriptive, survey-based article. It sets out defenders' arguments (rite of passage, religious obligation, likeness to male circumcision, sovereignty) in their own terms and attributes them, alongside the legal and campaign history. Two flags were found in the sentences read. One is in the lead: '77% of adverse neonatal outcomes' are linked to cut mothers in a population where about 73% of women are cut, so the figure means little without the base rate. The other is an uncited closing sentence that warns of 'Islamist influences' and cites a '2022 parliamentary push ... narrowly defeated'; elsewhere the article describes the repeal vote as a 2024 bill rejected 31-18. Lean: 0 pro, 1 anti, 1 neutral/structural. These are judgment calls.
+Run 2 found 1 flag: 0 pro, 0 anti, and 1 neutral. The lean is neutral. Main patterns were F032 Cum Hoc (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug female-g
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Predominantly Type I (clitoridectomy) or Type II (excision), with 16.6% involving infibulation (Type III), the practice correlates with elevated health risks including hemorrhage, urinary issues, and obstetric complications—studies indicate 77% of adverse neonatal outcomes link to FGM-affected mothers—compounded by a reported 34.3% lifetime health problems among cut women. [2] [1]" | F071 Base Rate Neglect | anti-circumcision | '77% of adverse neonatal outcomes link to FGM-affected mothers' is presented as evidence of risk. With 72.6-73% of women aged 15-49 cut (sentences 3, 28), roughly that share of all outcomes would come from cut mothers even with no added risk. The rate comparison in sentence 46 is the informative figure; this one ignores the base rate. (sentence 6) |
-| 2 | "However, political shifts, including potential Islamist influences, could undermine progress, as evidenced by a 2022 parliamentary push to repeal the ban that was narrowly defeated." | F040 Loaded Language | neutral/structural | Uncited (code count). The label 'potential Islamist influences' is offered as the threat, supported by a '2022 parliamentary push ... narrowly defeated'. Sentences 5, 89 and 111 describe a 2024 bill rejected 31-18. The date and margin conflict internally, and the claim needs a source check. (sentence 122) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; neutral/structural 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Education level inversely correlates with the practice: among mothers of girls aged 0-14, 77% of those with no education report their daughters cut, versus 72% with primary and 68% with secondary or higher education, indicating that formal schooling disrupts transmission by challenging cultural justifications." | F032 Cum Hoc | neutral | A small cross-sectional gradient (77%/72%/68%) is read as proof of a causal mechanism, with confounders not considered. |
 
 ## Both-sides balance note
 
-Same-standard check: defenders' claims (54-60, 96-100) and the anti-FGM campaign's own claims ('contributed to a slight decline', 91; 'monumental achievement', 111) are both attributed, and neither side's claims are endorsed in the article's voice in the sentences read. Sentence 50, reporting that the cohort's PTSD attributions cut against simple trauma framing, is an example of the article including evidence that complicates the anti-FGM narrative. The male-circumcision analogy (60, 98) is attributed to defenders and not evaluated.
+Run 2 flag counts by side: pro 0, anti 0, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (76 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The '2022 parliamentary push' (sentence 122) vs the 2024 vote was not resolved against sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

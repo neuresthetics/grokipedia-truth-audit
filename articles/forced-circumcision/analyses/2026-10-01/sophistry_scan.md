@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Forced_circumcision
 - **Snapshot file:** `articles/forced-circumcision/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 45 of 212 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 230/230 units read in full (224 paragraphs, 6 table rows).
 
 ## Verdict
 
-Unlike most articles in this set, this one leans anti-circumcision in its own voice, especially in the lead. Its scope definition places routine infant circumcision under 'forced circumcision', though later sections themselves separate coercion against refusal from proxy consent (22-23). The lead calls the HIV benefit 'unproven or context-specific' and casts doubt on public-health sources as 'amplifying benefits'. Elsewhere, complications in coerced initiations are attributed causally to non-consent rather than to unsterile settings, and male/female policy divergence is traced to 'cultural familiarity' alone. The body nonetheless gives the public-health defenses substantial, cited space (198-208). Lean: 1 pro, 5 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 7 flags: 0 pro, 7 anti, and 0 neutral. The lean is anti. Main patterns were F040 Loaded Language (2); F041 False Equivalence (1); F026 Poisoning the Well (1); F034 False Cause (1); F005 Appeal to Popularity (1); F027 Genetic Fallacy (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,30 +41,24 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug forced-c
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Non-therapeutic infant circumcision, routine in nations like the United States (with rates around 58% as of recent hospital data) and Israel, exemplifies inherent involuntariness, as newborns cannot consent, prompting legal challenges questioning its alignment with assault statutes or rights to physical integrity. [1] [3]" | F041 False Equivalence | anti-circumcision | Under the 'forced circumcision' heading, routine infant circumcision 'exemplifies inherent involuntariness'. Being unable to consent is equated with being forced against one's will. Sentences 22-23 of the same article distinguish 'the override of explicit refusal' from 'proxy consent in infancy', so the lead merges what the body separates. (sentence 6) |
-| 2 | "Proponents invoke unproven or context-specific benefits like reduced HIV transmission in high-prevalence areas, yet critics cite elevated complication risks—up to 20-fold higher in non-infants—and ethical parallels to other non-consensual body modifications. [4] [6]" | F040 Loaded Language | anti-circumcision | Article voice: 'Proponents invoke unproven or context-specific benefits like reduced HIV transmission'. The article itself cites randomized trials for that benefit (17, 214). 'Unproven' is the counterpart of the 'purported' convention flagged elsewhere in this audit. (sentence 7) |
-| 3 | "Debates persist over source credibility, with public health advocacy sometimes amplifying benefits while underreporting autonomy violations, reflecting institutional pressures in global campaigns. [4]" | F026 Poisoning the Well | anti-circumcision | Pre-labels public-health sources as 'sometimes amplifying benefits while underreporting autonomy violations, reflecting institutional pressures', discounting one side's evidence by motive before it is presented. (sentence 8) |
-| 4 | "Empirical data from regions like eastern Africa highlight procedural complications in up to 10-20% of coerced initiations, underscoring the causal link between non-consent and adverse outcomes. [12]" | F034 False Cause | anti-circumcision | From complication rates 'in coerced initiations' it concludes a 'causal link between non-consent and adverse outcomes'. Sentences 11 and 42 attribute complications to unqualified operators, shared blades and no anesthesia; consent status is not shown to be the cause. (sentence 15) |
-| 5 | "This table illustrates empirical divergences, yet first-principles scrutiny reveals that both undermine causal chains of individual consent, with policy divergences often tracing to cultural familiarity—male practices normalized in Abrahamic traditions and Western medicine, while FGC is exoticized as barbaric. [133]" | F033 Causal Oversimplification | anti-circumcision | Traces male/female 'policy divergences' to 'cultural familiarity' as a single explanation. Sentence 214 records the stated harm-severity rationale (WHO), which this explanation does not engage. (sentence 219) |
-| 6 | "Advocates for communal prerogatives argue that prohibiting circumcision would undermine religious practices central to Judaism (brit milah) and Islam, potentially eroding minority rights and parental proxy decision-making, which empirical data shows correlates with overall child welfare in stable families. [107]" | F003 Red Herring | pro-circumcision | The communal-rights argument is supported by 'empirical data' that proxy decision-making 'correlates with overall child welfare in stable families'. General parental-authority outcomes do not bear on whether this particular irreversible procedure is justified. (sentence 181) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 5; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Forced circumcision is the non-consensual surgical removal of the foreskin from the penis, encompassing procedures performed on infants incapable of consent, coercive initiations on adolescents or adults, and punitive or assimilative acts in historical or conflict settings." | F040 Loaded Language | anti | The definition of 'forced' is stretched to cover routine parental-consent infant procedures, so the condemnatory label carries the conclusion. |
+| 2 | "Non-therapeutic infant circumcision, routine in nations like the United States (with rates around 58% as of recent hospital data) and Israel, exemplifies inherent involuntariness, as newborns cannot consent, prompting legal challenges questioning its alignment with assault statutes or rights to physical integrity." | F041 False Equivalence | anti | Treats routine hospital infant circumcision under parental consent as equivalent to the coercive abductions and punitive cuttings the article describes, despite material differences in force, setting and intent. |
+| 3 | "Proponents invoke unproven or context-specific benefits like reduced HIV transmission in high-prevalence areas, yet critics cite elevated complication risks—up to 20-fold higher in non-infants—and ethical parallels to other non-consensual body modifications." | F040 Loaded Language | anti | Calls the benefits 'unproven' in the article's own voice, while the same article reports RCT evidence for them. |
+| 4 | "Debates persist over source credibility, with public health advocacy sometimes amplifying benefits while underreporting autonomy violations, reflecting institutional pressures in global campaigns." | F026 Poisoning the Well | anti | Discounts public-health sources as biased by institutional pressure, without engaging specific evidence. |
+| 5 | "Empirical data from regions like eastern Africa highlight procedural complications in up to 10-20% of coerced initiations, underscoring the causal link between non-consent and adverse outcomes." | F034 False Cause | anti | Complications from unsterile tools and untrained operators are attributed to non-consent itself; the more direct cause (setting and technique) is passed over. |
+| 6 | "This disparity fuels accusations of a double standard, as evidenced by surveys in Sweden where 38% of medical students viewed the practices as comparable in ethical terms, challenging institutional narratives that separate them into "mutilation" for females and "procedure" for males." | F005 Appeal to Popularity | anti | A minority opinion share among students is offered as evidence for a double standard. |
+| 7 | "This table illustrates empirical divergences, yet first-principles scrutiny reveals that both undermine causal chains of individual consent, with policy divergences often tracing to cultural familiarity—male practices normalized in Abrahamic traditions and Western medicine, while FGC is exoticized as barbaric." | F027 Genetic Fallacy | anti | Explains away the harm-based distinction (which the preceding table documents) by tracing it to cultural familiarity, an origin-based dismissal. |
 
 ## Both-sides balance note
 
-Same-standard check: here the evidence-standard asymmetry runs mostly the other way from the set's dominant pattern. The harm-side survey (151) is explicitly marked 'correlational and unproven', and intactivist surveys are critiqued for selection bias (148, 153). Meanwhile the lead calls the RCT-backed HIV benefit 'unproven' (7), and public-health sources are pre-discounted (8). Low-prevalence absolute-risk caveats (138, 146) are stated fairly. The pro side gets one weak support (181) and one claim that needs a source check ('developmental amnesia', 23).
+Run 2 flag counts by side: pro 0, anti 7, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (167 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Extraction artifact in sentence 125 ('07737-1/fulltext)').
-- Kenya post-election coercion accounts (4-5) were not checked against sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

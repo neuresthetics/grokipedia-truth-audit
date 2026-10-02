@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Phimosis
 - **Snapshot file:** `articles/phimosis/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 255 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 274/274 units read in full (263 paragraphs, 11 table rows).
 
 ## Verdict
 
-This clinical article is mostly guideline-based, emphasizing conservative management of physiological phimosis and recommending against forced retraction, with surgery reserved for refractory cases. The circumcision debate (221-229) and the medical-versus-cultural section (232-239) give both sides attributed space. Three flags were found. Two are pro-circumcision: general infant circumcision UTI data is applied to phimosis 'affected age groups', and the article concludes that circumcising societies have 'lower morbidity' and that culture 'causally shape[s]' epidemiology. Part of that conclusion is true by definition, since circumcised males cannot have phimosis. One is anti-circumcision: a survey of parental expectations is taken as showing that cultural bias 'drive[s] unnecessary interventions'. Lean: 2 pro, 1 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 3 flags: 2 pro, 1 anti, and 0 neutral. The lean is pro. Main patterns were F011 Hasty Generalization (1); F036 Suppressed Evidence (1); F034 False Cause (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,20 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug phimosis
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Over time, phimosis elevates the risk of urinary tract infections (UTIs), particularly in males, as incomplete foreskin retraction impedes hygiene and allows bacterial colonization under the prepuce, with studies indicating a protective effect from circumcision reducing UTI incidence by factors of 6.6- to 10-fold in affected age groups. [36] [37]" | F022 Accident | pro-circumcision | Phimosis-related UTI risk is supported with 'a protective effect from circumcision reducing UTI incidence by factors of 6.6- to 10-fold'. These are general infant and child circumcision figures (compare the foreskin article, 139-141), and they are applied to phimosis without phimosis-specific data. (sentence 106) |
-| 2 | "These variations highlight how cultural and religious practices causally shape phimosis epidemiology, with empirical data from global surveys confirming lower morbidity in circumcising societies. [81] [83]" | F032 Cum Hoc | pro-circumcision | 'Cultural and religious practices causally shape phimosis epidemiology, with empirical data ... confirming lower morbidity in circumcising societies'. Fewer phimosis cases among circumcised people is true by definition (see 205), and the jump to general 'lower morbidity' and causal language goes beyond what the article shows. (sentence 216) |
-| 3 | "Empirical data indicate that in uncircumcised cohorts, self-resolved or conservatively managed cases predominate, challenging claims of universal medical necessity and highlighting how cultural biases—such as parental expectations of early retraction by age 1 in 66% of surveyed families—drive unnecessary interventions despite evidence of natural resolution. [91] [83]" | F034 False Cause | anti-circumcision | From a survey that '66% of surveyed families' expected early retraction, it concludes 'cultural biases ... drive unnecessary interventions'. Parental expectations are not shown to cause interventions, and no intervention-rate data is tied to them in the sentence. (sentence 238) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; pro-circumcision 2.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "A Danish cohort study of uncircumcised boys under a foreskin-preserving policy found surprisingly high morbidity from phimosis, including adhesions and infections, underscoring risks in regions avoiding routine circumcision." | F011 Hasty Generalization | pro | Generalizes from one Danish cohort to all regions without routine circumcision. |
+| 2 | "These variations highlight how cultural and religious practices causally shape phimosis epidemiology, with empirical data from global surveys confirming lower morbidity in circumcising societies." | F036 Suppressed Evidence | pro | Treats the absence of foreskin conditions as 'lower morbidity' and leaves out circumcision's own complications, which the article mentions elsewhere. |
+| 3 | "Empirical data indicate that in uncircumcised cohorts, self-resolved or conservatively managed cases predominate, challenging claims of universal medical necessity and highlighting how cultural biases—such as parental expectations of early retraction by age 1 in 66% of surveyed families—drive unnecessary interventions despite evidence of natural resolution." | F034 False Cause | anti | Asserts from a survey of parental expectations that these biases cause unnecessary interventions, without establishing the causal link. |
 
 ## Both-sides balance note
 
-Same-standard check: the circumcision subsection presents critics (224, 225) and proponents (228) with attribution. Sentence 229 then sides with the critics in the article's voice ('evidence from controlled trials indicating minimal long-term health gains'); this was not flagged but needs a source check. Pro-side scope transfer (106) and anti-side causal inference (238) were each counted once. Harm claims (222: 'as reported in some studies') are hedged.
+Run 2 flag counts by side: pro 2, anti 1, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (210 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Phimosis prevalence figures ('1% to 3.4%', 232, vs 'around 13-14%', 235) were not reconciled.
-- The controlled-trial evidence claimed in 229 needs a source check; no verdict is given here.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Female_genital_mutilation_laws_by_country
 - **Snapshot file:** `articles/female-genital-mutilation-laws-by-country/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (5 sentences) read in full, plus 45 of 238 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 283/283 units read in full (249 paragraphs, 34 table rows).
 
 ## Verdict
 
-This is mostly a legal survey (international instruments, national bans, extraterritorial laws, prosecution data) and largely descriptive. Its 'Empirical Evidence on Impact' section is notably balanced: it reports the 2012 Campbell review's null finding, the 2023 review's 'legislation alone fails', and a time-series study estimating a 7.6-point reduction, each with limitations (171-177). One flag was found in the sentences read: an uncited article-voice conclusion that 'causal analysis favors universalism'. An internal inconsistency was noted: sentence 4 says Gambian 'courts upheld criminalization in 2024', while sentence 228 says the National Assembly rejected the repeal bill. Lean: 0 pro, 1 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 3 flags: 0 pro, 3 anti, and 0 neutral. The lean is anti. Main patterns were F031 Post Hoc (2); F034 False Cause (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,20 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug female-g
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Ultimately, causal analysis favors universalism, as relativist tolerance sustains intergenerational harm without verifiable compensatory cultural gains." | F061 Is-Ought Jump | anti-circumcision | Uncited (code count). 'Ultimately, causal analysis favors universalism'. Universalism versus relativism is a normative question; causal findings about harm feed into it but cannot settle it, and no causal analysis of the two policies is presented. (sentence 203) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Universalist frameworks have driven binding instruments like the 2003 Maputo Protocol (African Union, 55 signatories), mandating bans while incorporating community sensitization, yielding prevalence drops (e.g., 25% reduction in Kenya from 1998-2014 per DHS surveys)." | F031 Post Hoc | anti | Credits universalist instruments (the 2003 Maputo Protocol) with a Kenyan decline spanning 1998-2014, based on timing alone. The article elsewhere says causal evidence on laws is scarce. |
+| 2 | "Academic relativism, while highlighting implementation pitfalls like elite hypocrisy in urban-rural divides, is countered by evidence that sustained universalist pressure correlates with attitude shifts, as in Burkina Faso's 92% support for bans by 2010 surveys post-2005 laws." | F031 Post Hoc | anti | Survey support measured after a law is offered as evidence that universalist pressure works, based on timing alone. |
+| 3 | "From 2020 to 2025, global FGM cases rose 15% to over 230 million, partly fueled by medicalized forms in urbanizing areas, underscoring how professional involvement legitimizes the practice rather than eroding it, as confirmed by WHO and UNICEF analyses rejecting "safer" variants." | F034 False Cause | anti | Attributes the rise in survivor counts to medicalization without support, then uses it to show that medical involvement 'legitimizes' the practice. Population growth, the obvious alternative, is not considered. |
 
 ## Both-sides balance note
 
-Same-standard check: evidence that laws do not work (171, 172) and evidence that they do (174) are both reported with caveats, which is the even-handed treatment. Harm-reduction ('symbolic pricking', 28) and pro-medicalization (32) positions are attributed and then answered. Sentence 32's 'gender-based control mechanisms absent in male counterparts' asserts male/female non-equivalence in passing; it is cited and was not flagged, but it is the same kind of aside flagged as uncited in the New Zealand and FGM Act 2003 articles.
+Run 2 flag counts by side: pro 0, anti 3, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (193 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Gambia 2024: 'courts upheld' (4) vs Assembly rejected the bill (228). This needs a source check; no verdict is given here.
-- Per-country legal details (penalties, dates) in the country sections were not individually checked.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Cultural_views_on_circumcision_aesthetics
 - **Snapshot file:** `articles/cultural-views-on-circumcision-aesthetics/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 29 of 88 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 96/96 units read in full (96 paragraphs, 0 table rows).
 
 ## Verdict
 
-This article on aesthetic preferences is broadly even-handed. It reports preferences for both circumcised and intact penises, labels forum material as anecdotal, and repeatedly says preferences are subjective. Three flags were found. One uncited sweeping regional generalization goes each way (North America 'long favored' circumcised; Europe 'often critiqued' circumcision). One uncited summary sentence ('Scientific studies show no consistent overall preference...') appears twice word for word, giving it extra apparent weight with no source. Lean: 1 pro, 1 anti, 1 neutral/structural. These are judgment calls, except that the duplication was confirmed by exact string comparison in code.
+Run 2 found 2 flags: 0 pro, 1 anti, and 1 neutral. The lean is mixed (anti/neutral tie). Main patterns were F036 Suppressed Evidence (1); F011 Hasty Generalization (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,26 +41,19 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug cultural
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "In the United States and Canada, cultural preferences have long favored the circumcised penis for its perceived visual tidiness, uniformity, and reduced foreskin prominence, often framed as aligning with modern hygiene standards." | F011 Hasty Generalization | pro-circumcision | Uncited (code count). A two-country generalization ('cultural preferences have long favored the circumcised penis') with no survey or source shown in the sentence. (sentence 23) |
-| 2 | "In much of Europe, cultural perceptions emphasize the uncircumcised penis as the aesthetically natural and unaltered form, with routine circumcision often critiqued for disrupting visual harmony and proportions without compelling non-religious justification." | F011 Hasty Generalization | anti-circumcision | Uncited (code count). The mirror-image generalization for 'much of Europe' ('often critiqued for disrupting visual harmony and proportions without compelling non-religious justification'), also with no source shown. (sentence 31) |
-| 3 | "Scientific studies show no consistent overall preference or significant difference in female sexual satisfaction between circumcised and uncircumcised partners; results are mixed and often depend on cultural context." | F053 Argument from Repetition | neutral/structural | Exact duplicate of sentence 5 (identical strings, checked in code), and both copies are uncited. Repeating the claim in the lead and the body adds no evidence, and neither copy names a study. (sentence 84) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; neutral/structural 1; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Scientific studies show no consistent overall preference or significant difference in female sexual satisfaction between circumcised and uncircumcised partners; results are mixed and often depend on cultural context." | F036 Suppressed Evidence | anti | Lead claims no consistent preference, but the article later reports a 2019 systematic review in which the overwhelming majority of studies found women preferred circumcised penises. |
+| 2 | "This underscores the cultural bias toward circumcision in Turkey, where uncircumcised men are less common and sometimes viewed negatively." | F011 Hasty Generalization | neutral | Mixed anonymous forum posts generalized into a national 'cultural bias'. |
 
 ## Both-sides balance note
 
-Same-standard check: both preference directions get attributed reasons (sentences 3-4, 40, 86-91, 93), and the 'scientific studies' summary does not favor either side. Uncited regional generalizations appear for both sides (23 and 31), and both were flagged. Historical and religious views are attributed to traditions. No evidence-standard asymmetry was found in the sentences read.
+Run 2 flag counts by side: pro 0, anti 1, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (59 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Survey figures in sentences 86-91 were not traced to their sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

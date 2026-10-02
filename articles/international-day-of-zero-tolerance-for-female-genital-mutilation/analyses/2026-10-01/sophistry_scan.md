@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/International_Day_of_Zero_Tolerance_for_Female_Genital_Mutilation
 - **Snapshot file:** `articles/international-day-of-zero-tolerance-for-female-genital-mutilation/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 185 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 191/191 units read in full (191 paragraphs, 0 table rows).
 
 ## Verdict
 
-This article on a UN observance is largely descriptive. It includes a 'Criticisms of Zero-Tolerance' section (175-179) and says that intervention evidence is weak (4, 172). Two flags were found. In the article's voice, the closing sentence calls the zero-tolerance stance 'ideological absolutism' and draws a policy conclusion from data discrepancies. In the cultural-relativism passage, the claim about social benefits (marriage prospects) is answered with health data. Extraction artifacts ('00542-9/fulltext)') are embedded in sentences 100 and 102. Lean: 1 pro-cutting (pro-harm-reduction), 1 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 4 flags: 1 pro, 2 anti, and 1 neutral. The lean is anti. Main patterns were F031 Post Hoc (2); F036 Suppressed Evidence (1); F040 Loaded Language (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,21 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug internat
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Despite global commitments like SDG 5.3 targeting elimination by 2030, discrepancies in prevalence data—due to self-reporting biases and varying definitions—fuel skepticism about progress metrics, underscoring the need for culturally attuned, evidence-based hybrids over ideological absolutism. [97]" | F040 Loaded Language | pro-circumcision | Article voice: data discrepancies are said to underscore 'the need for culturally attuned, evidence-based hybrids over ideological absolutism'. A pejorative label is applied to the zero-tolerance position, and a policy preference is drawn from a point about measurement. The 'absolutist' label convention is applied as elsewhere in this audit. (sentence 191) |
-| 2 | "Further debate involves cultural relativism, where some anthropologists contend that universal condemnation ignores contextual benefits communities attribute to FGM, such as enhanced marriage prospects, potentially alienating participants from reform efforts; however, empirical data consistently affirm no health benefits and severe long-term harms like obstetric fistula and psychological trauma. [95] [96]" | F003 Red Herring | anti-circumcision | Anthropologists' point concerns 'contextual benefits communities attribute', specifically 'enhanced marriage prospects'. The reply ('empirical data consistently affirm no health benefits') addresses health, a different claim, and does not engage the social-benefit claim. (sentence 189) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "This initiative has supported national strategies leading to declines in prevalence, such as in Egypt where reported FGM rates among girls aged 0-14 fell from 74% in 1995 to under 10% by 2021, though enforcement gaps persist." | F031 Post Hoc | anti | Credits the 2008 Joint Programme with a decline measured from a 1995 baseline. The article later warns that trends predate the campaigns. |
+| 2 | "Similarly, 28 Too Many, established in 2010 as a research-driven charity, supports African civil society by mapping prevalence in 28 countries and developing model laws, enabling data-informed interventions that have informed policy in nations like Kenya, where prevalence fell from 37.6% in 1998 to 14.8% by 2022 among women aged 15-49." | F031 Post Hoc | anti | Implies a 2010-founded charity's work contributed to a decline that began in 1998, based on timing alone. |
+| 3 | "Despite two decades of global zero-tolerance advocacy since 2003, prevalence remains high, with over 230 million women and girls affected as of 2024, suggesting limited empirical success in high-risk areas and raising questions about overreliance on legal coercion without addressing underlying socioeconomic drivers like poverty and gender inequality." | F036 Suppressed Evidence | neutral | Uses the rising absolute count as evidence of failure, leaving out what the article itself says: the rise reflects population growth while prevalence rates decline. |
+| 4 | "Despite global commitments like SDG 5.3 targeting elimination by 2030, discrepancies in prevalence data—due to self-reporting biases and varying definitions—fuel skepticism about progress metrics, underscoring the need for culturally attuned, evidence-based hybrids over ideological absolutism." | F040 Loaded Language | pro | The article's closing line labels the zero-tolerance stance 'ideological absolutism', a loaded characterization. |
 
 ## Both-sides balance note
 
-Same-standard check: critics of zero tolerance (175-179, 186-188) are given space and attributed. The article does not overstate intervention effects (172: 'weak causal inferences'), so the evidence standard is applied to the anti-FGM side's own programs. Harm sentences (85-102) are cited.
+Run 2 flag counts by side: pro 1, anti 2, neutral 1. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (140 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Extraction artifacts in sentences 100 and 102 mean the cited source behind them could not be identified.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

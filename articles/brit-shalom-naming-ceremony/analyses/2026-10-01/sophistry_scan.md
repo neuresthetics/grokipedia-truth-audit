@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/brit_shalom_naming_ceremony
 - **Snapshot file:** `articles/brit-shalom-naming-ceremony/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (3 sentences) read in full, plus 34 of 103 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 113/113 units read in full (107 paragraphs, 6 table rows).
 
 ## Verdict
 
-This is a mostly descriptive article about a minority ritual. It attributes positions fairly evenly: proponents' ethical and health reasons on one side, Orthodox and halakhic objections and AAP benefit claims on the other. Three reasoning flags were found in the sentences read. One discounts pro-Brit Shalom sources by their ties to advocacy (favors circumcision). Two favor the critical side: an ecological 'no epidemic' reply that answers a stronger claim than the critics made, and the article's own 'purported' attached to health benefits. On the sentences read, the flags lean slightly anti-circumcision (2 of 3). These are judgment calls, and the sample is small.
+Run 2 found 2 flags: 1 pro, 1 anti, and 0 neutral. The lean is mixed (pro/anti tie). Main patterns were F026 Poisoning the Well (1); F040 Loaded Language (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,25 +41,19 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug brit-sha
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Sources promoting Brit Shalom, often tied to anti-circumcision advocacy, highlight its alignment with modern ethics, yet Orthodox Judaism uniformly rejects it as insufficient for covenantal entry. [9] [10]" | F025 Guilt by Association | pro-circumcision | Sources are characterized by their association ('often tied to anti-circumcision advocacy') before their content is reported, and 'yet' sets Orthodox rejection against them. Association is offered as a reason for doubt. (sentence 13) |
-| 2 | "Critics of Brit Shalom highlight that uncircumcised males face elevated risks of conditions like balanitis and phimosis, potentially requiring later interventions with higher complication rates, though long-term population studies in low-circumcision regions like Europe show no epidemic of such issues attributable to intact status. [30]" | F002 Straw Man | anti-circumcision | Critics claim elevated individual risk of balanitis/phimosis; the article's rebuttal is that Europe shows 'no epidemic' of such issues. That answers a stronger claim than the one made, and it uses population-level absence to answer an individual-risk point. (sentence 81) |
-| 3 | "They contend that purported health benefits, such as reduced urinary tract infections (UTIs) in infancy and lower heterosexual HIV transmission rates later in life, can be mitigated through hygiene practices and safe sex, rendering the intervention unnecessary and disproportionate to its harms. [31]" | F040 Loaded Language | anti-circumcision | In paraphrasing proponents, the article's own wording 'purported health benefits' (MOS:WTW expression of doubt) casts doubt on benefits that sentence 80 reports as AAP findings. (sentence 79) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 2; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Sources promoting Brit Shalom, often tied to anti-circumcision advocacy, highlight its alignment with modern ethics, yet Orthodox Judaism uniformly rejects it as insufficient for covenantal entry." | F026 Poisoning the Well | pro | Discounts the supporting sources by pointing to their advocacy ties instead of their content. |
+| 2 | "Emerging in the mid-1980s through grassroots efforts by rabbis like Nathan Segal, the ceremony reflects broader trends in humanistic and progressive Judaism, where personal choice supplants halachic absolutism, as endorsed by organizations such as the Society for Humanistic Judaism." | F040 Loaded Language | anti | 'Halachic absolutism' is pejorative framing of the traditional position. |
 
 ## Both-sides balance note
 
-Same-standard check: the article attributes both sides' positions with similar verbs ('argue', 'contend', 'counter', 'maintain') in the sentences read. The AAP figures in sentence 80 ('randomized trials and meta-analyses shows ... 90% reduction in penile cancer') are attributed to AAP but need a source check, since the sentence does not say which outcomes the trials measured. Proponents' complication figure in sentence 78 ('rare but severe complications ... approximately 1-2%') reads as if severe complications occur at 1-2%; the sentence is ambiguous and needs a source check. Neither side's figures were verified here.
+Run 2 flag counts by side: pro 1, anti 1, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (69 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

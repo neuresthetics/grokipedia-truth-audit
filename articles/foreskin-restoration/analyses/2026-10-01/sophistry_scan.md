@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Foreskin_restoration
 - **Snapshot file:** `articles/foreskin-restoration/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 204 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 229/229 units read in full (229 paragraphs, 0 table rows).
 
 ## Verdict
 
-This article is generally careful about evidence. It repeatedly notes that restoration benefits rest on self-selected, self-reported data with no RCTs (70, 71, 107, 126, 131, 134), and it attributes the ethical debate to named sides. Two flags were found. The lead's final sentence leaves restoration evidence to assert 'robust evidence' that circumcision 'imposes negligible long-term detriments', a pro-circumcision claim that is off-topic and held to a looser standard than the restoration claims nearby. And the opponents' argument is reported with the article's 'purported' inserted into their own position. Lean: 1 pro, 1 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 1 flag: 1 pro, 0 anti, and 0 neutral. The lean is pro. Main patterns were F036 Suppressed Evidence (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,25 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug foreskin
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Empirical data on objective benefits like sensitivity gains or sexual performance improvements remain sparse and inconclusive, contrasting with robust evidence that circumcision itself imposes negligible long-term detriments to erectile or orgasmic function. [6] [2]" | F003 Red Herring | pro-circumcision | In the lead, after saying that evidence on restoration benefits is 'sparse and inconclusive', it adds 'contrasting with robust evidence that circumcision itself imposes negligible long-term detriments'. That shifts the subject from restoration to a defense of circumcision. Sexual-function evidence is described as 'mixed' elsewhere in this set (for example, foreskin-man 70), and the claim needs a source check. (sentence 6) |
-| 2 | "They argue that ethical focus should prioritize IMC's purported health advantages over autonomy concerns, dismissing restoration as speculative and psychologically driven rather than medically substantiated. [49]" | F040 Loaded Language | anti-circumcision | Reporting opponents' view: 'They argue that ethical focus should prioritize IMC's purported health advantages'. Opponents of restoration would not describe the advantages as 'purported', so the article's skeptical word is inserted into their own argument. This is the article-voice 'purported' convention flagged elsewhere in this audit. (sentence 191) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Empirical data on objective benefits like sensitivity gains or sexual performance improvements remain sparse and inconclusive, contrasting with robust evidence that circumcision itself imposes negligible long-term detriments to erectile or orgasmic function." | F036 Suppressed Evidence | pro | A lead-section aside presents the sexual-function evidence as robustly one-sided. The article itself treats glans keratinization and sensitivity effects as real phenomena. |
 
 ## Both-sides balance note
 
-Same-standard check: restoration benefits are consistently held to an RCT standard and marked as self-reported. The lead holds circumcision's lack of detriments to no stated standard ('robust'), which is an asymmetry in favor of the pro side. On the anti side, ethicists' rebuttal (192) includes 'circumcision's failure to eradicate infections entirely', a nirvana-style standard, but it is attributed and was not counted as the article's reasoning. Sentence 183 ('inflicts irreversible harm') reads as a continuation of proponents' contention in sentence 182; it was not flagged, but it is close to article voice.
+Run 2 flag counts by side: pro 1, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (159 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The historical claims (epispasm in antiquity, 2) and survey figures (1,192 respondents, 85%) were not checked against sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

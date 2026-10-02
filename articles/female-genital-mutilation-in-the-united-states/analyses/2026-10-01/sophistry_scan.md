@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Female_genital_mutilation_in_the_United_States
 - **Snapshot file:** `articles/female-genital-mutilation-in-the-united-states/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 45 of 179 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 187/187 units read in full (187 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a legal, demographic and professional-position overview, mostly cited and descriptive. It reports the 2010 AAP 'ritual nick' episode and the backlash against it neutrally. Two flags were found, both in the 'Multicultural Relativism Critiques' section. One is an uncited sentence claiming that a correlation between integration and lower prevalence 'counters relativist tolerance', which does not address the relativist argument. The other answers relativism by asserting that no parental right extends to 'mutilating minors', so the loaded term carries the argument. That section also states a general principle (no consent, no medical necessity, irreversible alteration of a child) without saying whether it applies only to girls; see the balance note. Lean: 0 pro, 1 anti, 1 neutral/structural. These are judgment calls.
+Run 2 found 5 flags: 0 pro, 5 anti, and 0 neutral. The lean is anti. Main patterns were F034 False Cause (1); F002 Straw Man (1); F001 Ad Hominem (1); F010 Appeal to Ignorance (1); F011 Hasty Generalization (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,22 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug female-g
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Empirical data counters relativist tolerance by demonstrating that greater integration into host societies correlates with reduced FGM prevalence and support." | F003 Red Herring | neutral/structural | Uncited (code count). An empirical correlation between integration and reduced FGM is said to 'counter relativist tolerance'. Relativism is a normative claim about the standing of cultural norms; a demographic trend does not refute it, so the reply shifts the question. (sentence 151) |
-| 2 | "Relativism's claim of cultural equivalence debunks under scrutiny, as no parental "right" extends to mutilating minors, paralleling the historical rejection of other traditions like Chinese foot-binding or Indian sati, which were prohibited despite entrenched rationales of honor and purity. [88] [89]" | F040 Loaded Language | anti-circumcision | 'No parental "right" extends to mutilating minors': the conclusion is built into the loaded description, so the term does the arguing (question-begging). The foot-binding and sati parallels are offered as precedent without the analogy being argued. (sentence 155) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; neutral/structural 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Causal mechanisms stem from anatomical disruption and associated trauma, independent of confounding social factors in migrant contexts." | F034 False Cause | anti | Asserts that the causal attribution holds independent of confounders, with no analysis cited, after citing correlational survey data. |
+| 2 | "Proponents of relativism often frame FGM as a private cultural rite, such as informal "cutting ceremonies" conducted in immigrant enclaves, thereby excusing non-consensual procedures on minors as beyond external judgment." | F002 Straw Man | anti | Attributes to unnamed 'proponents of relativism' a position of 'excusing non-consensual procedures', a weak version that is then refuted. |
+| 3 | "Sources advancing relativism, often from anthropological circles, exhibit selective application by condemning equivalent male practices less rigorously, revealing inconsistency rather than principled neutrality." | F001 Ad Hominem | anti | Dismisses the relativist position by charging its sources with inconsistency rather than answering the argument. It also asserts the male practices are 'equivalent'. |
+| 4 | "Despite an estimated at-risk population exceeding 500,000 girls and women from high-prevalence immigrant communities, the paucity of documented cases post-2017 suggests potential deterrence effects from heightened awareness and legal risks, though underreporting remains a challenge." | F010 Appeal to Ignorance | anti | Takes the absence of documented cases as evidence that deterrence works, while the same sentence and section stress underreporting. |
+| 5 | "Without such imperatives, assimilation falters, as evidenced by ongoing clandestine networks, reinforcing arguments that education alone insufficiently supplants entrenched norms without legal compulsion and cultural integration requirements." | F011 Hasty Generalization | anti | Generalizes from the existence of clandestine networks to a claim that assimilation fails without legal compulsion and vetting. |
 
 ## Both-sides balance note
 
-Same-standard check: sentences 150 and 156 justify overriding relativist defenses with a stated principle: 'irreversible bodily alteration without the child's agency', 'lacking consent or medical necessity', 'child autonomy and bodily integrity'. The article does not say whether, or why, the principle is limited to girls. Male circumcision is not discussed in the sentences read, so there was nothing to flag. As written, though, the principle's scope is open, which is relevant to the cross-article pattern of different standards for male and female cutting. Relativist and enforcement positions (148, 159-166) are both attributed.
+Run 2 flag counts by side: pro 0, anti 5, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (134 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The Nagarwala case history (80, 159) was not checked against sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

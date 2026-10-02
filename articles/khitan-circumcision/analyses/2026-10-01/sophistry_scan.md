@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Khitan_(circumcision)
 - **Snapshot file:** `articles/khitan-circumcision/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 45 of 170 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 184/184 units read in full (179 paragraphs, 5 table rows).
 
 ## Verdict
 
-The religious and jurisprudential sections attribute positions to the schools that hold them (Hanbali, Shafi'i, Twelver Shia, Bohra, Ahmadiyya), and the consent debate gives both critics and proponents attributed space (130-148). The four flags are mostly in the article's own statements about medical evidence. The lead applies adult HIV-trial results to a 'benefits outweighing ... when performed neonatally' conclusion, and it dismisses sexual-function harm claims as 'anecdotal assertions'. The FGC-distinction section credits RCTs with UTI and penile-cancer findings that come from observational data. On the other side, one sentence pre-discredits existing pain research as shaped by 'institutional biases favoring minimal intervention narratives'. Lean: 3 pro, 1 anti, 0 neutral/structural. These are judgment calls.
+Run 2 found 4 flags: 3 pro, 1 anti, and 0 neutral. The lean is pro. Main patterns were F010 Appeal to Ignorance (1); F026 Poisoning the Well (1); F040 Loaded Language (1); F036 Suppressed Evidence (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,28 +41,21 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug khitan-c
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Empirical medical evidence indicates that male circumcision reduces risks of urinary tract infections in infancy, penile cancer, and heterosexual HIV acquisition by up to 60% in high-prevalence areas, with benefits outweighing rare complications like bleeding or adhesions when performed neonatally under sterile conditions. [3] [4]" | F011 Hasty Generalization | pro-circumcision | Lists HIV reduction 'by up to 60% in high-prevalence areas' (adult VMMC trials) among the benefits, then concludes 'benefits outweighing rare complications ... when performed neonatally'. Adult trial results feed a neonatal conclusion, following the convention flagged elsewhere in this audit. (sentence 5) |
-| 2 | "No robust data supports claims of diminished sexual function or satisfaction post-circumcision, countering anecdotal assertions of harm. [5]" | F026 Poisoning the Well | pro-circumcision | 'No robust data supports claims of diminished sexual function ... countering anecdotal assertions of harm'. The opposing evidence is pre-labelled 'anecdotal' in the article's voice. Elsewhere in this set (foreskin 9, foreskin-man 70), the evidence is described as 'mixed' or 'conflicting'. (sentence 6) |
-| 3 | "Empirical health outcomes further delineate the practices: randomized controlled trials demonstrate that male circumcision, including khitan when performed medically, reduces heterosexual HIV acquisition by approximately 60%, lowers urinary tract infection rates in infancy by up to 90%, and decreases risks of penile cancer and certain sexually transmitted infections like herpes (28-34% reduction). [66] [97]" | F032 Cum Hoc | pro-circumcision | 'Randomized controlled trials demonstrate that male circumcision ... lowers urinary tract infection rates in infancy by up to 90%, and decreases risks of penile cancer'. UTI and penile-cancer figures come from observational and meta-analytic data (see 111-112 in this article), so RCT-level causal standing is extended to them. Only the HIV and herpes figures are from trials. (sentence 152) |
-| 4 | "Despite these advancements, gaps persist in resource-limited areas where traditional practitioners may prioritize ritual speed over analgesia, underscoring the need for education on evidence-based methods; peer-reviewed analyses indicate that unaddressed pain in khitan correlates with higher incidence of immediate behavioral sequelae, though long-term psychological impacts require further longitudinal research free from institutional biases favoring minimal intervention narratives. [44]" | F026 Poisoning the Well | anti-circumcision | Calls for research 'free from institutional biases favoring minimal intervention narratives', which pre-discredits the existing literature by alleged motive without identifying a specific bias. (sentence 85) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; pro-circumcision 3.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "No robust data supports claims of diminished sexual function or satisfaction post-circumcision, countering anecdotal assertions of harm." | F010 Appeal to Ignorance | pro | Treats an absence of robust data as a refutation of harm claims, and labels contrary claims 'anecdotal' without engaging them. |
+| 2 | "Despite these advancements, gaps persist in resource-limited areas where traditional practitioners may prioritize ritual speed over analgesia, underscoring the need for education on evidence-based methods; peer-reviewed analyses indicate that unaddressed pain in khitan correlates with higher incidence of immediate behavioral sequelae, though long-term psychological impacts require further longitudinal research free from institutional biases favoring minimal intervention narratives." | F026 Poisoning the Well | anti | Pre-emptively discredits existing research as institutionally biased, so evidence of limited harm is discounted in advance. |
+| 3 | "Khitan, the Islamic practice of male circumcision, surgically excises the foreskin covering the glans penis, preserving the organ's primary erectile and urinary functions while removing a non-vital cutaneous layer." | F040 Loaded Language | pro | Minimizing description ('non-vital cutaneous layer') contrasts with FGC tissue described as 'erogenous tissue essential for sexual sensation' in the next sentence; the asymmetric wording builds in the distinction. |
+| 4 | "Complication rates for medically supervised male circumcision remain below 1% for serious adverse events, whereas FGC, predominantly non-sterile and non-clinical, correlates with morbidity rates exceeding 20% in untreated cases." | F036 Suppressed Evidence | pro | Compares serious-only male rates in medical settings with all-morbidity FGC rates in non-clinical settings. The article's own 3.84% overall rate and its higher traditional-setting rates go unused in this contrast. |
 
 ## Both-sides balance note
 
-Same-standard check: harm-side claims in this article are hedged ('potential', 'requires further longitudinal research', 81, 85, 128), while benefit claims are stated firmly and, in sentence 152, given the wrong evidence tier. Critics' rights arguments (130-132, 145-146) and proponents' counters (147) are both attributed, including the proponents' 'absolutist interpretations' phrase (147), which is attributed and not counted. Sentence 135's 'negligible psychological regret' is attributed to the religious perspective and needs a source check.
+Run 2 flag counts by side: pro 3, anti 1, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (125 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Extraction artifact in sentence 118 ('00113-8/abstract)').
-- The Kashmiri cohort complication figures (67, 70) were not checked.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

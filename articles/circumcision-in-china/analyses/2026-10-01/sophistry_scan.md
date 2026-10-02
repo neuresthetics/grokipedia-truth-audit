@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Circumcision_in_China
 - **Snapshot file:** `articles/circumcision-in-china/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (5 sentences) read in full, plus 25 of 50 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 55/55 units read in full (55 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a short, mostly descriptive article on low circumcision prevalence among the Han majority and religious practice among Muslim minorities. It does not argue the ethics. Much of the history section is uncited (code count). Two reasoning flags were found. An uncited causal explanation attributes low Han adoption to 'traditional views prioritizing bodily integrity'. And 'despite global evidence' implies that Chinese authorities are ignoring evidence whose scope (high-HIV-prevalence settings) the sentence does not state. Lean: 1 pro-circumcision and 1 neutral/structural flag. These are judgment calls.
+Run 2 found 0 flags: 0 pro, 0 anti, and 0 neutral. The lean is no flagged lean. Main patterns were none. Flags are judgment calls.
 
 ## Code counts
 
@@ -41,25 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug circumci
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Western medical influences, including those from missionaries and modern public health reformers, introduced surgical options for genital hygiene, yet adoption stayed limited due to entrenched traditional views prioritizing bodily integrity." | F033 Causal Oversimplification | neutral/structural | Uncited (code count). Gives a single cultural cause ('entrenched traditional views prioritizing bodily integrity') for limited adoption. Cost, medical practice and the absence of religious motive (noted elsewhere in the article) are other candidate causes the sentence leaves out. (sentence 13) |
-| 2 | "Authorities have refrained from endorsing circumcision for HIV prevention, citing insufficient readiness for policy adoption despite global evidence. [12]" | F022 Accident | pro-circumcision | 'Despite global evidence' frames non-endorsement as going against the evidence. It applies evidence scoped to high-HIV-prevalence heterosexual epidemics to China as a whole without stating that scope condition. (sentence 49) |
-
-Flag tally by side (simple count of the table above): neutral/structural 1; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| — | No run 2 flags. | — | — | No judgment-based flags were recorded. |
 
 ## Both-sides balance note
 
-Same-standard check: the article reports both 'high theoretical acceptability' (sentence 4) and cultural reasons for low uptake (16-19), with similar attribution. The Confucian bodily-integrity view (16-18) is attributed to tradition and is not presented as the article's own position, so it was not flagged. Pro-side medical claims are brief and mostly scoped to therapeutic indications. No ethical debate appears in the sentences read.
+Run 2 flag counts by side: pro 0, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (25 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Sources 33-36 are listed but never cited (code count).
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

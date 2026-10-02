@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/female_genital_mutilation
 - **Snapshot file:** `articles/female-genital-mutilation/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 45 of 283 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 303/303 units read in full (293 paragraphs, 10 table rows).
 
 ## Verdict
 
-This is a long overview, and structurally its sourcing is broken: the page lists 3 sources but cites up to [76], leaving 73 dangling citation numbers (code count), so almost nothing in it can be traced. On reasoning, the treatment of FGM's harms is mostly evidence-based, with some causal overstatement. The comparison sections defend the male/female distinction by replying with Type III severity and with severity in general to arguments about milder types and about consent. Elsewhere, the article discounts trauma data as coming from 'advocacy-influenced surveys'. Lean: 3 pro-circumcision (pro-cutting or pro-distinction), 3 anti, 1 neutral/structural. These are judgment calls.
+Run 2 found 5 flags: 4 pro, 1 anti, and 0 neutral. The lean is pro. Main patterns were F036 Suppressed Evidence (2); F026 Poisoning the Well (1); F011 Hasty Generalization (1); F040 Loaded Language (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,32 +41,22 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug female-g
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Critics, often anthropologists or community representatives from practicing regions, argue "mutilation" imposes cultural bias, equating varied practices (from pricking to excision) under a condemnatory label that impedes eradication efforts by alienating locals; they favor FGC for its descriptive neutrality, as endorsed by some UNICEF campaigns since 2008 to promote intra-community dialogue. [11] [12]" | F056 Exception Fallacy | pro-circumcision | The ethicists' critique concerns how 'all forms' of FGM are labelled compared with male circumcision. The reply cites 'up to 80%' tissue loss 'in Type III', the most extensive form, to justify the distinction for the whole category, including pricking and prepuce-only cuts. (sentence 14) |
-| 2 | "However, empirical evidence highlights fundamental differences in procedure, health outcomes, and functional impacts, rendering the practices non-equivalent in severity." | F003 Red Herring | pro-circumcision | Uncited (code count). The claim answered (sentence 268) is that both are 'non-consensual genital cutting of minors', a consent-parity argument. The reply ('non-equivalent in severity') addresses severity, which the parity argument does not rest on. (sentence 269) |
-| 3 | "Psychological trauma, manifesting as PTSD symptoms, has been observed in longitudinal studies of survivors, though data quality varies due to underreporting in biased self-reports from advocacy-influenced surveys." | F026 Poisoning the Well | pro-circumcision | Uncited. Discounts PTSD evidence because of 'biased self-reports from advocacy-influenced surveys'. Survivors' reports are pre-labelled by their supposed origin, which minimizes the harm evidence. (sentence 63) |
-| 4 | "These outcomes correlate with anatomical damage—such as clitoral excision and infibulation scarring—causally impairing nerve function and vaginal elasticity, though self-reported data may confound cultural stigma with physiological limits." | F032 Cum Hoc | anti-circumcision | Uncited. 'Correlate with anatomical damage ... causally impairing nerve function': correlation and causation in the same breath. Sentence 180 itself urges 'cautious inference' because of confounding. (sentence 177) |
-| 5 | "Variations include sunna circumcision, which targets only the prepuce, and more extensive forms removing the entire glans; the former is sometimes defended as a minor ritual akin to male circumcision, but empirical evidence shows it impairs clitoral function regardless." | F011 Hasty Generalization | anti-circumcision | Uncited. 'Empirical evidence shows it impairs clitoral function regardless' applies a sweeping claim to prepuce-only 'sunna' cutting with no study named. The cited review in sentence 40 concerns 'partial clitoridectomy', not prepuce-only procedures. (sentence 38) |
-| 6 | "While not prescribed by any major religion's doctrines, FGM persists across Muslim, Christian, and animist communities in practicing regions, often justified through misinterpreted religious or customary norms rather than explicit scriptural mandates. [5] [6]" | F040 Loaded Language | anti-circumcision | The article's own voice calls practitioners' religious justifications 'misinterpreted' norms. That is an evaluative verdict on religious interpretation, presented as description. (sentence 5) |
-| 7 | "Overall, early colonial and missionary interventions prioritized symbolic condemnation over sustained eradication, often exacerbating local resistance without significantly reducing incidence, as evidenced by post-colonial surveys indicating persistence in 90% of Sudanese women by the 1960s." | F034 False Cause | neutral/structural | Uncited. Concludes that colonial interventions were 'exacerbating local resistance', with continued 90% prevalence as the evidence. Persistence shows the practice did not decline; it does not show the interventions made resistance worse. (sentence 213) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 3; neutral/structural 1; pro-circumcision 3.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "A subset of ethicists critiques the nomenclature disparity with male genital cutting, positing gender bias in ethical framing—male procedures are normalized as "circumcision" despite non-consensual infant application, while FGM's all forms are pathologized—yet empirical comparisons reveal FGM's greater tissue loss (up to 80% in Type III) and zero net health gains, justifying the terminological distinction on harm-based grounds." | F036 Suppressed Evidence | pro | Uses the most extensive type (Type III) to justify one label for all FGM forms, including Type IV pricking that the article elsewhere calls minimal tissue removal. |
+| 2 | "Psychological trauma, manifesting as PTSD symptoms, has been observed in longitudinal studies of survivors, though data quality varies due to underreporting in biased self-reports from advocacy-influenced surveys." | F026 Poisoning the Well | pro | Discounts psychological-trauma evidence by attributing it to advocacy-influenced bias, without specifics. |
+| 3 | "Male circumcision, when conducted in clinical settings, has complication rates below 1%, primarily minor bleeding or infection, and is associated with protective effects against urinary tract infections in infancy (reduced by 90%) and heterosexual HIV acquisition (by 60%, per randomized trials in Africa)." | F036 Suppressed Evidence | pro | FGM rates from non-sterile traditional settings in the previous sentence are set against male circumcision in clinical settings only, a mismatched comparison that inflates the contrast. |
+| 4 | "These disparities stem from anatomical realities: the clitoris is the primary female sexual organ analogous to the penis, with excision equating to partial penile amputation, whereas foreskin removal affects a protective sheath without excising core genital tissue." | F011 Hasty Generalization | pro | Generalizes from clitoral excision to FGM as a whole, though the article itself describes prepuce-only (Type Ia) and pricking (Type IV) forms that this reasoning does not cover. |
+| 5 | "These patterns suggest that global efforts, while data-driven in intent, are undermined by inconsistent application influenced by political correctness and resource allocation priorities." | F040 Loaded Language | anti | Loaded attribution ('political correctness') in the article's own voice, without evidence of the claimed motive. |
 
 ## Both-sides balance note
 
-Same-standard check: within this article, FGM harms are stated causally (160, 177), while pro-practice 'purported benefits' are held to a strict standard (185-190). That asymmetry is partly warranted by the evidence the article describes, and it is noted rather than counted except where a sentence itself conflicts (177 vs 180). On the male-circumcision comparison, the anti-distinction side ('hypocrisy', 279-288) and the pro-distinction side (14, 269-278) both get space. The pro-distinction replies tend to compare FGM's severe forms with male circumcision as a whole. The anti-distinction sentences use 'analogous' and the 'often without ... anesthetic' claim (280), which need source checks. Shortfall: with 73 of 76 citation numbers dangling, neither side's claims can be traced from this page.
+Run 2 flag counts by side: pro 4, anti 1, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (238 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- With 73 dangling citation numbers, no citation in this article could be matched to a source row; the 'sentences without own citation' count understates the sourcing problem.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

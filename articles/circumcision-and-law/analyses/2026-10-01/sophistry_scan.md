@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Circumcision_and_law
 - **Snapshot file:** `articles/circumcision-and-law/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 80 of 314 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 80). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 320/320 units read in full (320 paragraphs, 0 table rows).
 
 ## Verdict
 
-This long legal survey mostly reports statutes, cases and rights arguments with attribution, and it gives restriction advocates a full hearing in the human-rights section. The flags are in the article's own voice at transition and summary points. It charges only critics' research with 'source biases'. It treats the absence of international enforcement as evidence that rights instruments permit the practice. It calls integrity arguments 'absolutist'. It answers autonomy objections with complication-rate data. It praises court deference as 'causal realism in law'. One flag goes the other way: the article's own 'purported' for historical benefit claims. On the sentences read, the flags lean pro-circumcision (5 of 6). These are judgment calls.
+Run 2 found 8 flags: 8 pro, 0 anti, and 0 neutral. The lean is pro. Main patterns were F026 Poisoning the Well (2); F040 Loaded Language (2); F003 Red Herring (2); F010 Appeal to Ignorance (1); F031 Post Hoc (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,30 +41,25 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug circumci
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "These cases highlight causal trade-offs: while religious communities argue continuity of tradition outweighs deferred consent, critics invoke first-principles of non-maleficence, noting irreversible alteration without immediate medical necessity, amid source biases in advocacy-driven research that often amplify risks or understate cultural contexts. [6]" | F026 Poisoning the Well | pro-circumcision | The lead charges 'advocacy-driven research' with 'source biases' that 'amplify risks'. No parallel caution is attached to research or policy from the other side, so one side's evidence is discounted in advance. (sentence 6) |
-| 2 | "These claims, primarily advanced in academic and advocacy literature rather than treaty body jurisprudence, face counterarguments that religious freedoms (e.g., ICCPR Article 18) and parental rights permit the practice, provided risks are minimized, as evidenced by the absence of international enforcement actions or prohibitions despite decades of debate." | F010 Appeal to Ignorance | pro-circumcision | Uncited (code count). 'The absence of international enforcement actions or prohibitions' is offered as evidence that rights instruments permit the practice. Absence of enforcement is not evidence about what a right requires. (sentence 53) |
-| 3 | "Empirical data on benefits, such as HIV reduction in high-prevalence areas (60% efficacy per WHO meta-analyses), complicates absolutist integrity claims, though advocates counter that such gains apply to adults in specific epidemics, not routine neonatal use in low-risk settings. [34]" | F040 Loaded Language | pro-circumcision | 'Absolutist integrity claims' is a pejorative label in the article's voice; the pro side's position gets no comparable label. The advocates' counter in the same sentence is noted. (sentence 54) |
-| 4 | "Medical performance is often mandated in countries with immigrant Muslim populations, where prevalence can exceed 20% in urban areas, but secular opposition has fueled debates framing it as a violation of autonomy, despite empirical data showing low complication rates (under 1% for trained providers) and no long-term functional deficits in peer-reviewed studies. [56]" | F003 Red Herring | pro-circumcision | An autonomy objection is set against 'empirical data showing low complication rates' with 'despite', as if the data answered it. Autonomy and consent arguments do not depend on complication rates. (sentence 76) |
-| 5 | "Such outcomes reflect causal realism in law: where parental intent aligns with prevailing medical literature showing modest aggregate benefits (e.g., CDC estimates of 1 in 100 HIV risk reduction in high-prevalence settings), courts avoid overriding decisions absent acute harm. [200] [201]" | F040 Loaded Language | pro-circumcision | Describes court deference with an approving label ('causal realism in law') in the article's voice. The label is a praise predicate attached to one side's legal outcome, not a description of it. (sentence 296) |
-| 6 | "Newborn circumcision rates increased from roughly 10% circa 1900 to peaks exceeding 80% by the 1960s, propelled by endorsements from organizations such as the American Medical Association and American Academy of Pediatrics, which cited purported preventive benefits against conditions like penile cancer and urinary tract infections, though these claims lacked robust randomized trial evidence at the time. [25] [26]" | F040 Loaded Language | anti-circumcision | The article's own 'purported preventive benefits' (MOS:WTW expression of doubt). The historical point that early claims lacked RCT evidence is fair, but 'purported' adds a verdict. (sentence 31) |
-
-Flag tally by side (simple count of the table above): anti-circumcision 1; pro-circumcision 5.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "These cases highlight causal trade-offs: while religious communities argue continuity of tradition outweighs deferred consent, critics invoke first-principles of non-maleficence, noting irreversible alteration without immediate medical necessity, amid source biases in advocacy-driven research that often amplify risks or understate cultural contexts." | F026 Poisoning the Well | pro | The lead discounts critics' research up front as advocacy-driven and biased, with no specific study engaged. |
+| 2 | "These claims, primarily advanced in academic and advocacy literature rather than treaty body jurisprudence, face counterarguments that religious freedoms (e.g., ICCPR Article 18) and parental rights permit the practice, provided risks are minimized, as evidenced by the absence of international enforcement actions or prohibitions despite decades of debate." | F010 Appeal to Ignorance | pro | Takes the absence of enforcement actions as evidence that religious freedom and parental rights permit the practice. |
+| 3 | "Empirical data on benefits, such as HIV reduction in high-prevalence areas (60% efficacy per WHO meta-analyses), complicates absolutist integrity claims, though advocates counter that such gains apply to adults in specific epidemics, not routine neonatal use in low-risk settings." | F040 Loaded Language | pro | Calls the opposing rights claims 'absolutist', a pejorative label that does no argumentative work. |
+| 4 | "Medical performance is often mandated in countries with immigrant Muslim populations, where prevalence can exceed 20% in urban areas, but secular opposition has fueled debates framing it as a violation of autonomy, despite empirical data showing low complication rates (under 1% for trained providers) and no long-term functional deficits in peer-reviewed studies." | F003 Red Herring | pro | Autonomy objection answered with complication-rate data, which does not address the consent argument. |
+| 5 | "These variations underscore a pattern where empirical risk assessments favor regulated access over bans, countering advocacy from sources like secular NGOs that amplify rare complications without proportional context." | F026 Poisoning the Well | pro | Dismisses opponents by characterizing their sources as amplifying, with no content engaged. |
+| 6 | "Following the 2012 law's implementation in 2013, non-medical circumcision rates among minors under 18 rose significantly, reflecting restored legal certainty for religious communities." | F031 Post Hoc | pro | Rise in rates after the 2012 law attributed to restored legal certainty on temporal sequence alone. |
+| 7 | "Such outcomes reflect causal realism in law: where parental intent aligns with prevailing medical literature showing modest aggregate benefits (e.g., CDC estimates of 1 in 100 HIV risk reduction in high-prevalence settings), courts avoid overriding decisions absent acute harm." | F040 Loaded Language | pro | Labels the permissive court outcomes 'causal realism', an approving term that presents a value judgment as description. |
+| 8 | "In the United States, a 2024 systematic review of neonatal male circumcision reaffirmed public health benefits such as reduced urinary tract infections and sexually transmitted infections, countering ethical critiques but noting no formal policy update from the American Academy of Pediatrics (AAP) since its 2012 statement, which was informally reaffirmed amid declining rates from 58.3% in 2012 to lower figures by 2022 per Johns Hopkins data." | F003 Red Herring | pro | Presents a review of health benefits as 'countering' ethical critiques about consent, which are a different question. |
 
 ## Both-sides balance note
 
-Same-standard check: rights-based arguments for restriction (sentences 37-52) are attributed throughout ('advocates argue', 'critics apply', 'some interpret'), and their non-binding status is noted. Pro-side replies are more often in the article's voice (53, 54, 76, 296). On the anti side, sentence 48 states 'meatal stenosis (occurring in 5-10% of cases)' as an unattributed figure inside an attributed interpretation, and sentence 38 lists 'reduced sexual sensitivity' among risks. Both need a source check; neither was flagged as a reasoning fault, but they are unsourced in the sentence. Court and legislative outcomes are reported with similar detail for restrictive rulings (Cologne, Montana, Boldt) and permissive ones (Hironimus, US deference).
+Run 2 flag counts by side: pro 8, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (234 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The '[2000]' bracket counted as a dangling citation number is a year rendered as a citation link on the page (see INDEX).
-- Sentence 69 contains an extraction artifact ('07737-1/fulltext)').
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

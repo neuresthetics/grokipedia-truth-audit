@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/female_genital_mutilation_in_sudan
 - **Snapshot file:** `articles/female-genital-mutilation-in-sudan/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (8 sentences) read in full, plus 45 of 207 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 215/215 units read in full (215 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a data-heavy article, largely cited, which describes community motivations and religious arguments on their own terms before testing them. The reasoning flags concern causal attribution about what changes prevalence, not the harm evidence. The lead credits a 'modest decline' to awareness campaigns, while later sections say campaigns had 'limited measurable impact'. The critiques section declares legal bans a failure 'despite widespread implementation', although the article says enforcement is 'negligible' and no national survey has been done since 2014, before the 2020 ban. Universalist positions are labelled 'absolutist mandates'. Lean: 1 pro-cutting, 0 anti, 3 neutral/structural. These are judgment calls.
+Run 2 found 4 flags: 2 pro, 0 anti, and 2 neutral. The lean is mixed (pro/neutral tie). Main patterns were F042 False Analogy (1); F001 Ad Hominem (1); F011 Hasty Generalization (1); F032 Cum Hoc (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,29 +41,21 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug female-g
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Prevalence remains near-universal in northern and central regions, such as Northern State (98%) and North Darfur (98%), though lower in western areas like Central Darfur (45%), with urban-rural parity at around 86-87% and a modest decline observed since 2010 due to awareness campaigns. [2] [1]" | F031 Post Hoc | neutral/structural | Attributes 'a modest decline observed since 2010' to 'awareness campaigns'. Sentences 155 and 165 describe minimal decline and limited impact of the campaigns, so the article uses the same data for opposite causal claims. (sentence 3) |
-| 2 | "Critiques of anti-FGM strategies in Sudan center on their limited empirical impact, with legal bans failing to substantially reduce prevalence despite widespread implementation." | F010 Appeal to Ignorance | neutral/structural | Uncited (code count). Concludes that legal bans are 'failing to substantially reduce prevalence despite widespread implementation'. Sentence 203 says 'no verified post-ban surveys' exist, the latest national data predate the 2020 ban (94, 155), and sentence 6 calls enforcement 'negligible'. Absence of measurement is treated as evidence of failure. (sentence 201) |
-| 3 | "Independent assessments note that while urban awareness increased, rural prevalence stagnated, underscoring causal factors like weak monitoring over ideological persuasion. [17]" | F033 Causal Oversimplification | neutral/structural | From rural stagnation it infers 'causal factors like weak monitoring over ideological persuasion': a single-factor explanation with a loaded label ('ideological') for awareness work. (sentence 158) |
-| 4 | "This perception persists despite declining support for severe forms, as evidenced by community-level shifts toward less invasive variants, suggesting that relativist sensitivities to sovereignty may facilitate gradual change more effectively than absolutist mandates, though universalists counter that delays perpetuate non-consensual harms without accountability. [59]" | F040 Loaded Language | pro-circumcision | Universalist prohibition is labelled 'absolutist mandates' in the article's voice, while relativist 'sensitivities' are credited with possibly more effective change. The labelling is the same convention flagged elsewhere in this audit. (sentence 200) |
-
-Flag tally by side (simple count of the table above): neutral/structural 3; pro-circumcision 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Sunna is distinguished as a ritualistic procedure akin to male circumcision, often promoted by health advocates and communities as a culturally acceptable substitute to eradicate infibulation while retaining perceived purity benefits." | F042 False Analogy | pro | In the article's own voice, calls Sunna 'akin to male circumcision', though the previous sentence defines it as removal of the clitoral prepuce and/or glans. The analogy downplays it as a substitute. |
+| 2 | "International NGOs and media, often institutionally inclined toward highlighting legislative "wins" to sustain funding and narratives, have overstated progress—e.g., touting the 2020 ban as transformative—while downplaying persistent high rates and enforcement voids, potentially reflecting biases that prioritize symbolic victories over rigorous outcome tracking." | F001 Ad Hominem | pro | Discounts anti-FGM organisations' reports by pointing to a funding motive instead of engaging the evidence. |
+| 3 | "Such approaches, integrating education with accountability frameworks and indirect economic support via donor-funded trainings, avoid resistance by addressing practitioners' motivations, outperforming bans that drive underground activity; scaling similar incentive-based models, potentially including subsidies for alternative livelihoods, could yield more sustainable reductions than prohibition alone." | F011 Hasty Generalization | neutral | Concludes that incentive models outperform bans from a single pilot that measured pledges, not prevalence. |
+| 4 | "Evidence indicates a slow, organic decline in FGM prevalence linked to urbanization and education, with urban rates at 85.5% compared to 87.2% in rural areas, and support for continuation dropping below 24% in Khartoum versus a national average of 41%, driven by greater access to awareness campaigns and professional opportunities." | F032 Cum Hoc | neutral | A 1.7-point cross-sectional urban/rural gap is offered as evidence of a decline over time driven by urbanization. |
 
 ## Both-sides balance note
 
-Same-standard check: proponents' benefit claims (123) are tested against WHO data (124-126), and their religious arguments (55-57) are paired with reformist Islamic counter-arguments (61); that is balanced handling. The relativist 'hypocrisy' argument about male circumcision (196) is attributed and answered with a universalist position (197-198). No sentence read argues the male/female distinction in the article's voice, so there was nothing to flag on that comparison here.
+Run 2 flag counts by side: pro 2, anti 0, neutral 2. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (162 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Medicalization percentages (58%; 72% to 80%) and their definitions were not reconciled with sentence 80 ('full clinical medicalization remains limited').
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

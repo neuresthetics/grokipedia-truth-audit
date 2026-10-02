@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Feast_of_the_Circumcision_of_Christ
 - **Snapshot file:** `articles/feast-of-the-circumcision-of-christ/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (13 sentences) read in full, plus 41 of 125 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 138/138 units read in full (138 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a liturgical-history article. Most theological content is attributed to traditions ('In Orthodox theology', patristic authors, named collects and hymns). One flag was found: an uncited sentence asserts in the article's own voice that Jesus entered Israel 'as the promised Messiah', which is a confessional claim stated as fact. There is also an internal inconsistency on dating (sentence 3, 'since at least the fourth century', vs sentence 36, 'emerged ... during the sixth century'); that is a factual inconsistency rather than a fallacy and is noted, not flagged. The article does not bear on the medical or ethical circumcision debate. The one flag is neutral/structural. This is a judgment call.
+Run 2 found 0 flags: 0 pro, 0 anti, and 0 neutral. The lean is no flagged lean. Main patterns were none. Flags are judgment calls.
 
 ## Code counts
 
@@ -41,25 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug feast-of
 
 ## Flags
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "The circumcision of Jesus, performed on the eighth day after his birth as prescribed by Jewish law, served as a profound affirmation of his submission to the Mosaic covenant, marking his entry into the community of Israel as the promised Messiah." | F004 Appeal to Authority | neutral/structural | Uncited (code count). States in the article's voice that the circumcision marked Jesus' entry 'as the promised Messiah'. Tradition is the only warrant, and its theological claim is presented as historical fact rather than attributed. (sentence 63) |
-
-Flag tally by side (simple count of the table above): neutral/structural 1.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| — | No run 2 flags. | — | — | No judgment-based flags were recorded. |
 
 ## Both-sides balance note
 
-Same-standard check: Eastern, Catholic, Anglican, Lutheran and Reformed practices are each described in their own terms, including the Reformed rejection of fixed feasts (58, 133). Jewish naming practice (87) is described accurately as far as can be seen without opening sources. The pro/anti-circumcision lean is not applicable.
+Run 2 flag counts by side: pro 0, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (84 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Sources 77-81 are listed but never cited (code count).
-- The dating inconsistency between sentences 3 and 36 was not resolved against sources.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

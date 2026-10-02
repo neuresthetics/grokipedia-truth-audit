@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Paraphimosis
 - **Snapshot file:** `articles/paraphimosis/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (14 sentences) read in full, plus 45 of 143 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 157/157 units read in full (157 paragraphs, 0 table rows).
 
 ## Verdict
 
-This is a clinical reference article covering definition, anatomy, causes, risk factors, diagnosis, treatment and prevention, and it is mostly descriptive. No sophistry or fallacy flags were raised in the sentences read. The lead is cited throughout, and circumcision appears only as a treatment or preventive option for recurrence, with the statement in sentence 152 that it is 'typically reserved for cases where non-surgical options fail'. Many anatomy and risk-factor sentences carry no citation of their own (see code counts), and the uncited epidemiological comparison of Europe with the United States (82) needs a source check. Lean: none. These are judgment calls.
+Run 2 found 1 flag: 1 pro, 0 anti, and 0 neutral. The lean is pro. Main patterns were F003 Red Herring (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,18 +41,18 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug paraphim
 
 ## Flags
 
-No flags. No flags were raised. Sentence 152's mention of 'broader benefits like reduced penile carcinoma incidence' in a prophylaxis context was considered but not flagged: it is relevant to the decision being described and is qualified as reserved for failed non-surgical options.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
+
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "This procedure serves as a reliable prophylactic strategy, nearly eliminating paraphimosis risk while also offering broader benefits like reduced penile carcinoma incidence, though it is typically reserved for cases where non-surgical options fail." | F003 Red Herring | pro | Brings in an unrelated claimed benefit (penile cancer) while discussing prophylaxis for paraphimosis, which tilts the case toward circumcision. |
 
 ## Both-sides balance note
 
-Same-standard check: the article states plainly that paraphimosis occurs only in uncircumcised males, as a matter of definition, and gives hygiene education as first-line prevention (136-143) before surgery (148-152). No asymmetric evidence standards were found in the sentences read.
+Run 2 flag counts by side: pro 1, anti 0, neutral 0. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (98 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- The uncited epidemiological claim in sentence 82 (Europe vs US prevalence) needs a source check; no verdict is given here.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).

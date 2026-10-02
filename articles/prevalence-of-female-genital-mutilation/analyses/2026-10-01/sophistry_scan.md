@@ -4,12 +4,12 @@
 - **URL:** https://grokipedia.com/page/Prevalence_of_female_genital_mutilation
 - **Snapshot file:** `articles/prevalence-of-female-genital-mutilation/snapshots/2026-10-01.txt` (sources: `2026-10-01_sources.csv`)
 - **Snapshot date / scan date:** 2026-10-01 / 2026-10-01 (PT)
-- **Method:** substance_lens v0.5.9, `fallacyScanPass` (67 kept entries from geometric_fallacy_engine v0.1.0; engine IDs kept). Both-sides by default. Sophistry and reasoning pass only; no outside fact-checking.
-- **Reading coverage:** lead (6 sentences) read in full, plus 45 of 192 body sentences picked by `tools/sophistry_triage.py` (cue-word score, cap 45). Other sentences were not read closely.
+- **Method:** substance_lens v0.5.9 fallacy scan, run 2 (full read, blind rerun). Both-sides by default; no outside fact-checking.
+- **Reading coverage:** 204/204 units read in full (199 paragraphs, 5 table rows).
 
 ## Verdict
 
-This is a survey-methodology and regional-prevalence article. It is careful about measurement limits: self-report bias in both directions (19, 27, 84, 88), validation studies (85), sampling gaps (91), and critics' concerns about how minimal forms affect global estimates (23-24, 28) and about funding incentives (92, attributed). Two neutral/structural flags were found, both moving from repeated or cross-sectional survey correlations to causal conclusions in the article's voice: one in the lead about which interventions work, one about religion having 'causally entrenched' the practice. Lean: 0 pro, 0 anti, 2 neutral/structural. These are judgment calls.
+Run 2 found 4 flags: 0 pro, 1 anti, and 3 neutral. The lean is neutral. Main patterns were F032 Cum Hoc (3); F031 Post Hoc (1). Flags are judgment calls.
 
 ## Code counts
 
@@ -41,27 +41,21 @@ Produced by `python3 tools/sophistry_counts.py --date 2026-10-01 --slug prevalen
 
 ## Flags
 
-Side labels: the task's three labels are kept. In this article, which is mainly about female genital cutting, 'pro-circumcision' marks a flag whose reasoning makes genital cutting (or male circumcision, where it is compared) look more acceptable or benign, or makes its critics look less credible. 'anti-circumcision' marks a flag whose reasoning makes genital cutting look worse or its defenders less credible. 'neutral/structural' marks flags that favor neither.
+Every flag below is a **judgment call** based on the run 2 reading, not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false.
 
-Every flag below is a **judgment call** (model reading against the engine entry's detection cue), not a computed result. A flag withdraws warrant from that sentence's inference; it does not show the claim is false. Quotes are verbatim snapshot sentences, citation markers included (checked by `sophistry_counts.py --verify-quotes`).
-
-| # | Quoted sentence | Type (engine ID, name) | Favors | Explanation (judgment call) |
-|---|---|---|---|---|
-| 1 | "Empirical data from repeated cross-sectional surveys underscore that while absolute numbers grow with demographics, targeted interventions have reduced type III procedures (infibulation) in some cohorts, highlighting causal links between education, legal enforcement, and attitude shifts over blanket prohibitions. [5]" | F032 Cum Hoc | neutral/structural | From 'repeated cross-sectional surveys' it concludes 'causal links between education, legal enforcement, and attitude shifts over blanket prohibitions'. Repeated cross-sections show co-movement, not causation, and the contrast between 'legal enforcement' and 'blanket prohibitions' is not explained. (sentence 6) |
-| 2 | "This fusion underscores how religious frameworks have causally entrenched the rite, countering claims of pure cultural autonomy. [39]" | F032 Cum Hoc | neutral/structural | From the correlations in 75 and 79 (Sunni adherence and Islamized groups with higher prevalence), it concludes 'religious frameworks have causally entrenched the rite, countering claims of pure cultural autonomy'. Ethnicity, region and religion are confounded in these comparisons. (sentence 80) |
-
-Flag tally by side (simple count of the table above): neutral/structural 2.
+| n | quote | Fxxx Name | side | note |
+|---:|---|---|---|---|
+| 1 | "Empirical data from repeated cross-sectional surveys underscore that while absolute numbers grow with demographics, targeted interventions have reduced type III procedures (infibulation) in some cohorts, highlighting causal links between education, legal enforcement, and attitude shifts over blanket prohibitions." | F032 Cum Hoc | neutral | Repeated cross-sectional surveys are said to establish 'causal links'. |
+| 2 | "Shia Islam, by contrast, lacks such hadith endorsements and explicitly rejects FGM, with negligible prevalence in Shia-dominant regions like Iran (under 1% nationally, though pockets exist in Sunni-influenced provinces), highlighting doctrinal variance as a causal factor in distribution." | F032 Cum Hoc | neutral | Infers that doctrine causes the distribution from a Shia/Sunni correlation. The article itself later notes Shia Ismaili (Bohra) practice. |
+| 3 | "This fusion underscores how religious frameworks have causally entrenched the rite, countering claims of pure cultural autonomy." | F032 Cum Hoc | neutral | Prevalence differences by religion are presented as proof of religious causation, with confounders such as ethnicity and region ignored. |
+| 4 | "Recent declines in younger cohorts underscore campaign impacts, with under-15 prevalence below 5% in Uganda and Rwanda due to community-led initiatives, religious leader involvement, and enforcement of anti-FGM laws, though adult women retain higher legacy rates from prior generations." | F031 Post Hoc | anti | Credits campaigns with low youth prevalence in countries the article describes as having been below 1% for over 30 years (Uganda) or negligible (Rwanda). |
 
 ## Both-sides balance note
 
-Same-standard check: both directions of measurement bias are acknowledged: underreporting through stigma and normalization (18, 25, 88) and inflation through inclusive definitions or advocacy incentives (24, 92). That is even-handed. The 'critics' who allege funding incentives (92) are not named, which is an unsupported attribution, but the sentence is attributed and was not counted.
+Run 2 flag counts by side: pro 0, anti 1, neutral 3. These are judgment-based labels, not measurements.
 
 ## What wasn't checked
 
-- Sentences outside the reading set (147 body sentences) were not read closely; flags may exist there.
-- No claim was fact-checked against outside sources, and no cited source was opened. Where a flag says a claim needs a source check, no verdict is given.
-- Whether a cited source actually supports the sentence it is attached to.
-- Tables were not scanned for flags (their rows are counted only).
-- No gate, XNOR or truth-table computation was run on any argument; no fallacy flag is a computed result. No scores or confidence grids are given.
-- Code-checkable engine entries (F063-F070, F072) were not run: no argument here was put into formal syllogistic or probabilistic shape.
-- Sentence 134's projections ('trending toward 7-2% by 2030') read as garbled and were not checked.
+- No outside fact-checking or source verification was performed.
+- Labels are judgment-based flags, not computed findings.
+- Reproducibility comparison: [COMPARISON.md](../../../SOPHISTRY_RERUN_2026-10-01/COMPARISON.md).
