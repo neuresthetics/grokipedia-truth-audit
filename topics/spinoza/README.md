@@ -16,3 +16,7 @@ From citation [90] onward the numbers seem to be shifted by nine places. As a re
 | `articles/baruch-spinoza/edit_submissions/` | Correction drafts for Grokipedia (none yet) |
 
 There is no `runs/` folder: this topic has a single-article audit and no cross-article scan runs yet. The audit was done with [tools/grokaudit](../../tools/grokaudit/README.md).
+
+```
+me: why is the necessary? Why should this be necessary when we have these massive teams of brain jars with access to all of the worlds data? Elon cannot afford a clean copy of Ethics to stash in the grokipedia library? these AI companies scraped the ENTIRE black market for digital books RIGHT before they shut down libgen forever. coincidence? They could at least return the books to the public so their AI systems can make accurate references. this is GREEEEEEED.
+```
