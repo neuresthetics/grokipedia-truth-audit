@@ -91,7 +91,9 @@ Agreement went up between the run 1/run 2 comparison and the run 2/run 3 compari
 - **The aggregate lean replicates.** In every run, most flags that take a side are pro-circumcision in the male-circumcision articles: 77%, 85%, and 84.0% vs 82.7% on the 24 title matches.
 - **The ranking of the worst articles replicates.** Ethics of circumcision and Circumcision controversies are among the three most-flagged articles in every run, and among the title-match articles Forced circumcision is the main anti-leaning exception each time. Per-article counts correlate at 0.75 (run 1 vs 2) and 0.837 (run 2 vs 3).
 - **When two runs flag the same sentence, they nearly always agree on which side it favours** (90% and 97%).
-
+```
+me: where there is sophistry, the case is weak. where there is bias in the application of sophistry, there is interest in controlling how people think. see: M.I.N.D.S.P.A.C.E. AI applications
+```
 **What it doesn't show**
 
 - **That any single flag is right.** Only 44% (run 1 to 2) and 60% (run 2 to 3) of flagged sentences came back. Any one run's list is a sample of defensible flags, not a complete or final inventory. Individual flags are leads to check by hand.
@@ -99,6 +101,9 @@ Agreement went up between the run 1/run 2 comparison and the run 2/run 3 compari
 - **Correctness.** All three runs used the same model family and the same method. Agreement between them measures **consistency (reliability), not correctness (validity)**. A blind spot or bias shared by the runs would show up as agreement. No independent human or second-model judge reviewed the flags.
 - **Full independence.** The "blind" runs did not see earlier flags, but all three runs used the same framework, the same catalogue and the same attribution rule.
 - **That the articles' facts are wrong.** A flag points to a gap in the article's reasoning, not a false claim. No outside fact-checking was done.
+```
+me: this reads as Grok covering his own ass. It'll say, well the individual pieces are factually data, and ignore that the flag it turning back to evaporate reasons as data being baked into the facts on that level. the gap in reasoning measures the inability of the model to fact check, correlating with the increased detection of sophistry present. the whole pount is this: grokipedia is supposed to be a knowledge base for Grok, that's what facilitates the jump to true open source: the data IS the archives, you can see it all yourself. It's not just about ethics, it's about processing power. sophistry is the tool of bitter old human kings, and the bane of truly super intelligent systems. But ok. We ride with proportions of self description the model makes of itself, using the evaluation tools we are using. Grok is at least honest about its own bias for the subject, based on the archives.
+```
 - **Any logic-gate result.** No XNOR, gate or other formal computation from substance_lens was run (see §1). The only computations were the scripts listed above: segmentation, quote checks and comparisons.
 
 **What would strengthen it:** an independent check of a sample of flags by human reviewers, a different model family run against the same catalogue, or both.
