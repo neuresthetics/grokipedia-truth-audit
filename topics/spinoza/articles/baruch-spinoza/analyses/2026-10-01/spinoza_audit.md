@@ -55,12 +55,12 @@ The "verdict" column scores each citation as linked, which is what a reader clic
 
 For the shifted citations, each claim was also checked against the source it was evidently meant to cite (n − 9). That column, `verdict_vs_intended`, covers 54 claims: SUPPORTED 28, UNVERIFIABLE 16, MISCITED 8, UNSUPPORTED 2. The UNSUPPORTED cases are C324 and C368. So for about half of the shifted claims, the right source does exist in the list. It is just mis-numbered.
 
-**Coverage.** 263 claims were judged by hand:
+**Coverage.** 263 claims were judged by a model, not by a person:
 - all 181 priority cited claims (dates, places, people, quotes, publication history, cherem, every Ethics/TTP/TP/TIE/letter reference);
 - all 42 priority uncited claims;
 - a seeded random sample of 40 of the remaining 144 non-priority cited claims (seed 1656).
 
-The remaining 104 cited non-priority claims are NOT_CHECKED. Hand checks were done at four depths: read the source passage (72), keyword plus best-passage skim (106), checked against the primary text (51), and title/abstract only (8). The remaining rows are script-only (34) or have no source check (130). Those 130 are the 104 NOT_CHECKED claims plus 26 priority claims judged without reading a source: 13 MISCITED by the shift rule and 13 UNVERIFIABLE.
+The remaining 104 cited non-priority claims are NOT_CHECKED. The model's checks were done at four depths: read the source passage (72), keyword plus best-passage skim (106), checked against the primary text (51), and title/abstract only (8). The remaining rows are script-only (34) or have no source check (130). Those 130 are the 104 NOT_CHECKED claims plus 26 priority claims judged without reading a source: 13 MISCITED by the shift rule and 13 UNVERIFIABLE.
 
 ## 3. Problem claims
 
@@ -244,7 +244,7 @@ Part titles (C293–C297) mix Elwes and Curley wording. They are not wrong, but 
   python3 tools/grokaudit/grokaudit.py evidence out/worksheet.csv --cache out/cache --only-priority
   ```
 
-  Then write the verdicts file by hand and run:
+  Then write the verdicts file (one verdict per claim) and run:
 
   ```
   python3 tools/grokaudit/grokaudit.py buildlog out/worksheet.csv verdicts.psv out/sources.csv -o audit_log.csv
